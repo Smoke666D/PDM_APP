@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             UPLOAD_RUN  = 2,
             INIT        = 3,
             FINISH      = 4,
-          
+          CLOSE         = 8,
             CONNECTED   = 6,
             CANSEL      = 7
         }
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
         private delegate void SafeCallDelegate4(TelemetryState status_ok);
         string USB_VID = "1155";
         string USB_PID = "22352";
-        string app_version = "1.1.2";
+        string app_version = "1.2.0";
         private int TimeStump = 0;
         AppSettings Settings;
         AppStateType State = AppStateType.INIT;
@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             btnTelemetryRun.Enabled = true;
             btnTelemetryRecord.Enabled = false;
             btnTelemetryPause.Enabled = false;
-            PDM = new PdmController(200, true, Int32.Parse(USB_VID), Int32.Parse(USB_PID), this.onConnect, this.onDisconect, new RedrawHandler(RedrawCallback), USBIsEnd);
+            PDM = new PdmController(200, Int32.Parse(USB_VID), Int32.Parse(USB_PID), this.onConnect, this.onDisconect, new RedrawHandler(RedrawCallback), USBIsEnd);
             vDataGrindInit();
             tabControl1.SelectTab(tabPage2);
             vSetTabPageButtn(1);
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
         private void onConnect()
         {
             btnConnect.BackColor = Color.LightGreen;
-            PDM.setConnected();
+            vGetDevice();
         }
         private void onDisconect()
         {
@@ -123,24 +123,9 @@ namespace WindowsFormsApp1
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {  
             FormCloseStatus = true;
-            vSetState(AppStateType.IDLE);
+            vSetState(AppStateType.CLOSE);
         }
-        private void CONNECT_PDM_Click(object sender, EventArgs e)
-        {
-            vGetDevice();
-            if (PDM.isConnected())
-            {
-                InfoForm = new SystemInfo();
-                InfoForm.SetHardvareVersion(PDM.pdm.SYSTEM.hardware);
-                InfoForm.SetSoftwareVersion(PDM.pdm.SYSTEM.firmware);
-                InfoForm.SetLuaVersion(PDM.pdm.SYSTEM.lua);
-                InfoForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("Устройство не обраружено!");
-            }
-        }
+       
         public void RedrawCallback(Telemetry data)
         {
             if (FormCloseStatus)
@@ -444,7 +429,7 @@ namespace WindowsFormsApp1
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            vSetState(AppStateType.IDLE);
+            vSetState(AppStateType.CANSEL);
         } 
         private bool ByteCodeLoad(string loadfile)
         {
@@ -690,15 +675,7 @@ namespace WindowsFormsApp1
             }
         }
         
-        private void btnDeviceInfo_Click(object sender, EventArgs e)
-        {
-              vGetDevice();
-              InfoForm = new SystemInfo();
-              InfoForm.SetHardvareVersion(PDM.pdm.SYSTEM.hardware);
-              InfoForm.SetSoftwareVersion(PDM.pdm.SYSTEM.firmware);
-              InfoForm.SetLuaVersion(PDM.pdm.SYSTEM.lua);
-              InfoForm.Show();
-        }    
+          
         private void btnOnlineTelemetry_Click(object sender, EventArgs e)
         {
             vSetTelemetryStatus(TelemetryStatus.OnlineTelemetry);
@@ -812,12 +789,16 @@ namespace WindowsFormsApp1
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            vGetDevice();
-            InfoForm = new SystemInfo();
-            InfoForm.SetHardvareVersion(PDM.pdm.SYSTEM.hardware);
-            InfoForm.SetSoftwareVersion(PDM.pdm.SYSTEM.firmware);
-            InfoForm.SetLuaVersion(PDM.pdm.SYSTEM.lua);
-            InfoForm.Show();
+            if (vGetDevice() == 1)
+            {
+                InfoForm = new SystemInfo();
+                InfoForm.SetHardvareVersion(PDM.pdm.SYSTEM.hardware);
+                InfoForm.SetSoftwareVersion(PDM.pdm.SYSTEM.firmware);
+                InfoForm.SetLuaVersion(PDM.pdm.SYSTEM.lua);
+                InfoForm.Show();
+            }
+            else
+                MessageBox.Show("Устройстов не обнаружено!");
         }
     }
 }

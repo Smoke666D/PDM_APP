@@ -166,7 +166,7 @@ namespace WindowsFormsApp1
                         break;
 
                 }
-                
+                PDM.vDataLoadStop();
                 ConsoleTextBox.ScrollToCaret();
                 
             }
@@ -235,30 +235,40 @@ namespace WindowsFormsApp1
                     break;
             }
         }
-        private void vGetDevice()
+        private int vGetDevice()
         {
+            int res = 0;
             if (!PDM.isConnected())
             {
-                
                 if (PDM.Init() == usbInit.done)
                 {
                     PDM.setLoopTime(int.Parse(LoopTime.Text));
                     if (PDM.isConnected())
                     {
-                        USBDataNoProcess.Reset();
-                        PDM.vGetDeviceInfo(isNoTelemetryFinish);
-                        USBDataNoProcess.WaitOne();
+                        try
+                        {
+                            Task InfoTask = new Task(PDM.syncDataGet);
+                            InfoTask.Start();
+                            InfoTask.Wait();
+                        }
+                        catch (Exception ex)
+                        {
+                            return res;
+                        }
                         PDM.pdm.vReinit();
                         LogData.AinCount = PDM.pdm.ainN;
                         LogData.DinCount = PDM.pdm.dinN;
                         LogData.DoutCount = PDM.pdm.doutN;
                         LogData.SystemCount = 6;
                     }
+                    if (TelStatus == TelemetryStatus.OnlineTelemetry)
+                        vChartDataInit();
+                    res = 1;
                 }
-                if (TelStatus == TelemetryStatus.OnlineTelemetry)
-                    vChartDataInit();
-                
             }
+            else res = 1;
+            
+            return res;
         }
         void vClearData()
         {
@@ -292,6 +302,10 @@ namespace WindowsFormsApp1
                 bStateChangeEnable = false;
                 switch (state)
                 {
+                    case AppStateType.CLOSE:
+                        PDM.cancel();
+                        PDM.close();
+                        break;
                     case AppStateType.CONNECTED:
                         switch (this.State)
                         {
@@ -321,10 +335,8 @@ namespace WindowsFormsApp1
                         this.State = AppStateType.IDLE;
                         break;
                     case AppStateType.CANSEL:
-                        PDM.cancel();
-                        USBDataNoProcess.WaitOne();
+                        PDM.vDataLoadStop();
                         this.State = AppStateType.IDLE;
-                        USBDataNoProcess.Set();
                         break;
                     case AppStateType.INIT:
                         this.State = AppStateType.IDLE;
@@ -335,14 +347,12 @@ namespace WindowsFormsApp1
                         USBDataNoProcess.Set();
                         break;
                     case AppStateType.STOP:
-                         PDM.cancel();
-                         USBDataNoProcess.WaitOne();
+                        PDM.vTelemetryStop();
                         if  (this.State != AppStateType.IDLE)
                         {
                             this.State = AppStateType.CONNECTED;
                         }
-                         USBDataNoProcess.Set();
-                         
+                        USBDataNoProcess.Set();
                         break;
                     case AppStateType.DOWNLOAD_RUN:
                         switch (this.State)

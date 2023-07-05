@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static WindowsFormsApp1.Controller;
 using static WindowsFormsApp1.USB_Exchange;
 
@@ -19,7 +23,7 @@ namespace WindowsFormsApp1
     public delegate void CallBackFunction();
     public delegate void DataFinshCallBack();
     public delegate void DataProcessCallBack();
-    public class USB_Exchange
+    public class  USB_Exchange
     {
         public enum usbInit : byte
         {
@@ -243,11 +247,6 @@ namespace WindowsFormsApp1
                 }
                 return;
             }
-            void setupLength(ref byte[] buffer)
-            {
-                buffer[USB_LEN0_BYTE] = length;
-                return;
-            }
  
             private void makeRequest(byte cmd, int adr)
             {
@@ -295,11 +294,7 @@ namespace WindowsFormsApp1
                 parsingDataBytes();    /* Parsing data bytes */
                 return;
             }
-            public void makeLuaRequest()
-            {
-                makeRequest((byte)msgCMD.USB_REPORT_CMD_READ_SCRIPT, 0);
-                return;
-            }
+
             public void makeDataRequest(int adr)
             {
                 makeRequest((byte)msgCMD.USB_REPORT_CMD_READ_DATA, adr);
@@ -466,7 +461,7 @@ namespace WindowsFormsApp1
             public void resetCounter()=> counter = 0;
      
         }
-        class InputMessageArray
+        public class InputMessageArray
         {
             uint length;
             MessageArray response;
@@ -568,13 +563,10 @@ namespace WindowsFormsApp1
             {
                 return response.getFullData();
             }
-            uint getLength()
-            {
-                return length;
-            }
+ 
         }
 
-        class OutputMessageArray
+        public class OutputMessageArray
         {
             private MessageArray array;
             public OutputMessageArray()
@@ -633,10 +625,6 @@ namespace WindowsFormsApp1
             {
                 
             }
-            public void close(int timeout)
-            {
-
-            }
             public void setProgressBar(uint progress)
             {
                 st.Invoke(progress);
@@ -648,157 +636,107 @@ namespace WindowsFormsApp1
             string[] usbStrStat = { "none", "wait", "write", "read", "dash", "error" };
             public Int32 USB_PID = 0x0201;
             public Int32 USB_VID = 0x1A40;
-            private InsertedEventHandler OnConnectCallback;
-            private RemovedEventHandler OnDisConnectCallback;
-            private DataFinshCallBack OnDataFinsh;
-            private DataProcessCallBack OnDataRocess;
-            private OutputMessageArray output;
-            private InputMessageArray input;
-            private usbStat status;
-            private Alert alert;
-            private static HidDevice device;
+            public InsertedEventHandler OnConnectCallback;
+            public RemovedEventHandler OnDisConnectCallback;
+           
+            public OutputMessageArray output;
+            public InputMessageArray input;
+          
+            public Alert alert;
+            public static HidDevice device;
             
-
             /*------------------- Pablic ------------------*/
             //this.error = [];
 
             //this.errorCounter = 0;
             /*------------------ Private ------------------*/
-            public USBtransport(int PID, int VID, InsertedEventHandler onConnect, RemovedEventHandler onDisconect, DataFinshCallBack c, DataProcessCallBack pDPCallBack)
+            public USBtransport(int PID, int VID, InsertedEventHandler onConnect, RemovedEventHandler onDisconect)
             {
                 USB_PID = PID;
                 USB_VID = VID;
                 OnConnectCallback = onConnect;
                 OnDisConnectCallback = onDisconect;
-                OnDataFinsh = c;
-                OnDataRocess = pDPCallBack;
-                status = usbStat.wait;
                 output = new OutputMessageArray();
                 input = new InputMessageArray();
             }
-            public usbHandler isEnd()
-            {
-                return output.isEnd();
-            }
-            void write(byte[] data)
-            {
-               
-                if ( device != null ) 
-                {
-                    HidReport report = new HidReport(data.Length, new HidDeviceData(data, HidDeviceData.ReadStatus.Success));
-                    try
+            public void write(byte[] data)
+            {           
+                    if (device.IsConnected)
                     {
-                        device.WriteReport(report);
-                    }
-                    catch (Exception e)
-                    {
-                        device.Dispose();
-                    }
-                    
+                        try
+                        {
+                            HidReport report = new HidReport(data.Length, new HidDeviceData(data, HidDeviceData.ReadStatus.Success));
+                            device.WriteReport(report,1000);
+                        }
+                        catch (Exception e)
+                        {
+                            device.Dispose();
+                        }      
                 }
                 return;
             }
-            public void handler(HidReport msg)
-            {
-                    usbHandler result = usbHandler.finish;
-                    USB_Message input = new USB_Message(msg);
-                     switch (status)
-                     {
-                         case usbStat.wait:
-                             break;
-                         case usbStat.write:
-                             result = writeHandler(input);
-                             break;
-                         case usbStat.read:
-                            result = readHandler(input);
-                             break;
-                         default:
-                             break;
-                     } 
-                    if (result == usbHandler.finish)
-                    {
-                        OnDataFinsh();
-                        status = usbStat.wait;
-                    }   
-                    else if (result == usbHandler.continue_)
-                    {
-                        
-                    }
-                try
-                {
-                    device.ReadReport(handler);
-                }
-                catch (Exception e) 
-                {
-                    device.Dispose(); 
-                }
-            }
 
-            usbHandler writeHandler(USB_Message response)
+            public usbHandler writedatahandler(HidReport msg)
             {
-                usbHandler result = usbHandler.continue_;
+                USB_Message response = new USB_Message(msg);
+                usbHandler result = usbHandler.error;
                 response.Init();
                 if (response.status == msgSTAT.USB_OK_STAT)
                 {
-                        if ((response.command == msgCMD.USB_REPORT_CMD_START_WRITING) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_WRITE_SCRIPT) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_END_WRITING) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_READ_SCRIPT) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_READ_DATA) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_READ_TELEMETRY) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_UPDATE_TELEMETRY) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_RESTART_LUA) ||
-                             (response.command == msgCMD.USB_REPORT_CMD_READ_ERROR_STR))
+                    if ((response.command == msgCMD.USB_REPORT_CMD_START_WRITING) ||
+                         (response.command == msgCMD.USB_REPORT_CMD_WRITE_SCRIPT) ||
+                         (response.command == msgCMD.USB_REPORT_CMD_END_WRITING) )
+                    {
+                        result = output.isEnd();
+                        if (result == usbHandler.continue_)
                         {
-                            result = output.isEnd();
-                            if (result == usbHandler.continue_)
+                            if (alert != null)
                             {
-                                if (alert != null)
-                                {
-                                    OnDataRocess();
-                                    alert.setProgressBar(output.getProgress());
-                                }
-                                write(output.nextMessage());
+                                alert.setProgressBar(output.getProgress());
                             }
                         }
-                        else
-                        {
-                            result = usbHandler.finish;
-                        }
-                }
-                if (alert != null)
-                {
-                    alert.close(0);
+                    }
+                    else
+                    {
+                        result = usbHandler.finish;
+                    }
                 }
                 return result;
             }
-
-            usbHandler readHandler(USB_Message message)
+            public void vDataLoadWrite()
             {
-                message.Init();
-                usbHandler result = input.process(message);
+                write(output.nextMessage());
+            }
+            public usbHandler DataLoadStep()
+            {
+                return writedatahandler(device.ReadReport(1000));
+            }
+            public usbHandler readdatahandler(HidReport msg)
+            {
+                USB_Message response = new USB_Message(msg);
+                response.Init();
+                usbHandler result = input.process(response);
                 if ((result == usbHandler.finish) && (input.isEnd() == usbHandler.continue_))
                 {
-                        if (alert != null)
-                        {
-                            alert.setProgressBar(input.getProgress());
-                        }
-                        write(input.nextRequest());
-                        result = usbHandler.continue_;
+                    result = usbHandler.continue_;
                 }
-                else if ((result == usbHandler.error) || (result == usbHandler.unauthorized))
-                {
-                     if (alert != null)
-                     {
-                         alert.close(0);
-                     }
-                 }
                 return result;
+                
             }
 
+            public usbHandler ReadDataStep() 
+            {
+                return readdatahandler(device.ReadReport(1000));
+            }
+
+            public void vStartRead()
+            {
+                write(input.nextRequest());
+            }
+           
+            
             public usbInit scan()
             {
-
                 usbInit res;
                 device =  HidDevices.Enumerate(USB_VID, USB_PID).FirstOrDefault();
                 if ( device != null)
@@ -807,7 +745,6 @@ namespace WindowsFormsApp1
                     device.OpenDevice();
                     device.Inserted += OnConnectCallback;
                     device.Removed += OnDisConnectCallback;
-                    device.ReadReport(handler);
                     device.MonitorDeviceEvents = true;
                 }
                 else
@@ -823,8 +760,8 @@ namespace WindowsFormsApp1
                 {
                     if (device.IsOpen)
                     {
+                        device.CloseDevice();
                         device.Dispose();
-                        OnDisConnectCallback();
                     }
                 }
                 return;
@@ -833,17 +770,8 @@ namespace WindowsFormsApp1
             {
                 return input.getData();
             }
-
-
-            public usbStat getStatus() => status;
-            public void setRead() => status = usbStat.read;
-            public void setWait() => status= usbStat.wait;
-            
-            public string getStringStatus() => usbStrStat[(int)status];
-        
             public void clean() 
             { 
-
                 output.clean();
                 input.clean(); 
                 return;
@@ -858,131 +786,104 @@ namespace WindowsFormsApp1
                 input.addRequest(message);
                 return;
             }
-         
+              
 
-            public void start_write(Alert alertIn)
+            public void vsetProgressBar(Alert alertIn) 
             {
-                while (output.isEnd() != usbHandler.finish)
+                alert = alertIn;     
+                if (alertIn != null)
                 {
-                    status = usbStat.write;
-                    if (alertIn != null)
-                    {
-                        alert.setProgressBar(output.getProgress());
-                    }
-                    write(output.nextMessage());
-                }
-                status = usbStat.wait;
-            }
-         
-
-            public void start (usbStat dir, Alert alertIn) 
-            {
-                alert = alertIn;
-                switch (dir)
-                {
-                    case usbStat.write:
-                        status = usbStat.write;
-                        if (alertIn != null)
-                        {
-                            alert.setProgressBar(output.getProgress());
-                        }
-                        write(output.nextMessage()) ;
-                        break;
-                    case usbStat.read:
-                        status = usbStat.read;
-                        if (alertIn != null)
-                        {
-                            alert.setProgressBar(input.getProgress());
-                        }
-                        write(input.nextRequest());
-                        break;
-                    case usbStat.dash:
-                        status = usbStat.dash;
-                        if (alertIn != null)
-                        {
-                            alert.setProgressBar(input.getProgress());
-                        }
-                        write(input.nextRequest());
-                        break;
+                     alert.setProgressBar(input.getProgress());
                 }
                 return;
+            }
+            
+
+            public usbHandler asynchandler(HidReport msg)
+            {
+                USB_Message InputData = new USB_Message(msg);
+                InputData.Init();
+                usbHandler result = input.process(InputData);
+                if ((result == usbHandler.finish) && (input.isEnd() == usbHandler.continue_))
+                {
+                    write(input.nextRequest());
+                    result = usbHandler.continue_;
+                }
+                return result;
+            }
+
+            public  Task<int> taskGetData()
+            {
+                usbHandler result;
+                write(input.nextRequest());
+                do
+                {
+                    result = asynchandler( device.ReadReport( 1000 ) );       
+                }
+                while (result == usbHandler.continue_);
+                return Task.FromResult(1);
             }
         }
         public delegate void RedrawHandler(Telemetry data);
         
         public class PdmController
-        {
-            
+        {      
             public USBtransport transport;
             Alert alert;
             public Controller.PDM pdm;
-            private byte loopActive;
             private bool connected;
-            private bool finish;
-            public bool newdata = false;
-            private bool ReadErrorString = false;
-            private bool ReadDeviceData = false;
+            private bool ReadErrorString = false;    
             private bool LUARestart = false;
-           
-            private bool loop_enable;
             RedrawHandler RedrawCallback;
             private int USB_VID;
             private int USB_PID;
-            private int loopTime;
-            AutoResetEvent USBDataFinish = new AutoResetEvent(false);
-            AutoResetEvent USBDataProcess = new AutoResetEvent(false);
+            public int loopTime;
             AutoResetEvent USBDataCancel = new AutoResetEvent(false);
-            public Thread TelemetryThread;
-            public Thread DataLoadThread;
-            public bool isDataLoad;
             private ProccesEndFinisgCallBack FinishCallBack;
+            private Task telemetry_task;
+            private Task data_load_task;
+          
             /*---------------------------------------------*/
 
-            public PdmController(int usbtimeout, bool loop, int VID, int PID, InsertedEventHandler onConnect, RemovedEventHandler onDisconect, RedrawHandler RedrawCallback,Semaphore s)
+            public PdmController(int usbtimeout,  int VID, int PID, InsertedEventHandler onConnect, RemovedEventHandler onDisconect, RedrawHandler RedrawCallback,Semaphore s)
             {
                 USB_VID = VID;
                 USB_PID = PID;
-                isDataLoad = false;
-                this.loop_enable = loop;
                 loopTime = 100;
                 transport = null;
                 this.RedrawCallback = RedrawCallback;                  
-                loopActive = 0;
                 connected = false;
-                finish = false;
                 alert = new Alert();
                 pdm = new Controller.PDM();
-                transport = new USBtransport(USB_PID, USB_VID, onConnect, onDisconect, DataF, DataProcces);             
-            }
-            
-            public void DataF()
-            {
-                USBDataFinish.Set();
+                transport = new USBtransport(USB_PID, USB_VID, onConnect, onDisconect);             
             }
             public void setLoopTime(int lt)
             {
-                if (lt!=0)
+                if (lt>0)
                 {
                     loopTime = (int)lt;
                 }
             }
-            public void DataProcces() => USBDataProcess.Set();
+           
             public void TelemetryRun(ProccesEndFinisgCallBack finishcall)
             {
                 FinishCallBack = new ProccesEndFinisgCallBack(finishcall);
-                USBDataFinish.Reset();
                 USBDataCancel.Reset();
                 transport.clean();
-                TelemetryThread = new Thread(TelemetryLoop); 
-                TelemetryThread.Start();
+                if (telemetry_task== null)
+                {
+                    telemetry_task = new Task(TelemetryLoop);
+                    telemetry_task.Start();
+                }
             }
             public void TelemetryRun()
             {
-                USBDataFinish.Reset();
-                USBDataCancel.Reset();
-                transport.clean();
-                TelemetryThread = new Thread(TelemetryLoop);
-                TelemetryThread.Start();
+              //  vEnableLoop();
+              //  USBDataFinish.Reset();
+              //  USBDataCancel.Reset();
+              //  transport.clean();
+              //  TelemetryThread = new Thread(TelemetryLoop);
+              //  TelemetryThread.Start();
             }
            
             public void readErrorString()
@@ -990,10 +891,38 @@ namespace WindowsFormsApp1
                 ReadErrorString = true;
                 return;
             }
+            private Task< int> parsingData()
+            {
+                bool DataError = true;
+                transport.getInput();
+                USB_Message[] buffer = new USB_Message[transport.getInput().Length];
+                msgType type;
+                byte[] data = new byte[41];
+                buffer = transport.getInput();
+                pdm.telemetryBlob.Clear();
+                for (var i = 0; i < buffer.Length; i++)
+                {
+                    buffer[i].Init();
+                    buffer[i].parse(out type, out data);
+                    if (type == msgType.data)
+                    {
+                            for (var j = 0; j < buffer[i].length; j++)
+                            {
+                                pdm.telemetryBlob.Add(data[j]);
+                            }
+                            DataError = false;
+                    }    
+                }
+                if (!DataError)
+                {
+                    pdm.SYSTEM.parsing(pdm.telemetryBlob);
+                    return Task.FromResult(1);
+                }
+                return Task.FromResult(0);
+            }
             public void parsingFullMessage()
             {
                 bool dashFl = false;
-                bool dataFl = false;
                 bool errorFl = false;
                 transport.getInput();
                 USB_Message[] buffer= new USB_Message[transport.getInput().Length];
@@ -1008,14 +937,8 @@ namespace WindowsFormsApp1
                     switch (type)
                     {
                         case msgType.lua:
-                        case msgType.loop:
-                            break;
+                        case msgType.loop:                  
                         case msgType.data:
-                            dataFl = true;
-                            for (var j = 0; j < buffer[i].length; j++)
-                            {
-                                pdm.telemetryBlob.Add(data[j]);
-                            }
                             break;
                         case msgType.telemetry:
                             dashFl = true;
@@ -1036,8 +959,7 @@ namespace WindowsFormsApp1
                 if (dashFl  == true) pdm.telemetry.parsing(pdm.telemetryBlob);
                 else
                 if (errorFl == true) pdm.telemetry.lua.errorParsing(pdm.telemetryBlob);
-                else
-                if (dataFl  == true) pdm.SYSTEM.parsing(pdm.telemetryBlob);
+               
             }
             
             int initWriteSequency()
@@ -1105,7 +1027,7 @@ namespace WindowsFormsApp1
             public void Restart()
             {
                 LUARestart = true;
-                if (TelemetryThread == null)
+               /* if (TelemetryThread == null)
                 {
                     TelemetryRun();
                 }
@@ -1113,23 +1035,9 @@ namespace WindowsFormsApp1
                 if (!TelemetryThread.IsAlive)
                 {
                     TelemetryRun();
-                }
+                }*/
             }
-            public void vGetDeviceInfo(ProccesEndFinisgCallBack finishcall)
-            {
-                ReadDeviceData = true;
-                if (TelemetryThread == null)
-                {
-                    FinishCallBack = new ProccesEndFinisgCallBack(finishcall);
-                    TelemetryRun(FinishCallBack);
-                }
-                else
-                if (!TelemetryThread.IsAlive)
-                {
-                    FinishCallBack = new ProccesEndFinisgCallBack(finishcall);
-                    TelemetryRun(FinishCallBack);
-                }
-            }
+           
             public bool isConnected() => connected;
             public void setConnected()
 
@@ -1137,6 +1045,7 @@ namespace WindowsFormsApp1
             public void setDisconected()
             {
                 cancel();
+                close();
                 connected = false;
             }
             public void close()
@@ -1146,35 +1055,55 @@ namespace WindowsFormsApp1
                 {
                     transport.close();
                 }
-                
                 return;
+            }
+
+            public async void syncDataGet()
+            {
+                USB_Message msg = new USB_Message();
+                transport.clean();
+                msg.codeUpdateTelemetry();
+                transport.addRequest(msg);
+                for (var i = 0; i < (pdm.SYSTEM.length / USB_DATA_SIZE) + 1; i++)
+                {
+                    msg.makeDataRequest(i * USB_DATA_SIZE);
+                    transport.addRequest(msg);
+                }
+                await transport.taskGetData();
+                await parsingData();
+               
+            }
+            public void cancel()
+            {
+                vTelemetryStop();
+                vDataLoadStop();
+            }
+            public void vTelemetryStop()
+            {
+                if (telemetry_task != null)
+                {
+                    USBDataCancel.Set();
+                    telemetry_task.Wait(2000);
+                    //telemetry_task.Dispose();
+                    telemetry_task = null;
+                }
             }
             public void TelemetryLoop()
             {
+                usbHandler res;
+                USB_Message msg = new USB_Message();
                 while (true)
                 {
-                    transport.clean();
-                    USB_Message msg = new USB_Message();
+                    transport.clean(); 
                     if (LUARestart)
                     {
                         LUARestart = false;
                         msg.codeRestartLua();
                         transport.addToOutput(msg);
-                        transport.start(usbStat.write, null);
+                       // transport.start(usbStat.write, null);
                     }
                     else
                     {
-                        if (ReadDeviceData)
-                        {
-                            msg.codeUpdateTelemetry();
-                            transport.addRequest(msg);
-                            for (var i = 0; i < (pdm.SYSTEM.length / USB_DATA_SIZE)+1; i++)
-                            {
-                                msg.makeDataRequest(i * USB_DATA_SIZE);
-                                transport.addRequest(msg);
-                            }
-                        }
-                        else
                         if (ReadErrorString)
                         {
                             ReadErrorString = false;
@@ -1194,97 +1123,89 @@ namespace WindowsFormsApp1
                                 transport.addRequest(msg);
                             }
                         }
-                        transport.start(usbStat.read, null);
                     }
-                    var res = AutoResetEvent.WaitAny(new WaitHandle[] { USBDataCancel, USBDataFinish }, 2000);
-                    if ((res == WaitHandle.WaitTimeout) || (res == 0))
+                    while(true)
                     {
-                        transport.clean();
-                        FinishCallBack(3);
-                        break;
-                    }
-                    else
-                    {
-                        parsingFullMessage();
-                        if (ReadDeviceData == false)
+                        try
                         {
-                            if (bCanselDataFlag == false)
-                            {
-                                RedrawCallback(pdm.telemetry);
-                            }
-                            else
-                                bCanselDataFlag = false;
+                            transport.vStartRead();
+                            res = transport.ReadDataStep();
                         }
-                        else
+                        catch
                         {
-                            ReadDeviceData = false;
-                            FinishCallBack(3);
+                            transport.clean();
+                            return;
+                        }
+                        if (res == usbHandler.finish)
+                        {
+                            parsingFullMessage();
+                            RedrawCallback(pdm.telemetry);
+                            if (USBDataCancel.WaitOne(loopTime) == true)
+                            {
+                                transport.clean();
+                                return;
+                            }
                             break;
                         }
-                        
+                        if (USBDataCancel.WaitOne(0) == true)
+                        {
+                            transport.clean();
+                            return;
+                        }
                     }
+                }   
+            }
+            
+            public void vDataLoadStop()
+            {
+                if (data_load_task != null)
+                {
+                    USBDataCancel.Set();
+                    data_load_task.Wait(1000);
+                    data_load_task = null;
                 }
             }
-            private bool bCanselDataFlag = false;
             private void DataLoad()
             {
-                Int32 res;
-                USBDataProcess.Reset();
+                usbHandler result;           
+                initWriteSequency();
+                transport.vsetProgressBar( alert );
                 while (true)
                 {
-                    res = AutoResetEvent.WaitAny(new WaitHandle[] { USBDataProcess, USBDataCancel, USBDataFinish },2000);
-                    if (res == WaitHandle.WaitTimeout)
+                    transport.vDataLoadWrite();
+                    result = transport.DataLoadStep();
+                    if (result == usbHandler.finish)
                     {
-                        transport.clean();
-                        res = 1;
+                        FinishCallBack(0);
                         break;
                     }
-                    if (res == 1)
+                    if (result == usbHandler.error)
                     {
-                        transport.clean();
-                        res = 2;
+                        FinishCallBack(1);
                         break;
                     }
-                    if (res == 2)
+                    if (USBDataCancel.WaitOne(0) == true)
                     {
-                        res = 0;
-                        break;  
+                        transport.clean();
+                        FinishCallBack(2);
+                        break;
                     }
                 }
-                FinishCallBack(res);
+                return;
             }
-            public void cancel()
-            {
-                if (DataLoadThread != null)
-                {
-                    if (DataLoadThread.IsAlive)
-                    {
-                        USBDataCancel.Set();
-                        return;
-                    }
-                }
-                if (TelemetryThread != null)
-                {
-                    if (TelemetryThread.IsAlive)
-                    {
-                        bCanselDataFlag = true;
-                        USBDataCancel.Set();
-                    }
-                }
-            }
+
             public void send(IndicatoStep callbac, ProccesEndFinisgCallBack finishcall)
             {
                 if (isConnected())
                 {
                     FinishCallBack = new ProccesEndFinisgCallBack(finishcall);
                     alert.st = new IndicatoStep(callbac);
-                    DataLoadThread = new Thread(DataLoad);
-                    initWriteSequency();
-                    transport.start(usbStat.write, alert);
-                    USBDataFinish.Reset();
-                    USBDataProcess.Reset();
                     USBDataCancel.Reset();
-                    DataLoadThread.Start();
+                    if (data_load_task == null) 
+                    {
+                        data_load_task = new Task(DataLoad);
+                        data_load_task.Start();
+                    }
                 }
                 return;
             }

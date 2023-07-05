@@ -136,8 +136,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox[,] ChartControlBox;
         private void vChartDataInit()
         {
-           
-
             if ( (PDM.isConnected() && (TelStatus == TelemetryStatus.OnlineTelemetry)) ||
                    ( TelStatus == TelemetryStatus.OffLineTelemetry) )
             {
@@ -147,6 +145,7 @@ namespace WindowsFormsApp1
 
                     for (int k = 0; k < 2; k++)
                     {
+                        ChartControlBox[j, k].Items.Clear();
                         for (int i = 0; i < ChannelName.Count; i++)
                         {
                             ChartControlBox[j, k].Items.Add(ChannelName[i]);
