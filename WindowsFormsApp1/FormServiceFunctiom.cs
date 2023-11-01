@@ -65,6 +65,13 @@ namespace WindowsFormsApp1
             toolTip.SetToolTip(this.btnHelp, "Справка по системе");
             toolTip.SetToolTip(this.StatusLine, "Строка статуса");
             toolTip.SetToolTip(this.btnLoad, "Сборка и загрузка прикладной программы");
+            toolTip.SetToolTip(this.btnAccess, "Ввод ключа доступа к памяти");
+            toolTip.SetToolTip(this.btnReadES, "Чтение образа EEPROM из устройства");
+            toolTip.SetToolTip(this.btnWriteES, "Запись образа EEPROM в устройство");
+            toolTip.SetToolTip(this.btnJournal, "Работа с хранилищем данных");
+            toolTip.SetToolTip(this.button3, "Графики");
+            toolTip.SetToolTip(this.button1, "Отображение телеметрии");
+            toolTip.SetToolTip(this.btnStop, "Остоновка выполнения прикладной программы");
             toolTip.IsBalloon = true;
             toolTip.ShowAlways = true;
         }
@@ -148,6 +155,8 @@ namespace WindowsFormsApp1
                     case 0:
                         vStatusLinePrint( load_end_mes ,true);
                         vColorText(load_end_mes, 0);
+                        stopwatch.Stop();
+                        vColorText(stopwatch.ElapsedMilliseconds.ToString(), 0);
                         vSetTelemetryState(TelemetryState.Stop);
                         break;
                     case 1:
@@ -256,6 +265,7 @@ namespace WindowsFormsApp1
                             return res;
                         }
                         PDM.pdm.vReinit();
+                        SystemDataSource.ResetBindings(false);
                         LogData.AinCount = PDM.pdm.ainN;
                         LogData.DinCount = PDM.pdm.dinN;
                         LogData.DoutCount = PDM.pdm.doutN;

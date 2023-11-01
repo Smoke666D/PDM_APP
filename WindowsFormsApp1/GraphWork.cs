@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
         }
         private void vDisableChannelSelect( )
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 8; i++)
             {
                 ChartControlBox[i, 0].Enabled = false;
                 ChartControlBox[i, 1].Enabled = false;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
         }
         private void vEnableChannelSelect( ) 
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 8; i++)
             {
                 ChartControlBox[i, 0].Enabled = true;
                 ChartControlBox[i, 1].Enabled = true;

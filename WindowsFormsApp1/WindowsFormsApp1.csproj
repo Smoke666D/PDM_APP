@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -41,10 +41,11 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -60,7 +61,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -69,7 +71,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>WindowsFormsApp1.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>94593BDBDCC75BFF6724CE79D69EA1F59295D48C</ManifestCertificateThumbprint>
@@ -105,7 +108,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="DataClass\EEPROMRecordFormat.cs" />
     <Compile Include="DataLog.cs" />
+    <Compile Include="DataStorageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataClass\EEPROMRecord.cs" />
+    <Compile Include="DataClass\EEPROMRegister.cs" />
+    <Compile Include="DataClass\TelemtryFull.cs" />
+    <Compile Include="ViewModel\EEPROMStorage.cs" />
     <Compile Include="FileProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +147,25 @@
     <Compile Include="GraphWork.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="message.cs" />
+    <Compile Include="PassworForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassworForm.Designer.cs">
+      <DependentUpon>PassworForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="pdm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisteEnterDATA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisteEnterDATA.Designer.cs">
+      <DependentUpon>RegisteEnterDATA.cs</DependentUpon>
+    </Compile>
     <Compile Include="System\MouseEventHandler.cs" />
     <Compile Include="USB_Message.cs" />
+    <Compile Include="usb_transport.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassworForm.resx">
+      <DependentUpon>PassworForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,7 +188,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisteEnterDATA.resx">
+      <DependentUpon>RegisteEnterDATA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EEPROMRecord.datasource" />
+    <None Include="Properties\DataSources\EEPROMRecordFormat.datasource" />
+    <None Include="Properties\DataSources\EEPROMRegister.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.DataSources.TelemtryFull.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,5 +227,6 @@
   <ItemGroup>
     <Content Include="logo1.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

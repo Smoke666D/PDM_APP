@@ -6,14 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
-
-
-
-
-
-
-
-
+using WindowsFormsApp1.Properties.DataSources;
 
 namespace WindowsFormsApp1
 {
@@ -172,10 +165,11 @@ namespace WindowsFormsApp1
             public byte[] sysyBlob;
             public List<byte> telemetryBlob;
             public byte[] erorstringBlob;
+            string[] RowNames = { "Наряжение АКБ", "Температура", "Тангаж", "Крен", "Оборты 1", "Оборты 2" };
+            public List<TelemtryFull> common_parametr;
             public PDM()
             {
                 SYSTEM = new SYS();
-                //telemetry = new Telemetry(dinN, doutN, ainN, velN, tempN, angleN);
                 telemetryBlob = new List<byte>();
                 lua = null;
                 DIN_Count = 20;
@@ -194,6 +188,7 @@ namespace WindowsFormsApp1
                         tempN = 1;
                         angleN = 2;
                         telemetry = new Telemetry(dinN, doutN, ainN, velN, tempN, angleN);
+                        common_parametr = new List<TelemtryFull>();
                         break;
                     case (int)Devices.PCM:
                         dinN =  20;
@@ -203,6 +198,9 @@ namespace WindowsFormsApp1
                         tempN = 1;
                         angleN = 2;
                         telemetry = new Telemetry(dinN, doutN, ainN, velN, tempN, angleN);
+                        common_parametr = new List<TelemtryFull>();
+                        for (int i = 0; i < RowNames.Length; i++)
+                            common_parametr.Add(new TelemtryFull(RowNames[i]));
                         break;
                 }
             }
@@ -256,6 +254,7 @@ namespace WindowsFormsApp1
             public byte[] din;
             public DoutTelemetry[] dout ;
             public byte[][] velocity;
+                
             public float[] temperature;
             public float[] angle;
             public LuaTelemetry lua;
@@ -308,7 +307,7 @@ namespace WindowsFormsApp1
                 }
                 for (var i = 0; i < din.Length; i++)
                 {
-                    din[i] = blob[counter];
+                   din[i] = blob[counter];
                     counter += 1;
                 }
                 for (var i = 0; i < dout.Length; i++)
@@ -340,3 +339,4 @@ namespace WindowsFormsApp1
     }
 
 }
+//////////////////////////

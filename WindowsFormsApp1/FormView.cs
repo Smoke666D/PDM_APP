@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,37 @@ namespace WindowsFormsApp1
     {
         List<string> ChannelName = new List<string>();
         List<float> ChannelData = new List<float>();
+        private System.Windows.Forms.ComboBox[,] ChartControlBox;
+        
+       
+        private void vRecordDataGrindInit()
+        {
+            RecordForamtSource.DataSource = VMstorage.Estorage.getEEPROMFieldFormat();
+            RecordForamtSource.ResetBindings(false);
+            vSetStorageAccessVisible(false);
+            tbEEPROMSize.Text = "0";
+            tbRgisterCount.Text = "0";
+        }
+        private void vSetStorageAccessVisible(bool visible)
+        {
+            btnReadES.Enabled = visible;
+            btnWriteES.Enabled = visible;
+        }
+        private void RenumberReocrdData()
+        {
+            for (int i = 0;i < RecordFormatView.Rows.Count-1;i++)
+            {
+                RecordFormatView[0,i ].Value = i + 1;
+            }
+        }
+       
+     
+       
         private void vDataGrindInit()
         {
             /*Таблица сисетмных парамертов */
             string[] Names = { "Канал", "Значение", "MAX", "МIN", "TRIP" };
-            string[] DoutNames = { "Канал",  "Ток", "Уставка", "MAX", "МIN", "TRIP" };
+            string[] DoutNames = { "Канал", "Ток", "Уставка", "MAX", "МIN", "TRIP" };
             string[] DinColNames = { "Канал", "Состояние" };
             string[] RowNames = { "Наряжение АКБ", "Температура", "Тангаж", "Крен", "Оборты 1", "Оборты 2" };
             int[] Widths = { 100, 80, 80, 80, 80 };
@@ -41,7 +68,7 @@ namespace WindowsFormsApp1
                 DiscreteOut.Rows.Add(Name);
                 LogData.dout[i].ChannelName = Name;
                 //ChannelName.Add(Name);
-                
+
             }
             for (int i = 0; i < Names.Length; i++)
             {
@@ -56,9 +83,11 @@ namespace WindowsFormsApp1
             {
                 System_Par.Rows.Add(RowNames[i]);
                 LogData.system[i].ChannelName = RowNames[i];
-               // ChannelName.Add(RowNames[i]);
+                // ChannelName.Add(RowNames[i]);
             }
             /*Заполение таблицы с данными дискретных входов*/
+
+           
             for (int i = 0; i < DinColNames.Length; i++)
             {
                 DinInput.Columns.Add(new DataGridViewColumn(new DataGridViewTextBoxCell()));
@@ -67,15 +96,15 @@ namespace WindowsFormsApp1
                 DinInput.Columns[i].ReadOnly = true;
                 DinInput.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-
             for (int i = 0; i < PDM.pdm.DIN_Count; i++)
             {
                 Name = "DIN" + (i + 1);
                 DinInput.Rows.Add(Name);
                 LogData.din[i].ChannelName = Name;
-                //ChannelName.Add(Name);
             }
             DinInput.RowHeadersVisible = false;
+            DinInput.ClearSelection();
+
             /*Заполнение таблицы аналоговых входов*/
             for (int i = 0; i < Names.Length; i++)
             {
@@ -90,7 +119,7 @@ namespace WindowsFormsApp1
                 Name = "AIN" + (i + 1);
                 AnalogInput.Rows.Add(Name, 0, 0);
                 LogData.ain[i].ChannelName = Name;
-               // ChannelName.Add(Name);
+                // ChannelName.Add(Name);
             }
             AnalogInput.RowHeadersVisible = false;
             ChartControlBox = new ComboBox[,]{
@@ -111,7 +140,7 @@ namespace WindowsFormsApp1
             {
                 ChannelName.Add(LogData.OffLineData.channel_data[i].Name);
             }
-            
+
         }
         public void vInsertChannelListNames()
         {
@@ -119,9 +148,9 @@ namespace WindowsFormsApp1
             for (int i = 0; i < PDM.pdm.doutN; i++)
             {
                 ChannelName.Add(LogData.dout[i].ChannelName);
-            } 
+            }
             for (int i = 0; i < 6; i++)
-            { 
+            {
                 ChannelName.Add(LogData.system[i].ChannelName);
             }
             for (int i = 0; i < PDM.pdm.dinN; i++)
@@ -133,7 +162,23 @@ namespace WindowsFormsApp1
                 ChannelName.Add(LogData.ain[i].ChannelName);
             }
         }
-        private System.Windows.Forms.ComboBox[,] ChartControlBox;
+        
+        private void vChartControlClear()
+        {
+            if (ChartControlBox[0, 0].InvokeRequired)
+            {
+                var d = new SafeCallDelegate5(vChartControlClear);
+                System_Par.Invoke(d, new object[] {  });
+            }
+            else
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    ChartControlBox[j, 0].Items.Clear();
+                    ChartControlBox[j, 1].Items.Clear();
+                }
+            }
+        }
         private void vChartDataInit()
         {
             if ( (PDM.isConnected() && (TelStatus == TelemetryStatus.OnlineTelemetry)) ||
@@ -142,7 +187,6 @@ namespace WindowsFormsApp1
                 vInsertChannelListNames();
                 for (int j = 0; j < 8; j++)
                 {
-
                     for (int k = 0; k < 2; k++)
                     {
                         ChartControlBox[j, k].Items.Clear();
@@ -151,7 +195,6 @@ namespace WindowsFormsApp1
                             ChartControlBox[j, k].Items.Add(ChannelName[i]);
                         }
                     }
-
                 }
             }
         }
@@ -215,32 +258,45 @@ namespace WindowsFormsApp1
         private void vSetTelemetryStatus(TelemetryStatus status)
         {
             TelStatus = status;
-            btnOnlineTelemetry.BackColor =
-                (status == TelemetryStatus.OnlineTelemetry) ? Color.LightGreen : SystemColors.Control;
-            btnOfflineTelemetry.BackColor =
-                (status == TelemetryStatus.OnlineTelemetry) ? SystemColors.Control : Color.LightGreen;
+            vChartControlClear();
+            if (status == TelemetryStatus.IDLE)
+            {
+                btnOnlineTelemetry.BackColor = SystemColors.Control;
+                btnOfflineTelemetry.BackColor =SystemColors.Control;
+            }
+            else
+            {
+                btnOnlineTelemetry.BackColor =
+                    (status == TelemetryStatus.OnlineTelemetry) ? Color.LightGreen : SystemColors.Control;
+                btnOfflineTelemetry.BackColor =
+                    (status == TelemetryStatus.OnlineTelemetry) ? SystemColors.Control : Color.LightGreen;
+            }
         }
         private void vSetTabPageButtn(int tabIndex)
         {
+            Color btn1Color = SystemColors.Control;
+            Color btn2Color = SystemColors.Control;
+            Color btn3Color = SystemColors.Control;
+            Color btn4Color = SystemColors.Control;
             switch (tabIndex)
             {
                 case 0:
-                    button1.BackColor = Color.LightGreen;
-                    btnLoad.BackColor = SystemColors.Control;
-                    button3.BackColor = SystemColors.Control;
+                    btn2Color = Color.LightGreen;
                     break;
                 case 1:
-                    btnLoad.BackColor = Color.LightGreen;
-                    button1.BackColor = SystemColors.Control;
-                    button3.BackColor = SystemColors.Control;
+                    btn3Color = Color.LightGreen;
                     break;
                 case 2:
-                    button3.BackColor = Color.LightGreen;
-                    button1.BackColor = SystemColors.Control;
-                    btnLoad.BackColor = SystemColors.Control;
+                    btn1Color = Color.LightGreen;
                     break;
-
+                case 3:
+                    btn4Color = Color.LightGreen;
+                    break;
             }
+            button3.BackColor = btn1Color;
+            button1.BackColor = btn2Color;
+            btnLoad.BackColor = btn3Color;
+            btnJournal.BackColor = btn4Color;
         }
 
     }

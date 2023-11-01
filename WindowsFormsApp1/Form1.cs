@@ -33,10 +33,10 @@ namespace WindowsFormsApp1
         TelemetryState TelState = new TelemetryState();
         enum TelemetryState
         {
-            Stop    = 0,
-            Run     = 1,
-            Pause   = 2,
-            Record  = 3,
+            Stop = 0,
+            Run = 1,
+            Pause = 2,
+            Record = 3,
             PauseRecord = 4,
             DownLoad = 5,
         }
@@ -49,17 +49,19 @@ namespace WindowsFormsApp1
         enum AppStateType
         {
             STOP = 5,
-            IDLE    = 0,
-            DOWNLOAD_RUN =1,
-            UPLOAD_RUN  = 2,
-            INIT        = 3,
-            FINISH      = 4,
-          CLOSE         = 8,
-            CONNECTED   = 6,
-            CANSEL      = 7
+            IDLE = 0,
+            DOWNLOAD_RUN = 1,
+            UPLOAD_RUN = 2,
+            INIT = 3,
+            FINISH = 4,
+            CLOSE = 8,
+            CONNECTED = 6,
+            CANSEL = 7
         }
+        List<EEPROMRecord> PROMRecords;
         SystemInfo InfoForm;
         MainForm[] Charts;
+        private PassworForm passwordForm;
         AutoResetEvent USBDataNoProcess = new AutoResetEvent(true);
         private PdmController PDM;
         private TelemetryStatus TelStatus;
@@ -71,42 +73,56 @@ namespace WindowsFormsApp1
         private delegate void SafeCallDelegate2(Int32 status_ok);
         private delegate void SafeCallDelegate3(bool status_ok);
         private delegate void SafeCallDelegate4(TelemetryState status_ok);
+        private delegate void SafeCallDelegate5();
         string USB_VID = "1155";
         string USB_PID = "22352";
-        string app_version = "1.2.0";
+        string app_version = "1.4.1";
         private int TimeStump = 0;
         AppSettings Settings;
         AppStateType State = AppStateType.INIT;
         bool FormCloseStatus = false;
         bool ErrorStringIsRead = false;
         DataLog LogData;
-        private static string LuaCheckParam = " --no-max-line-length -t --globals io os init main CanTable setDINConfig EXT_CAN_ID CanInput  setOutConfig sendCandRequest setCanFilter CanSend getDelay GetCanToTable CanOut getRPM getOut setCanFilte DInput getCurrent GetEEPROM ConfigCan waitDIN CanRequest Yield CheckAnswer setCanFilte GetRequest";
+        public DataStorageViewModel VMstorage;
+        Stopwatch stopwatch = new Stopwatch();
+        private Binding oEEPROMSizeBind;
+        private static string LuaCheckParam = " --no-max-line-length -t --globals io os init main CanTable setDINConfig EXT_CAN_ID CanInput  setOutConfig sendCandRequest setCanFilter CanSend getDelay setAINCalTable GetCanToTable CanOut getRPM getOut setCanFilte DInput getCurrent GetEEPROMReg SetEEPROMReg AddReccord ConfigStorage ConfigCan waitDIN CanRequest Yield CheckAnswer setCanFilte GetRequest";
         public Form1()
         {
             Charts = new MainForm[8];
-            for (int i = 0;i < Charts.Length; i++) 
+            passwordForm = new PassworForm();
+            for (int i = 0; i < Charts.Length; i++)
             {
                 Charts[i] = new MainForm();
             }
+            VMstorage = new DataStorageViewModel();
             LogData = new DataLog(20, 20, 20, 6);
             InitializeComponent();
-            LoopTimeLabel.Text = "Время" + Environment.NewLine+ " цикла";
+            LoopTimeLabel.Text = "Время" + Environment.NewLine + " цикла";
             Settings = new AppSettings();
             vSetTelemetryState(TelemetryState.Stop);
-            vSetTelemetryStatus(TelemetryStatus.OnlineTelemetry);
             btnTelemetryStop.Enabled = false;
             btnTelemetryRun.Enabled = true;
             btnTelemetryRecord.Enabled = false;
             btnTelemetryPause.Enabled = false;
             PDM = new PdmController(200, Int32.Parse(USB_VID), Int32.Parse(USB_PID), this.onConnect, this.onDisconect, new RedrawHandler(RedrawCallback), USBIsEnd);
             vDataGrindInit();
+            vRecordDataGrindInit();
             tabControl1.SelectTab(tabPage2);
             vSetTabPageButtn(1);
             btnLoad.Select();
             vSetState(AppStateType.INIT);
             tabControl1_SelectedIndexChanged(null, null);
             vInitInterface();
+            vSetTelemetryStatus(TelemetryStatus.IDLE);
+
             app_version_lebel.Text = app_version;
+            vDataBindingConnect();
+        }
+        void vDataBindingConnect()
+        {
+            Binding bind = new Binding("Text", VMstorage, "sEEPROMSize", false, DataSourceUpdateMode.OnPropertyChanged);
+            tbEEPROMSize.DataBindings.Add(bind);
         }
         private void onConnect()
         {
@@ -119,13 +135,15 @@ namespace WindowsFormsApp1
             PDM.setDisconected();
             vSetState(AppStateType.STOP);
             vSetTelemetryState(TelemetryState.Stop);
+            if (TelStatus == TelemetryStatus.OnlineTelemetry) vSetTelemetryStatus(TelemetryStatus.IDLE);
+
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {  
+        {
             FormCloseStatus = true;
             vSetState(AppStateType.CLOSE);
         }
-       
+
         public void RedrawCallback(Telemetry data)
         {
             if (FormCloseStatus)
@@ -142,8 +160,8 @@ namespace WindowsFormsApp1
                 bool record_enable = (TelState == TelemetryState.Record);
                 string logbuffer = null;
                 TimeStump += int.Parse(LoopTime.Text);
-                logbuffer += record_enable ? TimeStump.ToString() + ";": "";
-                
+                logbuffer += record_enable ? TimeStump.ToString() + ";" : "";
+
                 for (int i = 0; i < PDM.pdm.DOUT_Count; i++)
                 {
                     LogData.dout[i].AddPoint(data.dout[i].current, TimeStump, true);
@@ -181,7 +199,8 @@ namespace WindowsFormsApp1
                     DiscreteOut[5, i].Value = Math.Round(LogData.dout[i].TripValue, 2);
                 }
 
-                float[] sys_data = { data.battery, data.temperature[0], data.angle[0], data.angle[1] };
+                float[] sys_data = { data.battery, data.temperature[0], data.angle[0], data.angle[1], (float)(data.velocity[0][1]<<8 | data.velocity[0][0])/*/(float)6.8*/
+                        , (data.velocity[1][1]<<8 | data.velocity[1][0]) };
                 for (int i = 0; i < sys_data.Length; i++)
                 {
                     if (LogData.system[i].GrapData != 0)
@@ -189,12 +208,13 @@ namespace WindowsFormsApp1
                         vSetGrapData(sys_data[i], LogData.system[i].GrapData);
                     }
                     logbuffer += record_enable ? sys_data[i].ToString() + ";" : "";
-                    LogData.system[i].AddPoint(sys_data[i], TimeStump,  true);
+                    LogData.system[i].AddPoint(sys_data[i], TimeStump, true);
                     System_Par[1, i].Value = Math.Round(sys_data[i], 2);
                     System_Par[2, i].Value = Math.Round(LogData.system[i].MaxValue, 2);
                     System_Par[3, i].Value = Math.Round(LogData.system[i].MinValue, 2);
                     System_Par[4, i].Value = Math.Round(LogData.system[i].TripValue, 2);
                 }
+                SystemDataSource.ResetBindings(false);
                 logbuffer += "0;0;";
 
                 for (int i = 0; i < PDM.pdm.ainN; i++)
@@ -205,7 +225,7 @@ namespace WindowsFormsApp1
                     }
                     logbuffer += record_enable ? data.voltage[i].ToString() + ";" : "";
                     AnalogInput[1, i].Value = Math.Round(data.voltage[i], 2);
-                    LogData.ain[i].AddPoint(data.voltage[i], TimeStump,  true);
+                    LogData.ain[i].AddPoint(data.voltage[i], TimeStump, true);
                     AnalogInput[2, i].Value = Math.Round(LogData.ain[i].MaxValue, 2);
                     AnalogInput[3, i].Value = Math.Round(LogData.ain[i].MinValue, 2);
                     AnalogInput[4, i].Value = Math.Round(LogData.ain[i].TripValue, 2);
@@ -213,24 +233,15 @@ namespace WindowsFormsApp1
                 for (int i = 0; i < PDM.pdm.dinN; i++)
                 {
                     logbuffer += record_enable ? data.din[i].ToString() + ";" : "";
-                    LogData.din[i].AddPoint(data.din[i], TimeStump,  false);
+                    LogData.din[i].AddPoint(data.din[i], TimeStump, false);
                     if (LogData.din[i].GrapData != 0)
                     {
                         vSetGrapData(data.din[i], LogData.din[i].GrapData);
                     }
-                    if (data.din[i] != 0)
-                    {
-                        DinInput[1, i].Style.BackColor = Color.Green;
-                        DinInput[1, i].Style.ForeColor = Color.White;
-                    }
-                    else
-                    {
-                        DinInput[1, i].Style.BackColor = Color.White;
-                        DinInput[1, i].Style.ForeColor = Color.Black;
-                    }
                     DinInput[1, i].Value = data.din[i];
                 }
-               
+                DinInput.ClearSelection();
+
                 uint RunTime = data.lua.time * 10;
                 LUA_TIME.Text = RunTime.ToString("D");
                 switch (data.lua.state)
@@ -254,20 +265,20 @@ namespace WindowsFormsApp1
                             LuaState.Text = "ERROR";
                             ErrorStringIsRead = true;
                             PDM.readErrorString();
-                        } 
+                        }
                         break;
-                    case 4:
+                    case 3:
                         LuaState.Text = "STOP";
                         break;
+                    case 4:
+                        LuaState.Text = "RESTART";
+                        break;
                 }
-
                 if (record_enable)
                 {
-                   LogData.vAddDataToLog(logbuffer);
+                    LogData.vAddDataToLog(logbuffer);
                 }
                 AddDataToCharts();
-               // }
-                
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -284,6 +295,11 @@ namespace WindowsFormsApp1
         {
             tabControl1.SelectTab(tabPage3);
             vSetTabPageButtn(2);
+        }
+        private void btnJournal_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabPage4);
+            vSetTabPageButtn(3);
         }
         public void vParseLibList()
         {
@@ -420,7 +436,7 @@ namespace WindowsFormsApp1
                 Settings.vSetUtilityPath(sFolderName);
                 vLUAConfigEnable(Settings.UtilityPathValid, 1);
             }
-        }        
+        }
         private void LuaCompileButton_Click(object sender, EventArgs e)
         {
             progressBar1.Value = 0;
@@ -430,14 +446,15 @@ namespace WindowsFormsApp1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             vSetState(AppStateType.CANSEL);
-        } 
+        }
+
         private bool ByteCodeLoad(string loadfile)
         {
             bool res = false;
             vSetState(AppStateType.DOWNLOAD_RUN);
             if (xGetState() == AppStateType.DOWNLOAD_RUN)
-            { 
-                ConsoleTextBox.AppendText("Загрузка файла: "+ Path.GetFullPath(loadfile) + Environment.NewLine);
+            {
+                ConsoleTextBox.AppendText("Загрузка файла: " + Path.GetFullPath(loadfile) + Environment.NewLine);
                 if (File.Exists(loadfile))
                 {
                     FileStream fs = File.OpenRead(loadfile);
@@ -450,6 +467,7 @@ namespace WindowsFormsApp1
                             bool Connect = PDM.isConnected();
                             vStatusLinePrint(Connect ? load_begin_mes : conection_error_mes, Connect);
                             vColorText(Connect ? load_begin_mes : conection_error_mes, Connect ? 0 : 1);
+                            stopwatch.Restart();
                             PDM.send(ProgressStep, isFinish);
                         }
                     }
@@ -457,7 +475,7 @@ namespace WindowsFormsApp1
                 }
                 else ConsoleTextBox.AppendText("Невозможно открыть файл для загрузки!");
             }
-            
+
             return res;
         }
         private void LuaRunButton_Click(object sender, EventArgs e)
@@ -472,8 +490,8 @@ namespace WindowsFormsApp1
                 ByteCodeLoad("out.luac");
             }
         }
-            
-        void vSetGrapData(float Y,  uint chart_index)
+
+        void vSetGrapData(float Y, uint chart_index)
         {
             uint mask = 0x0001;
             for (int i = 0; i < Charts.Length; i++)
@@ -496,7 +514,7 @@ namespace WindowsFormsApp1
         void vSetChartAxisName(string name, uint chart_index)
         {
             uint mask = 0x0001;
-            for (int i = 0;i < Charts.Length; i++)
+            for (int i = 0; i < Charts.Length; i++)
             {
                 if ((chart_index & mask) != 0)
                 {
@@ -512,7 +530,7 @@ namespace WindowsFormsApp1
                 mask = mask << 1;
             }
         }
-        
+
         void vFindData(string name, uint chart_index)
         {
             if (TelStatus == TelemetryStatus.OnlineTelemetry)
@@ -564,10 +582,10 @@ namespace WindowsFormsApp1
                         return;
                     }
                 }
-                
+
             }
         }
-        
+
         void vSetGraphicData()
         {
             vClearData();
@@ -578,7 +596,7 @@ namespace WindowsFormsApp1
             vSetAsisForm(4);
             vSetAsisForm(5);
             vSetAsisForm(6);
-            vSetAsisForm(7);    
+            vSetAsisForm(7);
         }
         private void btnTelemetryRun_Click(object sender, EventArgs e)
         {
@@ -589,43 +607,46 @@ namespace WindowsFormsApp1
             {
                 LuaState.ForeColor = Color.Black;
                 vSetTelemetryState(TelemetryState.Run);
-                
+
             }
         }
         private void btnTelemetryStop_Click(object sender, EventArgs e)
-        { 
+        {
             vSetState(AppStateType.STOP);
             vSetTelemetryState(TelemetryState.Stop);
             vEnableChannelSelect();
         }
 
         private void btnTelemetryPause_Click(object sender, EventArgs e)
-        {  
+        {
             vSetState(AppStateType.STOP);
             vSetTelemetryState(TelemetryState.Pause);
         }
 
         private void btnTelemetryRecord_Click(object sender, EventArgs e)
         {
-            vSetTelemetryState(TelemetryState.Record);    
+            vSetTelemetryState(TelemetryState.Record);
         }
         private void LoopTime_TextChanged(object sender, EventArgs e)
         {
-            PDM.setLoopTime(int.Parse(LoopTime.Text)); 
+            PDM.setLoopTime(int.Parse(LoopTime.Text));
         }
-    
+
         private void btnLUARestart_Click(object sender, EventArgs e)
         {
+            vSetState(AppStateType.STOP);
+            vSetTelemetryState(TelemetryState.Stop);
+            vEnableChannelSelect();
             PDM.Restart();
         }
 
-        
-        
+
+
         private void Chart1Window_Click(object sender, EventArgs e)
         {
             vOpenGraphWindow(0);
         }
-    
+
         private void Chart2Window_Click(object sender, EventArgs e)
         {
             vOpenGraphWindow(1);
@@ -668,14 +689,14 @@ namespace WindowsFormsApp1
             dlgSaveFile.InitialDirectory = Directory.GetCurrentDirectory();
             if (dlgSaveFile.ShowDialog() == DialogResult.OK)
             {
-                using (FileStream fsa = File.OpenRead("log.cvs"), sva = File.OpenWrite(dlgSaveFile.FileName))   
+                using (FileStream fsa = File.OpenRead("log.cvs"), sva = File.OpenWrite(dlgSaveFile.FileName))
                 {
                     fsa.CopyToAsync(sva);
                 }
             }
         }
-        
-          
+
+
         private void btnOnlineTelemetry_Click(object sender, EventArgs e)
         {
             vSetTelemetryStatus(TelemetryStatus.OnlineTelemetry);
@@ -692,11 +713,11 @@ namespace WindowsFormsApp1
                 LogData.ReadOfflineData(dlgOpen.FileName);
                 vInsertChannelOffLineListNames();
                 vSetTelemetryStatus(TelemetryStatus.OffLineTelemetry);
-                vChartDataInit(); 
+                vChartDataInit();
             }
-            
+
         }
-        
+
         private void Chart1_1Select_SelectedIndexChanged(object sender, EventArgs e)
         {
             vCheckChannelNames(0, 0, sender);
@@ -800,5 +821,137 @@ namespace WindowsFormsApp1
             else
                 MessageBox.Show("Устройстов не обнаружено!");
         }
-    }
+
+        private void btnReadTime_Click(object sender, EventArgs e)
+        {
+            if (vGetDevice() == 1)
+            {
+                PDM.GetTime();
+                vGetPDMTime();
+            }
+        }
+
+        private void btnSyn_Click(object sender, EventArgs e)
+        {
+            if (vGetDevice() == 1)
+            {
+                PDM.PDM_Time.Year = (byte)(DateTime.Now.Year - 2000);
+                PDM.PDM_Time.Month = (byte)DateTime.Now.Month;
+                PDM.PDM_Time.Day = (byte)DateTime.Now.Day;
+                PDM.PDM_Time.Hour = (byte)DateTime.Now.Hour;
+                PDM.PDM_Time.Minute = (byte)DateTime.Now.Minute;
+                PDM.PDM_Time.Second = (byte)DateTime.Now.Second;
+                vGetPDMTime();
+                PDM.SetTime();
+            }
+        }
+
+
+
+        private void RegisterView_MouseClick(object sender, MouseEventArgs e)
+        {
+            RegisteEnterDATA data_form = new RegisteEnterDATA();
+            if ((RegisterView.CurrentCell.ColumnIndex % 3) == 1)
+            {
+                data_form.ShowDialog(this);
+
+            }
+        }
+
+        private void btnConfigStorage_Click(object sender, EventArgs e)
+        {
+            int time_stamp_offset = timeStampCheck.Checked ? 1 : 0;
+            ushort reg_count = (ushort)int.Parse(tbRgisterCount.Text);
+            ushort record_len = (ushort)(RecordFormatView.Rows.Count + time_stamp_offset);
+            byte[] record_type = new byte[record_len];
+
+            if (time_stamp_offset != 0) { record_type[0] = 0; }
+
+
+            for (int i = 0; i < record_len - time_stamp_offset; i++)
+            {
+
+                switch (RecordFormatView[1, i].Value.ToString())
+                {
+                    case "BYTE":
+                        record_type[i + time_stamp_offset] = 1;
+                        break;
+                    case "SHORT":
+                        record_type[i + time_stamp_offset] = 2;
+                        break;
+                    case "LUA_TYPE":
+                        record_type[i + time_stamp_offset] = 3;
+                        break;
+                }
+            }
+            VMstorage.Estorage.ResetALL();
+            if (VMstorage.Estorage.SetRecordSize(record_type))
+            {
+                if (VMstorage.Estorage.InitStorage((ushort)int.Parse(tbRgisterCount.Text)))
+                {
+
+                    vInitRecordSource();
+                    vRegisterDataInit();
+                    tbMaxRecord.Text = VMstorage.Estorage.record_count.ToString();
+
+                }
+            }
+
+        }
+        public bool TokenValid = false;
+        private void btnAccess_Click(object sender, EventArgs e)
+        {
+            passwordForm.Access = false;
+            passwordForm.ShowDialog(this);
+            vSetStorageAccessVisible(TokenValid);
+        }
+        private void btnWriteES_Click(object sender, EventArgs e)
+        {
+            byte[] data = new byte[VMstorage.Estorage.DataStorageSize];
+            data = VMstorage.Estorage.bGetEEPROMData();
+
+            PDM.SendEEPROM(data, ProgressEEPROM);
+        }
+
+        private void btnReadES_Click(object sender, EventArgs e)
+        {
+            byte[] data = new byte[VMstorage.Estorage.DataStorageSize];
+            if (PDM.GendEEPROM(VMstorage.Estorage.DataStorageSize, out data, ProgressEEPROM))
+            {
+                VMstorage.Estorage.vSetEEPROMData(data);
+                tbRgisterCount.Text = VMstorage.Estorage.RegisetCount.ToString();
+                vRegisterDataInit();
+                vInitRecordSource();
+            }
+
+        }
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            // vSetState(AppStateType.STOP);
+            // vSetTelemetryState(TelemetryState.Stop);
+            // vEnableChannelSelect();
+            PDM.Stop();
+        }
+
+
+        private void DinInput_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((e.RowIndex >= 0) && (e.ColumnIndex > 0))
+            {
+                bool ColorType = DinInput[e.ColumnIndex, e.RowIndex].Value.ToString().Equals("0");
+                DinInput[e.ColumnIndex, e.RowIndex].Style.BackColor = (ColorType) ? Color.White : Color.Green;
+                DinInput[e.ColumnIndex, e.RowIndex].Style.ForeColor = (ColorType) ? Color.Black : Color.White;
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            RecordForamtSource.Add( new EEPROMRecordFormat(RecordFormatView.RowCount + 1, 0));
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            RecordForamtSource.Clear(); 
+        }
+    }   
 }

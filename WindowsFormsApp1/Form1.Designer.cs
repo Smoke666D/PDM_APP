@@ -31,9 +31,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LUA_TIME = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnJournal = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.app_version_lebel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +54,6 @@
             this.AnalogInput = new System.Windows.Forms.DataGridView();
             this.DiscreteOut = new System.Windows.Forms.DataGridView();
             this.System_Par = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -129,18 +134,113 @@
             this.btnTelemetryRun1 = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.btnWriteES = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnReadES = new System.Windows.Forms.Button();
+            this.tbEEPROMSize = new System.Windows.Forms.TextBox();
+            this.btnAccess = new System.Windows.Forms.Button();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.RecordFormatView = new System.Windows.Forms.DataGridView();
+            this.fieldNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fieldTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RecordForamtSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timeStampCheck = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnConfigStorage = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbRgisterCount = new System.Windows.Forms.TextBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.RegisterView = new System.Windows.Forms.DataGridView();
+            this.n1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RegisterSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RecordView = new System.Windows.Forms.DataGridView();
+            this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p6DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p7DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p8DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p9DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p10DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecordSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.txRecordCount = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbMaxRecord = new System.Windows.Forms.TextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnReadTime = new System.Windows.Forms.Button();
+            this.btnSyn = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HTxtb = new System.Windows.Forms.TextBox();
+            this.MTxtb = new System.Windows.Forms.TextBox();
+            this.STxtb = new System.Windows.Forms.TextBox();
+            this.YTxtb = new System.Windows.Forms.TextBox();
+            this.DTxtb = new System.Windows.Forms.TextBox();
+            this.MonTxtb = new System.Windows.Forms.TextBox();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.btnConnect = new System.Windows.Forms.Button();
+            this.SystemDataSource = new System.Windows.Forms.BindingSource(this.components);
+           
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DinInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnalogInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscreteOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.System_Par)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -164,6 +264,19 @@
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panel32.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordFormatView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).BeginInit();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).BeginInit();
+            this.panel27.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LUA_TIME
@@ -192,6 +305,8 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel17.Controls.Add(this.btnStop);
+            this.panel17.Controls.Add(this.btnJournal);
             this.panel17.Controls.Add(this.btnConnect);
             this.panel17.Controls.Add(this.btnHelp);
             this.panel17.Controls.Add(this.app_version_lebel);
@@ -206,6 +321,48 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(175, 793);
             this.panel17.TabIndex = 20;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStop.BackgroundImage")));
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnStop.Location = new System.Drawing.Point(10, 172);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(155, 78);
+            this.btnStop.TabIndex = 38;
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnJournal
+            // 
+            this.btnJournal.BackColor = System.Drawing.SystemColors.Control;
+            this.btnJournal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnJournal.BackgroundImage")));
+            this.btnJournal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnJournal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnJournal.Location = new System.Drawing.Point(10, 539);
+            this.btnJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJournal.Name = "btnJournal";
+            this.btnJournal.Size = new System.Drawing.Size(155, 78);
+            this.btnJournal.TabIndex = 37;
+            this.btnJournal.UseVisualStyleBackColor = false;
+            this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConnect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.BackgroundImage")));
+            this.btnConnect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnConnect.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnConnect.Location = new System.Drawing.Point(12, 8);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(155, 78);
+            this.btnConnect.TabIndex = 36;
+            this.btnConnect.UseVisualStyleBackColor = false;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnHelp
             // 
@@ -260,7 +417,7 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(10, 445);
+            this.button3.Location = new System.Drawing.Point(10, 457);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 78);
@@ -275,7 +432,7 @@
             this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLoad.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLoad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLoad.Location = new System.Drawing.Point(10, 281);
+            this.btnLoad.Location = new System.Drawing.Point(10, 293);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(155, 78);
@@ -289,7 +446,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(10, 363);
+            this.button1.Location = new System.Drawing.Point(10, 375);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 78);
@@ -338,12 +495,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DinInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DinInput.Location = new System.Drawing.Point(768, 4);
+            this.DinInput.Location = new System.Drawing.Point(753, 4);
             this.DinInput.Margin = new System.Windows.Forms.Padding(4);
             this.DinInput.Name = "DinInput";
             this.DinInput.RowHeadersWidth = 51;
-            this.DinInput.Size = new System.Drawing.Size(171, 592);
+            this.DinInput.Size = new System.Drawing.Size(168, 592);
             this.DinInput.TabIndex = 24;
+            this.DinInput.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DinInput_CellValueChanged);
             // 
             // AnalogInput
             // 
@@ -351,11 +509,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AnalogInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AnalogInput.Location = new System.Drawing.Point(428, 4);
+            this.AnalogInput.Location = new System.Drawing.Point(420, 4);
             this.AnalogInput.Margin = new System.Windows.Forms.Padding(4);
             this.AnalogInput.Name = "AnalogInput";
             this.AnalogInput.RowHeadersWidth = 51;
-            this.AnalogInput.Size = new System.Drawing.Size(332, 592);
+            this.AnalogInput.Size = new System.Drawing.Size(325, 592);
             this.AnalogInput.TabIndex = 25;
             // 
             // DiscreteOut
@@ -366,20 +524,19 @@
             this.DiscreteOut.Margin = new System.Windows.Forms.Padding(4);
             this.DiscreteOut.Name = "DiscreteOut";
             this.DiscreteOut.RowHeadersWidth = 51;
-            this.DiscreteOut.Size = new System.Drawing.Size(416, 592);
+            this.DiscreteOut.Size = new System.Drawing.Size(408, 592);
             this.DiscreteOut.TabIndex = 26;
             // 
             // System_Par
             // 
-            this.System_Par.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.System_Par.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.System_Par.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.System_Par.Location = new System.Drawing.Point(947, 4);
+            this.System_Par.Location = new System.Drawing.Point(929, 4);
             this.System_Par.Margin = new System.Windows.Forms.Padding(4);
             this.System_Par.Name = "System_Par";
             this.System_Par.RowHeadersWidth = 51;
-            this.System_Par.Size = new System.Drawing.Size(354, 592);
+            this.System_Par.Size = new System.Drawing.Size(372, 590);
             this.System_Par.TabIndex = 27;
             // 
             // tabControl1
@@ -391,6 +548,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
             this.tabControl1.Location = new System.Drawing.Point(182, 0);
@@ -437,9 +595,10 @@
             this.tableLayoutPanel1.Controls.Add(this.DinInput, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 167);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1305, 594);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1305, 603);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
             // panel9
@@ -482,6 +641,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+           
             this.panel7.Controls.Add(this.LoopTimeLabel);
             this.panel7.Controls.Add(this.LoopTime);
             this.panel7.Controls.Add(this.btnTelemetryStop);
@@ -587,7 +747,7 @@
             this.panel12.Location = new System.Drawing.Point(23, 182);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1318, 592);
+            this.panel12.Size = new System.Drawing.Size(1318, 227);
             this.panel12.TabIndex = 34;
             // 
             // tabPage2
@@ -1330,7 +1490,7 @@
             this.Chart1_1Select.Name = "Chart1_1Select";
             this.Chart1_1Select.Size = new System.Drawing.Size(161, 24);
             this.Chart1_1Select.TabIndex = 42;
-            this.Chart1_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart1_1Select_SelectedIndexChanged);
+            this.Chart1_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart2_1Select_SelectedIndexChanged);
             // 
             // Chart1_2Select
             // 
@@ -1427,6 +1587,1158 @@
             this.panel25.Size = new System.Drawing.Size(439, 130);
             this.panel25.TabIndex = 47;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel33);
+            this.tabPage4.Controls.Add(this.panel34);
+            this.tabPage4.Controls.Add(this.panel32);
+            this.tabPage4.Controls.Add(this.panel29);
+            this.tabPage4.Controls.Add(this.panel30);
+            this.tabPage4.Controls.Add(this.panel27);
+            this.tabPage4.Controls.Add(this.panel28);
+            this.tabPage4.Controls.Add(this.panel31);
+            this.tabPage4.Location = new System.Drawing.Point(4, 5);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1361, 784);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel33.Controls.Add(this.progressBar2);
+            this.panel33.Controls.Add(this.btnWriteES);
+            this.panel33.Controls.Add(this.label10);
+            this.panel33.Controls.Add(this.btnReadES);
+            this.panel33.Controls.Add(this.tbEEPROMSize);
+            this.panel33.Controls.Add(this.btnAccess);
+            this.panel33.Location = new System.Drawing.Point(7, 4);
+            this.panel33.Margin = new System.Windows.Forms.Padding(4);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(321, 305);
+            this.panel33.TabIndex = 52;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(23, 265);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(282, 23);
+            this.progressBar2.TabIndex = 50;
+            // 
+            // btnWriteES
+            // 
+            this.btnWriteES.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWriteES.BackColor = System.Drawing.SystemColors.Control;
+            this.btnWriteES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnWriteES.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnWriteES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnWriteES.Location = new System.Drawing.Point(14, 150);
+            this.btnWriteES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnWriteES.Name = "btnWriteES";
+            this.btnWriteES.Size = new System.Drawing.Size(291, 44);
+            this.btnWriteES.TabIndex = 48;
+            this.btnWriteES.Text = "Записать в устройство";
+            this.btnWriteES.UseVisualStyleBackColor = false;
+            this.btnWriteES.Click += new System.EventHandler(this.btnWriteES_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(15, 229);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 20);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Размер EEPROM";
+            // 
+            // btnReadES
+            // 
+            this.btnReadES.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReadES.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReadES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnReadES.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReadES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReadES.Location = new System.Drawing.Point(14, 81);
+            this.btnReadES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReadES.Name = "btnReadES";
+            this.btnReadES.Size = new System.Drawing.Size(291, 47);
+            this.btnReadES.TabIndex = 49;
+            this.btnReadES.Text = "Прочитать из устройства";
+            this.btnReadES.UseVisualStyleBackColor = false;
+            this.btnReadES.Click += new System.EventHandler(this.btnReadES_Click);
+            // 
+            // tbEEPROMSize
+            // 
+            this.tbEEPROMSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbEEPROMSize.Location = new System.Drawing.Point(204, 222);
+            this.tbEEPROMSize.Name = "tbEEPROMSize";
+            this.tbEEPROMSize.ReadOnly = true;
+            this.tbEEPROMSize.Size = new System.Drawing.Size(101, 30);
+            this.tbEEPROMSize.TabIndex = 3;
+            this.tbEEPROMSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnAccess
+            // 
+            this.btnAccess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccess.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAccess.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccess.BackgroundImage")));
+            this.btnAccess.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAccess.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAccess.Location = new System.Drawing.Point(14, 14);
+            this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccess.Name = "btnAccess";
+            this.btnAccess.Size = new System.Drawing.Size(291, 54);
+            this.btnAccess.TabIndex = 37;
+            this.btnAccess.UseVisualStyleBackColor = false;
+            this.btnAccess.Click += new System.EventHandler(this.btnAccess_Click);
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel34.Location = new System.Drawing.Point(18, 18);
+            this.panel34.Margin = new System.Windows.Forms.Padding(4);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(321, 303);
+            this.panel34.TabIndex = 53;
+            // 
+            // panel32
+            // 
+            this.panel32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel32.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel32.Controls.Add(this.button4);
+            this.panel32.Controls.Add(this.button2);
+            this.panel32.Controls.Add(this.RecordFormatView);
+            this.panel32.Controls.Add(this.timeStampCheck);
+            this.panel32.Controls.Add(this.label11);
+            this.panel32.Controls.Add(this.btnConfigStorage);
+            this.panel32.Controls.Add(this.label15);
+            this.panel32.Controls.Add(this.tbRgisterCount);
+            this.panel32.Location = new System.Drawing.Point(7, 329);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(321, 428);
+            this.panel32.TabIndex = 49;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(158, 305);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 46);
+            this.button4.TabIndex = 50;
+            this.button4.Text = "Очистить";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(11, 305);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(141, 46);
+            this.button2.TabIndex = 49;
+            this.button2.Text = "+Поле";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // RecordFormatView
+            // 
+            this.RecordFormatView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RecordFormatView.AutoGenerateColumns = false;
+            this.RecordFormatView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RecordFormatView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fieldNumberDataGridViewTextBoxColumn,
+            this.fieldTypeDataGridViewTextBoxColumn});
+            this.RecordFormatView.DataSource = this.RecordForamtSource;
+            this.RecordFormatView.Location = new System.Drawing.Point(11, 139);
+            this.RecordFormatView.Name = "RecordFormatView";
+            this.RecordFormatView.RowHeadersVisible = false;
+            this.RecordFormatView.RowHeadersWidth = 51;
+            this.RecordFormatView.RowTemplate.Height = 24;
+            this.RecordFormatView.Size = new System.Drawing.Size(294, 154);
+            this.RecordFormatView.TabIndex = 48;
+            // 
+            // fieldNumberDataGridViewTextBoxColumn
+            // 
+            this.fieldNumberDataGridViewTextBoxColumn.DataPropertyName = "FieldNumber";
+            this.fieldNumberDataGridViewTextBoxColumn.HeaderText = "№ поля";
+            this.fieldNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fieldNumberDataGridViewTextBoxColumn.Name = "fieldNumberDataGridViewTextBoxColumn";
+            this.fieldNumberDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // fieldTypeDataGridViewTextBoxColumn
+            // 
+            this.fieldTypeDataGridViewTextBoxColumn.DataPropertyName = "FieldType";
+            this.fieldTypeDataGridViewTextBoxColumn.HeaderText = "Тип поля";
+            this.fieldTypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "BYTE",
+            "SHORT",
+            "LUA_TYPE"});
+            this.fieldTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fieldTypeDataGridViewTextBoxColumn.Name = "fieldTypeDataGridViewTextBoxColumn";
+            this.fieldTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fieldTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fieldTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // RecordForamtSource
+            // 
+            this.RecordForamtSource.AllowNew = false;
+            this.RecordForamtSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecordFormat);
+            // 
+            // timeStampCheck
+            // 
+            this.timeStampCheck.AutoSize = true;
+            this.timeStampCheck.Location = new System.Drawing.Point(14, 104);
+            this.timeStampCheck.Name = "timeStampCheck";
+            this.timeStampCheck.Size = new System.Drawing.Size(219, 20);
+            this.timeStampCheck.TabIndex = 47;
+            this.timeStampCheck.Text = "Добавлять временную метку";
+            this.timeStampCheck.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(80, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(153, 20);
+            this.label11.TabIndex = 46;
+            this.label11.Text = "Формат записи";
+            // 
+            // btnConfigStorage
+            // 
+            this.btnConfigStorage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfigStorage.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfigStorage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnConfigStorage.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnConfigStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnConfigStorage.Location = new System.Drawing.Point(14, 369);
+            this.btnConfigStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfigStorage.Name = "btnConfigStorage";
+            this.btnConfigStorage.Size = new System.Drawing.Size(294, 46);
+            this.btnConfigStorage.TabIndex = 38;
+            this.btnConfigStorage.Text = "Сконфигурировать";
+            this.btnConfigStorage.UseVisualStyleBackColor = false;
+            this.btnConfigStorage.Click += new System.EventHandler(this.btnConfigStorage_Click);
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(46, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(221, 20);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Количество регистров";
+            // 
+            // tbRgisterCount
+            // 
+            this.tbRgisterCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbRgisterCount.Location = new System.Drawing.Point(101, 48);
+            this.tbRgisterCount.Name = "tbRgisterCount";
+            this.tbRgisterCount.Size = new System.Drawing.Size(101, 30);
+            this.tbRgisterCount.TabIndex = 0;
+            this.tbRgisterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel29
+            // 
+            this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel29.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel29.Controls.Add(this.RegisterView);
+            this.panel29.Controls.Add(this.RecordView);
+            this.panel29.Controls.Add(this.label13);
+            this.panel29.Controls.Add(this.txRecordCount);
+            this.panel29.Controls.Add(this.label12);
+            this.panel29.Controls.Add(this.tbMaxRecord);
+            this.panel29.Location = new System.Drawing.Point(351, 121);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(974, 638);
+            this.panel29.TabIndex = 50;
+            // 
+            // RegisterView
+            // 
+            this.RegisterView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RegisterView.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RegisterView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.RegisterView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegisterView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.n1DataGridViewTextBoxColumn,
+            this.d1DataGridViewTextBoxColumn,
+            this.t1DataGridViewTextBoxColumn,
+            this.n2DataGridViewTextBoxColumn,
+            this.d2DataGridViewTextBoxColumn,
+            this.t2DataGridViewTextBoxColumn,
+            this.n3DataGridViewTextBoxColumn,
+            this.d3DataGridViewTextBoxColumn,
+            this.t3DataGridViewTextBoxColumn,
+            this.n4DataGridViewTextBoxColumn,
+            this.d4DataGridViewTextBoxColumn,
+            this.t4DataGridViewTextBoxColumn,
+            this.n5DataGridViewTextBoxColumn,
+            this.d5DataGridViewTextBoxColumn,
+            this.t5DataGridViewTextBoxColumn});
+            this.RegisterView.DataSource = this.RegisterSource;
+            this.RegisterView.Location = new System.Drawing.Point(23, 20);
+            this.RegisterView.Name = "RegisterView";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RegisterView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.RegisterView.RowHeadersVisible = false;
+            this.RegisterView.RowHeadersWidth = 51;
+            this.RegisterView.RowTemplate.Height = 24;
+            this.RegisterView.Size = new System.Drawing.Size(925, 344);
+            this.RegisterView.TabIndex = 54;
+            this.RegisterView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RegisterView_MouseClick);
+            // 
+            // n1DataGridViewTextBoxColumn
+            // 
+            this.n1DataGridViewTextBoxColumn.DataPropertyName = "N1";
+            this.n1DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n1DataGridViewTextBoxColumn.Name = "n1DataGridViewTextBoxColumn";
+            this.n1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n1DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d1DataGridViewTextBoxColumn
+            // 
+            this.d1DataGridViewTextBoxColumn.DataPropertyName = "D1";
+            this.d1DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d1DataGridViewTextBoxColumn.Name = "d1DataGridViewTextBoxColumn";
+            this.d1DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t1DataGridViewTextBoxColumn
+            // 
+            this.t1DataGridViewTextBoxColumn.DataPropertyName = "T1";
+            this.t1DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t1DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t1DataGridViewTextBoxColumn.Name = "t1DataGridViewTextBoxColumn";
+            this.t1DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t1DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n2DataGridViewTextBoxColumn
+            // 
+            this.n2DataGridViewTextBoxColumn.DataPropertyName = "N2";
+            this.n2DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n2DataGridViewTextBoxColumn.Name = "n2DataGridViewTextBoxColumn";
+            this.n2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n2DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d2DataGridViewTextBoxColumn
+            // 
+            this.d2DataGridViewTextBoxColumn.DataPropertyName = "D2";
+            this.d2DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d2DataGridViewTextBoxColumn.Name = "d2DataGridViewTextBoxColumn";
+            this.d2DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t2DataGridViewTextBoxColumn
+            // 
+            this.t2DataGridViewTextBoxColumn.DataPropertyName = "T2";
+            this.t2DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t2DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t2DataGridViewTextBoxColumn.Name = "t2DataGridViewTextBoxColumn";
+            this.t2DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t2DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n3DataGridViewTextBoxColumn
+            // 
+            this.n3DataGridViewTextBoxColumn.DataPropertyName = "N3";
+            this.n3DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n3DataGridViewTextBoxColumn.Name = "n3DataGridViewTextBoxColumn";
+            this.n3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n3DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d3DataGridViewTextBoxColumn
+            // 
+            this.d3DataGridViewTextBoxColumn.DataPropertyName = "D3";
+            this.d3DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d3DataGridViewTextBoxColumn.Name = "d3DataGridViewTextBoxColumn";
+            this.d3DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t3DataGridViewTextBoxColumn
+            // 
+            this.t3DataGridViewTextBoxColumn.DataPropertyName = "T3";
+            this.t3DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t3DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t3DataGridViewTextBoxColumn.Name = "t3DataGridViewTextBoxColumn";
+            this.t3DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t3DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t3DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n4DataGridViewTextBoxColumn
+            // 
+            this.n4DataGridViewTextBoxColumn.DataPropertyName = "N4";
+            this.n4DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n4DataGridViewTextBoxColumn.Name = "n4DataGridViewTextBoxColumn";
+            this.n4DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n4DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d4DataGridViewTextBoxColumn
+            // 
+            this.d4DataGridViewTextBoxColumn.DataPropertyName = "D4";
+            this.d4DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d4DataGridViewTextBoxColumn.Name = "d4DataGridViewTextBoxColumn";
+            this.d4DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t4DataGridViewTextBoxColumn
+            // 
+            this.t4DataGridViewTextBoxColumn.DataPropertyName = "T4";
+            this.t4DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t4DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t4DataGridViewTextBoxColumn.Name = "t4DataGridViewTextBoxColumn";
+            this.t4DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t4DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t4DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n5DataGridViewTextBoxColumn
+            // 
+            this.n5DataGridViewTextBoxColumn.DataPropertyName = "N5";
+            this.n5DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n5DataGridViewTextBoxColumn.Name = "n5DataGridViewTextBoxColumn";
+            this.n5DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n5DataGridViewTextBoxColumn.Width = 29;
+            // 
+            // d5DataGridViewTextBoxColumn
+            // 
+            this.d5DataGridViewTextBoxColumn.DataPropertyName = "D5";
+            this.d5DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d5DataGridViewTextBoxColumn.Name = "d5DataGridViewTextBoxColumn";
+            this.d5DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t5DataGridViewTextBoxColumn
+            // 
+            this.t5DataGridViewTextBoxColumn.DataPropertyName = "T5";
+            this.t5DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t5DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t5DataGridViewTextBoxColumn.Name = "t5DataGridViewTextBoxColumn";
+            this.t5DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t5DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t5DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // RegisterSource
+            // 
+            this.RegisterSource.DataSource = typeof(WindowsFormsApp1.EEPROMRegister);
+            // 
+            // RecordView
+            // 
+            this.RecordView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RecordView.AutoGenerateColumns = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecordView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.RecordView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RecordView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.index,
+            this.p1DataGridViewTextBoxColumn,
+            this.p2DataGridViewTextBoxColumn,
+            this.p3DataGridViewTextBoxColumn,
+            this.p4DataGridViewTextBoxColumn,
+            this.p5DataGridViewTextBoxColumn,
+            this.p6DataGridViewTextBoxColumn,
+            this.p7DataGridViewTextBoxColumn,
+            this.p8DataGridViewTextBoxColumn,
+            this.p9DataGridViewTextBoxColumn,
+            this.p10DataGridViewTextBoxColumn,
+            this.P11,
+            this.P12,
+            this.P13,
+            this.P14,
+            this.P15,
+            this.P16,
+            this.P17,
+            this.P18,
+            this.P19,
+            this.P20,
+            this.P21,
+            this.P23,
+            this.P24,
+            this.P25,
+            this.P26,
+            this.P27,
+            this.P28,
+            this.P29,
+            this.P30,
+            this.P31,
+            this.P32});
+            this.RecordView.DataSource = this.RecordSource;
+            this.RecordView.Location = new System.Drawing.Point(23, 382);
+            this.RecordView.Name = "RecordView";
+            this.RecordView.RowHeadersVisible = false;
+            this.RecordView.RowHeadersWidth = 51;
+            this.RecordView.RowTemplate.Height = 24;
+            this.RecordView.Size = new System.Drawing.Size(921, 172);
+            this.RecordView.TabIndex = 53;
+            // 
+            // index
+            // 
+            this.index.DataPropertyName = "index";
+            this.index.HeaderText = "Номер";
+            this.index.MinimumWidth = 60;
+            this.index.Name = "index";
+            this.index.ReadOnly = true;
+            this.index.Visible = false;
+            this.index.Width = 60;
+            // 
+            // p1DataGridViewTextBoxColumn
+            // 
+            this.p1DataGridViewTextBoxColumn.DataPropertyName = "P1";
+            this.p1DataGridViewTextBoxColumn.HeaderText = "Поле 1";
+            this.p1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p1DataGridViewTextBoxColumn.Name = "p1DataGridViewTextBoxColumn";
+            this.p1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p1DataGridViewTextBoxColumn.Visible = false;
+            this.p1DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p2DataGridViewTextBoxColumn
+            // 
+            this.p2DataGridViewTextBoxColumn.DataPropertyName = "P2";
+            this.p2DataGridViewTextBoxColumn.HeaderText = "Поле 2";
+            this.p2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p2DataGridViewTextBoxColumn.Name = "p2DataGridViewTextBoxColumn";
+            this.p2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p2DataGridViewTextBoxColumn.Visible = false;
+            this.p2DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p3DataGridViewTextBoxColumn
+            // 
+            this.p3DataGridViewTextBoxColumn.DataPropertyName = "P3";
+            this.p3DataGridViewTextBoxColumn.HeaderText = "Поле 3";
+            this.p3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p3DataGridViewTextBoxColumn.Name = "p3DataGridViewTextBoxColumn";
+            this.p3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p3DataGridViewTextBoxColumn.Visible = false;
+            this.p3DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p4DataGridViewTextBoxColumn
+            // 
+            this.p4DataGridViewTextBoxColumn.DataPropertyName = "P4";
+            this.p4DataGridViewTextBoxColumn.HeaderText = "Поле 4";
+            this.p4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p4DataGridViewTextBoxColumn.Name = "p4DataGridViewTextBoxColumn";
+            this.p4DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p4DataGridViewTextBoxColumn.Visible = false;
+            this.p4DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p5DataGridViewTextBoxColumn
+            // 
+            this.p5DataGridViewTextBoxColumn.DataPropertyName = "P5";
+            this.p5DataGridViewTextBoxColumn.HeaderText = "Поле 5";
+            this.p5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p5DataGridViewTextBoxColumn.Name = "p5DataGridViewTextBoxColumn";
+            this.p5DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p5DataGridViewTextBoxColumn.Visible = false;
+            this.p5DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p6DataGridViewTextBoxColumn
+            // 
+            this.p6DataGridViewTextBoxColumn.DataPropertyName = "P6";
+            this.p6DataGridViewTextBoxColumn.HeaderText = "Поле 6";
+            this.p6DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p6DataGridViewTextBoxColumn.Name = "p6DataGridViewTextBoxColumn";
+            this.p6DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p6DataGridViewTextBoxColumn.Visible = false;
+            this.p6DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p7DataGridViewTextBoxColumn
+            // 
+            this.p7DataGridViewTextBoxColumn.DataPropertyName = "P7";
+            this.p7DataGridViewTextBoxColumn.HeaderText = "Поле 7";
+            this.p7DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p7DataGridViewTextBoxColumn.Name = "p7DataGridViewTextBoxColumn";
+            this.p7DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p7DataGridViewTextBoxColumn.Visible = false;
+            this.p7DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p8DataGridViewTextBoxColumn
+            // 
+            this.p8DataGridViewTextBoxColumn.DataPropertyName = "P8";
+            this.p8DataGridViewTextBoxColumn.HeaderText = "Поле 8";
+            this.p8DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p8DataGridViewTextBoxColumn.Name = "p8DataGridViewTextBoxColumn";
+            this.p8DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p8DataGridViewTextBoxColumn.Visible = false;
+            this.p8DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p9DataGridViewTextBoxColumn
+            // 
+            this.p9DataGridViewTextBoxColumn.DataPropertyName = "P9";
+            this.p9DataGridViewTextBoxColumn.HeaderText = "Поле 9";
+            this.p9DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p9DataGridViewTextBoxColumn.Name = "p9DataGridViewTextBoxColumn";
+            this.p9DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p9DataGridViewTextBoxColumn.Visible = false;
+            this.p9DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p10DataGridViewTextBoxColumn
+            // 
+            this.p10DataGridViewTextBoxColumn.DataPropertyName = "P10";
+            this.p10DataGridViewTextBoxColumn.HeaderText = "Поле 10";
+            this.p10DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p10DataGridViewTextBoxColumn.Name = "p10DataGridViewTextBoxColumn";
+            this.p10DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p10DataGridViewTextBoxColumn.Visible = false;
+            this.p10DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // P11
+            // 
+            this.P11.DataPropertyName = "P11";
+            this.P11.HeaderText = "Поле 11";
+            this.P11.MinimumWidth = 6;
+            this.P11.Name = "P11";
+            this.P11.ReadOnly = true;
+            this.P11.Visible = false;
+            this.P11.Width = 125;
+            // 
+            // P12
+            // 
+            this.P12.DataPropertyName = "P12";
+            this.P12.HeaderText = "Поле 12";
+            this.P12.MinimumWidth = 6;
+            this.P12.Name = "P12";
+            this.P12.ReadOnly = true;
+            this.P12.Visible = false;
+            this.P12.Width = 125;
+            // 
+            // P13
+            // 
+            this.P13.DataPropertyName = "P13";
+            this.P13.HeaderText = "Поле 13";
+            this.P13.MinimumWidth = 6;
+            this.P13.Name = "P13";
+            this.P13.ReadOnly = true;
+            this.P13.Visible = false;
+            this.P13.Width = 125;
+            // 
+            // P14
+            // 
+            this.P14.DataPropertyName = "P14";
+            this.P14.HeaderText = "Поле 14";
+            this.P14.MinimumWidth = 6;
+            this.P14.Name = "P14";
+            this.P14.ReadOnly = true;
+            this.P14.Visible = false;
+            this.P14.Width = 125;
+            // 
+            // P15
+            // 
+            this.P15.DataPropertyName = "P15";
+            this.P15.HeaderText = "Поле 15";
+            this.P15.MinimumWidth = 6;
+            this.P15.Name = "P15";
+            this.P15.ReadOnly = true;
+            this.P15.Visible = false;
+            this.P15.Width = 125;
+            // 
+            // P16
+            // 
+            this.P16.DataPropertyName = "P16";
+            this.P16.HeaderText = "Поле 16";
+            this.P16.MinimumWidth = 6;
+            this.P16.Name = "P16";
+            this.P16.ReadOnly = true;
+            this.P16.Visible = false;
+            this.P16.Width = 125;
+            // 
+            // P17
+            // 
+            this.P17.DataPropertyName = "P17";
+            this.P17.HeaderText = "Поле 17";
+            this.P17.MinimumWidth = 6;
+            this.P17.Name = "P17";
+            this.P17.ReadOnly = true;
+            this.P17.Visible = false;
+            this.P17.Width = 125;
+            // 
+            // P18
+            // 
+            this.P18.DataPropertyName = "P18";
+            this.P18.HeaderText = "Поле 18";
+            this.P18.MinimumWidth = 6;
+            this.P18.Name = "P18";
+            this.P18.ReadOnly = true;
+            this.P18.Visible = false;
+            this.P18.Width = 125;
+            // 
+            // P19
+            // 
+            this.P19.DataPropertyName = "P19";
+            this.P19.HeaderText = "Поле 19";
+            this.P19.MinimumWidth = 6;
+            this.P19.Name = "P19";
+            this.P19.ReadOnly = true;
+            this.P19.Visible = false;
+            this.P19.Width = 125;
+            // 
+            // P20
+            // 
+            this.P20.DataPropertyName = "P20";
+            this.P20.HeaderText = "Поле 20";
+            this.P20.MinimumWidth = 6;
+            this.P20.Name = "P20";
+            this.P20.ReadOnly = true;
+            this.P20.Visible = false;
+            this.P20.Width = 125;
+            // 
+            // P21
+            // 
+            this.P21.DataPropertyName = "P21";
+            this.P21.HeaderText = "Поле 21";
+            this.P21.MinimumWidth = 6;
+            this.P21.Name = "P21";
+            this.P21.ReadOnly = true;
+            this.P21.Visible = false;
+            this.P21.Width = 125;
+            // 
+            // P23
+            // 
+            this.P23.DataPropertyName = "P23";
+            this.P23.HeaderText = "Поле 23";
+            this.P23.MinimumWidth = 6;
+            this.P23.Name = "P23";
+            this.P23.ReadOnly = true;
+            this.P23.Visible = false;
+            this.P23.Width = 125;
+            // 
+            // P24
+            // 
+            this.P24.DataPropertyName = "P24";
+            this.P24.HeaderText = "Поле 24";
+            this.P24.MinimumWidth = 6;
+            this.P24.Name = "P24";
+            this.P24.ReadOnly = true;
+            this.P24.Visible = false;
+            this.P24.Width = 125;
+            // 
+            // P25
+            // 
+            this.P25.DataPropertyName = "P25";
+            this.P25.HeaderText = "Поле 25";
+            this.P25.MinimumWidth = 6;
+            this.P25.Name = "P25";
+            this.P25.ReadOnly = true;
+            this.P25.Visible = false;
+            this.P25.Width = 125;
+            // 
+            // P26
+            // 
+            this.P26.DataPropertyName = "P26";
+            this.P26.HeaderText = "Поле 26";
+            this.P26.MinimumWidth = 6;
+            this.P26.Name = "P26";
+            this.P26.ReadOnly = true;
+            this.P26.Visible = false;
+            this.P26.Width = 125;
+            // 
+            // P27
+            // 
+            this.P27.DataPropertyName = "P27";
+            this.P27.HeaderText = "Поле 27";
+            this.P27.MinimumWidth = 6;
+            this.P27.Name = "P27";
+            this.P27.ReadOnly = true;
+            this.P27.Visible = false;
+            this.P27.Width = 125;
+            // 
+            // P28
+            // 
+            this.P28.DataPropertyName = "P28";
+            this.P28.HeaderText = "Поле 28";
+            this.P28.MinimumWidth = 6;
+            this.P28.Name = "P28";
+            this.P28.ReadOnly = true;
+            this.P28.Visible = false;
+            this.P28.Width = 125;
+            // 
+            // P29
+            // 
+            this.P29.DataPropertyName = "P29";
+            this.P29.HeaderText = "Поле 29";
+            this.P29.MinimumWidth = 6;
+            this.P29.Name = "P29";
+            this.P29.ReadOnly = true;
+            this.P29.Visible = false;
+            this.P29.Width = 125;
+            // 
+            // P30
+            // 
+            this.P30.DataPropertyName = "P30";
+            this.P30.HeaderText = "Поле 30";
+            this.P30.MinimumWidth = 6;
+            this.P30.Name = "P30";
+            this.P30.ReadOnly = true;
+            this.P30.Visible = false;
+            this.P30.Width = 125;
+            // 
+            // P31
+            // 
+            this.P31.DataPropertyName = "P31";
+            this.P31.HeaderText = "Поле 31";
+            this.P31.MinimumWidth = 6;
+            this.P31.Name = "P31";
+            this.P31.ReadOnly = true;
+            this.P31.Visible = false;
+            this.P31.Width = 125;
+            // 
+            // P32
+            // 
+            this.P32.DataPropertyName = "P32";
+            this.P32.HeaderText = "Поле 32";
+            this.P32.MinimumWidth = 6;
+            this.P32.Name = "P32";
+            this.P32.ReadOnly = true;
+            this.P32.Visible = false;
+            this.P32.Width = 125;
+            // 
+            // RecordSource
+            // 
+            this.RecordSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecord);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(654, 589);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(175, 25);
+            this.label13.TabIndex = 52;
+            this.label13.Text = " Кол-во записей";
+            // 
+            // txRecordCount
+            // 
+            this.txRecordCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txRecordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txRecordCount.Location = new System.Drawing.Point(847, 586);
+            this.txRecordCount.Name = "txRecordCount";
+            this.txRecordCount.ReadOnly = true;
+            this.txRecordCount.Size = new System.Drawing.Size(101, 30);
+            this.txRecordCount.TabIndex = 51;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(27, 589);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(229, 25);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Макc. кол-во записей";
+            // 
+            // tbMaxRecord
+            // 
+            this.tbMaxRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbMaxRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbMaxRecord.Location = new System.Drawing.Point(293, 586);
+            this.tbMaxRecord.Name = "tbMaxRecord";
+            this.tbMaxRecord.ReadOnly = true;
+            this.tbMaxRecord.Size = new System.Drawing.Size(101, 30);
+            this.tbMaxRecord.TabIndex = 48;
+            // 
+            // panel30
+            // 
+            this.panel30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel30.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel30.Location = new System.Drawing.Point(363, 141);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(978, 629);
+            this.panel30.TabIndex = 51;
+            // 
+            // panel27
+            // 
+            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel27.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel27.Controls.Add(this.tableLayoutPanel3);
+            this.panel27.Controls.Add(this.label9);
+            this.panel27.Controls.Add(this.label8);
+            this.panel27.Controls.Add(this.label7);
+            this.panel27.Controls.Add(this.label6);
+            this.panel27.Controls.Add(this.label5);
+            this.panel27.Controls.Add(this.label4);
+            this.panel27.Controls.Add(this.HTxtb);
+            this.panel27.Controls.Add(this.MTxtb);
+            this.panel27.Controls.Add(this.STxtb);
+            this.panel27.Controls.Add(this.YTxtb);
+            this.panel27.Controls.Add(this.DTxtb);
+            this.panel27.Controls.Add(this.MonTxtb);
+            this.panel27.Location = new System.Drawing.Point(351, 4);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(974, 92);
+            this.panel27.TabIndex = 48;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.btnReadTime, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnSyn, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(412, 10);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(550, 58);
+            this.tableLayoutPanel3.TabIndex = 45;
+            // 
+            // btnReadTime
+            // 
+            this.btnReadTime.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReadTime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnReadTime.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReadTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReadTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReadTime.Location = new System.Drawing.Point(3, 2);
+            this.btnReadTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReadTime.Name = "btnReadTime";
+            this.btnReadTime.Size = new System.Drawing.Size(269, 54);
+            this.btnReadTime.TabIndex = 37;
+            this.btnReadTime.Text = "Прочитать время";
+            this.btnReadTime.UseVisualStyleBackColor = false;
+            this.btnReadTime.Click += new System.EventHandler(this.btnReadTime_Click);
+            // 
+            // btnSyn
+            // 
+            this.btnSyn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSyn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSyn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSyn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSyn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSyn.Location = new System.Drawing.Point(278, 2);
+            this.btnSyn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSyn.Name = "btnSyn";
+            this.btnSyn.Size = new System.Drawing.Size(269, 54);
+            this.btnSyn.TabIndex = 38;
+            this.btnSyn.Text = "Синхронизировать верия";
+            this.btnSyn.UseVisualStyleBackColor = false;
+            this.btnSyn.Click += new System.EventHandler(this.btnSyn_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(23, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Дата";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(253, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 25);
+            this.label8.TabIndex = 43;
+            this.label8.Text = ".";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(167, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 25);
+            this.label7.TabIndex = 42;
+            this.label7.Text = ".";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(252, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = ":";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(167, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 25);
+            this.label5.TabIndex = 40;
+            this.label5.Text = ":";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(19, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Время";
+            // 
+            // HTxtb
+            // 
+            this.HTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HTxtb.Location = new System.Drawing.Point(112, 12);
+            this.HTxtb.Name = "HTxtb";
+            this.HTxtb.Size = new System.Drawing.Size(50, 30);
+            this.HTxtb.TabIndex = 0;
+            // 
+            // MTxtb
+            // 
+            this.MTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MTxtb.Location = new System.Drawing.Point(198, 10);
+            this.MTxtb.Name = "MTxtb";
+            this.MTxtb.Size = new System.Drawing.Size(47, 30);
+            this.MTxtb.TabIndex = 1;
+            // 
+            // STxtb
+            // 
+            this.STxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.STxtb.Location = new System.Drawing.Point(277, 10);
+            this.STxtb.Name = "STxtb";
+            this.STxtb.Size = new System.Drawing.Size(46, 30);
+            this.STxtb.TabIndex = 2;
+            // 
+            // YTxtb
+            // 
+            this.YTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.YTxtb.Location = new System.Drawing.Point(277, 52);
+            this.YTxtb.Name = "YTxtb";
+            this.YTxtb.Size = new System.Drawing.Size(58, 30);
+            this.YTxtb.TabIndex = 5;
+            // 
+            // DTxtb
+            // 
+            this.DTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DTxtb.Location = new System.Drawing.Point(112, 52);
+            this.DTxtb.Name = "DTxtb";
+            this.DTxtb.Size = new System.Drawing.Size(50, 30);
+            this.DTxtb.TabIndex = 3;
+            // 
+            // MonTxtb
+            // 
+            this.MonTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MonTxtb.Location = new System.Drawing.Point(198, 52);
+            this.MonTxtb.Name = "MonTxtb";
+            this.MonTxtb.Size = new System.Drawing.Size(47, 30);
+            this.MonTxtb.TabIndex = 4;
+            // 
+            // panel28
+            // 
+            this.panel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel28.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel28.Location = new System.Drawing.Point(363, 16);
+            this.panel28.Margin = new System.Windows.Forms.Padding(4);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(978, 97);
+            this.panel28.TabIndex = 49;
+            // 
+            // panel31
+            // 
+            this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel31.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel31.Location = new System.Drawing.Point(14, 344);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(325, 426);
+            this.panel31.TabIndex = 50;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1435,19 +2747,11 @@
             // 
             this.helpProvider1.HelpNamespace = "C:\\Users\\i.dymov\\Documents\\WindowsFormsApp1\\WindowsFormsApp1\\PDM Help File.chm";
             // 
-            // btnConnect
+            // SystemDataSource
             // 
-            this.btnConnect.BackColor = System.Drawing.SystemColors.Control;
-            this.btnConnect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.BackgroundImage")));
-            this.btnConnect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnConnect.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnConnect.Location = new System.Drawing.Point(12, 8);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(155, 78);
-            this.btnConnect.TabIndex = 36;
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            this.SystemDataSource.DataSource = typeof(WindowsFormsApp1.Properties.DataSources.TelemtryFull);
+       
+            
             // 
             // Form1
             // 
@@ -1463,7 +2767,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Sider";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -1475,7 +2778,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AnalogInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscreteOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.System_Par)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1502,6 +2804,23 @@
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel32.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordFormatView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).EndInit();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).EndInit();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1519,7 +2838,7 @@
         private System.Windows.Forms.DataGridView DiscreteOut;
         private System.Windows.Forms.DataGridView System_Par;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource RecordSource;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1544,7 +2863,6 @@
         private System.Windows.Forms.Button LuaFileButton;
         private System.Windows.Forms.RichTextBox ConsoleTextBox;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLUARestart;
         private System.Windows.Forms.Panel panel9;
@@ -1611,6 +2929,105 @@
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnJournal;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btnSyn;
+        private System.Windows.Forms.Button btnReadTime;
+        private System.Windows.Forms.TextBox YTxtb;
+        private System.Windows.Forms.TextBox MonTxtb;
+        private System.Windows.Forms.TextBox DTxtb;
+        private System.Windows.Forms.TextBox STxtb;
+        private System.Windows.Forms.TextBox MTxtb;
+        private System.Windows.Forms.TextBox HTxtb;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnAccess;
+        private System.Windows.Forms.TextBox tbRgisterCount;
+        private System.Windows.Forms.Button btnConfigStorage;
+        private System.Windows.Forms.TextBox tbEEPROMSize;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnWriteES;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbMaxRecord;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Button btnReadES;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txRecordCount;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.CheckBox timeStampCheck;
+        private System.Windows.Forms.BindingSource RegisterSource;
+        private System.Windows.Forms.DataGridView RecordView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn index;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p6DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p7DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p8DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p9DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p10DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P32;
+        private System.Windows.Forms.DataGridView RegisterView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn t1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn t2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn t3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn t4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn t5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView RecordFormatView;
+        private System.Windows.Forms.BindingSource RecordForamtSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fieldNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn fieldTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource SystemDataSource;
+        
     }
 }
 
