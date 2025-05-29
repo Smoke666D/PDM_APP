@@ -37,6 +37,7 @@
             this.LUA_TIME = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnJournal = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -147,9 +148,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.RecordFormatView = new System.Windows.Forms.DataGridView();
-            this.fieldNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fieldTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.RecordForamtSource = new System.Windows.Forms.BindingSource(this.components);
             this.timeStampCheck = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnConfigStorage = new System.Windows.Forms.Button();
@@ -157,34 +155,8 @@
             this.tbRgisterCount = new System.Windows.Forms.TextBox();
             this.panel29 = new System.Windows.Forms.Panel();
             this.RegisterView = new System.Windows.Forms.DataGridView();
-            this.n1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.n2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.n3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.n4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.n5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.RegisterSource = new System.Windows.Forms.BindingSource(this.components);
             this.RecordView = new System.Windows.Forms.DataGridView();
             this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p6DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p7DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p8DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p9DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p10DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -206,7 +178,6 @@
             this.P30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecordSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.txRecordCount = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -233,8 +204,40 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.lua5_4 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.fieldNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fieldTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RecordForamtSource = new System.Windows.Forms.BindingSource(this.components);
+            this.n1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.n5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RegisterSource = new System.Windows.Forms.BindingSource(this.components);
+            this.p1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p6DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p7DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p8DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p9DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p10DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecordSource = new System.Windows.Forms.BindingSource(this.components);
             this.SystemDataSource = new System.Windows.Forms.BindingSource(this.components);
-           
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DinInput)).BeginInit();
@@ -268,15 +271,16 @@
             this.panel33.SuspendLayout();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordFormatView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).BeginInit();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegisterView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).BeginInit();
             this.panel27.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LUA_TIME
@@ -286,9 +290,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LUA_TIME.AutoSize = true;
             this.LUA_TIME.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LUA_TIME.Location = new System.Drawing.Point(480, 65);
+            this.LUA_TIME.Location = new System.Drawing.Point(360, 53);
+            this.LUA_TIME.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LUA_TIME.Name = "LUA_TIME";
-            this.LUA_TIME.Size = new System.Drawing.Size(100, 36);
+            this.LUA_TIME.Size = new System.Drawing.Size(77, 28);
             this.LUA_TIME.TabIndex = 5;
             this.LUA_TIME.Text = "00000";
             // 
@@ -296,15 +301,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(260, 72);
+            this.label3.Location = new System.Drawing.Point(195, 58);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 26);
+            this.label3.Size = new System.Drawing.Size(159, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Время исполнения";
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel17.Controls.Add(this.button5);
             this.panel17.Controls.Add(this.btnStop);
             this.panel17.Controls.Add(this.btnJournal);
             this.panel17.Controls.Add(this.btnConnect);
@@ -317,10 +324,22 @@
             this.panel17.Controls.Add(this.button1);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(175, 793);
+            this.panel17.Size = new System.Drawing.Size(131, 694);
             this.panel17.TabIndex = 20;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button5.Location = new System.Drawing.Point(7, 11);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(116, 63);
+            this.button5.TabIndex = 39;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // btnStop
             // 
@@ -328,10 +347,10 @@
             this.btnStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStop.BackgroundImage")));
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnStop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnStop.Location = new System.Drawing.Point(10, 172);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStop.Location = new System.Drawing.Point(7, 225);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(155, 78);
+            this.btnStop.Size = new System.Drawing.Size(116, 63);
             this.btnStop.TabIndex = 38;
             this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -342,10 +361,10 @@
             this.btnJournal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnJournal.BackgroundImage")));
             this.btnJournal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnJournal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnJournal.Location = new System.Drawing.Point(10, 539);
-            this.btnJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJournal.Location = new System.Drawing.Point(7, 514);
+            this.btnJournal.Margin = new System.Windows.Forms.Padding(2);
             this.btnJournal.Name = "btnJournal";
-            this.btnJournal.Size = new System.Drawing.Size(155, 78);
+            this.btnJournal.Size = new System.Drawing.Size(116, 63);
             this.btnJournal.TabIndex = 37;
             this.btnJournal.UseVisualStyleBackColor = false;
             this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
@@ -356,10 +375,10 @@
             this.btnConnect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.BackgroundImage")));
             this.btnConnect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnConnect.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnConnect.Location = new System.Drawing.Point(12, 8);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConnect.Location = new System.Drawing.Point(7, 88);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(2);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(155, 78);
+            this.btnConnect.Size = new System.Drawing.Size(116, 63);
             this.btnConnect.TabIndex = 36;
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -370,10 +389,10 @@
             this.btnHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelp.BackgroundImage")));
             this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnHelp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnHelp.Location = new System.Drawing.Point(10, 639);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHelp.Location = new System.Drawing.Point(7, 594);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(155, 78);
+            this.btnHelp.Size = new System.Drawing.Size(116, 63);
             this.btnHelp.TabIndex = 34;
             this.btnHelp.UseVisualStyleBackColor = false;
             this.btnHelp.Click += new System.EventHandler(this.button4_Click);
@@ -381,18 +400,20 @@
             // app_version_lebel
             // 
             this.app_version_lebel.AutoSize = true;
-            this.app_version_lebel.Location = new System.Drawing.Point(59, 759);
+            this.app_version_lebel.Location = new System.Drawing.Point(44, 672);
+            this.app_version_lebel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.app_version_lebel.Name = "app_version_lebel";
-            this.app_version_lebel.Size = new System.Drawing.Size(34, 16);
+            this.app_version_lebel.Size = new System.Drawing.Size(31, 13);
             this.app_version_lebel.TabIndex = 33;
             this.app_version_lebel.Text = "v 1.0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 733);
+            this.label2.Location = new System.Drawing.Point(11, 659);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 16);
+            this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 32;
             this.label2.Text = "Версия приложения:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -403,10 +424,10 @@
             this.btnLUARestart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLUARestart.BackgroundImage")));
             this.btnLUARestart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLUARestart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnLUARestart.Location = new System.Drawing.Point(10, 90);
-            this.btnLUARestart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLUARestart.Location = new System.Drawing.Point(7, 158);
+            this.btnLUARestart.Margin = new System.Windows.Forms.Padding(2);
             this.btnLUARestart.Name = "btnLUARestart";
-            this.btnLUARestart.Size = new System.Drawing.Size(155, 78);
+            this.btnLUARestart.Size = new System.Drawing.Size(116, 63);
             this.btnLUARestart.TabIndex = 31;
             this.btnLUARestart.UseVisualStyleBackColor = false;
             this.btnLUARestart.Click += new System.EventHandler(this.btnLUARestart_Click);
@@ -417,10 +438,10 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(10, 457);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(7, 447);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 78);
+            this.button3.Size = new System.Drawing.Size(116, 63);
             this.button3.TabIndex = 30;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -432,10 +453,10 @@
             this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLoad.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLoad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLoad.Location = new System.Drawing.Point(10, 293);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoad.Location = new System.Drawing.Point(7, 313);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(155, 78);
+            this.btnLoad.Size = new System.Drawing.Size(116, 63);
             this.btnLoad.TabIndex = 29;
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.button2_Click);
@@ -446,10 +467,10 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(10, 375);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(7, 380);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 78);
+            this.button1.Size = new System.Drawing.Size(116, 63);
             this.button1.TabIndex = 28;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -461,9 +482,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(612, 72);
+            this.label1.Location = new System.Drawing.Point(459, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 26);
+            this.label1.Size = new System.Drawing.Size(38, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "мкс";
             // 
@@ -471,10 +493,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(83, 75);
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
@@ -483,8 +504,9 @@
             this.LuaState.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LuaState.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LuaState.Location = new System.Drawing.Point(0, 0);
+            this.LuaState.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LuaState.Name = "LuaState";
-            this.LuaState.Size = new System.Drawing.Size(489, 54);
+            this.LuaState.Size = new System.Drawing.Size(367, 44);
             this.LuaState.TabIndex = 5;
             this.LuaState.Text = "Init";
             this.LuaState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -495,11 +517,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DinInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DinInput.Location = new System.Drawing.Point(753, 4);
-            this.DinInput.Margin = new System.Windows.Forms.Padding(4);
+            this.DinInput.Location = new System.Drawing.Point(561, 3);
             this.DinInput.Name = "DinInput";
             this.DinInput.RowHeadersWidth = 51;
-            this.DinInput.Size = new System.Drawing.Size(168, 592);
+            this.DinInput.Size = new System.Drawing.Size(125, 481);
             this.DinInput.TabIndex = 24;
             this.DinInput.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DinInput_CellValueChanged);
             // 
@@ -509,22 +530,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AnalogInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AnalogInput.Location = new System.Drawing.Point(420, 4);
-            this.AnalogInput.Margin = new System.Windows.Forms.Padding(4);
+            this.AnalogInput.Location = new System.Drawing.Point(313, 3);
             this.AnalogInput.Name = "AnalogInput";
             this.AnalogInput.RowHeadersWidth = 51;
-            this.AnalogInput.Size = new System.Drawing.Size(325, 592);
+            this.AnalogInput.Size = new System.Drawing.Size(242, 481);
             this.AnalogInput.TabIndex = 25;
             // 
             // DiscreteOut
             // 
             this.DiscreteOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DiscreteOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscreteOut.Location = new System.Drawing.Point(4, 4);
-            this.DiscreteOut.Margin = new System.Windows.Forms.Padding(4);
+            this.DiscreteOut.Location = new System.Drawing.Point(3, 3);
             this.DiscreteOut.Name = "DiscreteOut";
             this.DiscreteOut.RowHeadersWidth = 51;
-            this.DiscreteOut.Size = new System.Drawing.Size(408, 592);
+            this.DiscreteOut.Size = new System.Drawing.Size(304, 481);
             this.DiscreteOut.TabIndex = 26;
             // 
             // System_Par
@@ -532,11 +551,10 @@
             this.System_Par.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.System_Par.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.System_Par.Location = new System.Drawing.Point(929, 4);
-            this.System_Par.Margin = new System.Windows.Forms.Padding(4);
+            this.System_Par.Location = new System.Drawing.Point(692, 3);
             this.System_Par.Name = "System_Par";
             this.System_Par.RowHeadersWidth = 51;
-            this.System_Par.Size = new System.Drawing.Size(372, 590);
+            this.System_Par.Size = new System.Drawing.Size(284, 479);
             this.System_Par.TabIndex = 27;
             // 
             // tabControl1
@@ -551,11 +569,11 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl1.Location = new System.Drawing.Point(182, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(136, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1369, 793);
+            this.tabControl1.Size = new System.Drawing.Size(1027, 694);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 23;
             this.tabControl1.TabStop = false;
@@ -570,10 +588,10 @@
             this.tabPage1.Controls.Add(this.panel8);
             this.tabPage1.Controls.Add(this.panel12);
             this.tabPage1.Location = new System.Drawing.Point(4, 5);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1361, 784);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 685);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -593,12 +611,13 @@
             this.tableLayoutPanel1.Controls.Add(this.DiscreteOut, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.System_Par, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.DinInput, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 167);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 136);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1305, 603);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(979, 505);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
             // panel9
@@ -611,10 +630,9 @@
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.LUA_TIME);
-            this.panel9.Location = new System.Drawing.Point(650, 20);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Location = new System.Drawing.Point(488, 16);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(674, 124);
+            this.panel9.Size = new System.Drawing.Size(506, 101);
             this.panel9.TabIndex = 33;
             // 
             // panel13
@@ -622,9 +640,10 @@
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.Controls.Add(this.LuaState);
-            this.panel13.Location = new System.Drawing.Point(172, 15);
+            this.panel13.Location = new System.Drawing.Point(129, 12);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(489, 54);
+            this.panel13.Size = new System.Drawing.Size(367, 44);
             this.panel13.TabIndex = 28;
             // 
             // panel10
@@ -632,26 +651,23 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel10.Location = new System.Drawing.Point(654, 32);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4);
+            this.panel10.Location = new System.Drawing.Point(490, 26);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(687, 127);
+            this.panel10.Size = new System.Drawing.Size(515, 103);
             this.panel10.TabIndex = 32;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-           
             this.panel7.Controls.Add(this.LoopTimeLabel);
             this.panel7.Controls.Add(this.LoopTime);
             this.panel7.Controls.Add(this.btnTelemetryStop);
             this.panel7.Controls.Add(this.btnTelemetryRecord);
             this.panel7.Controls.Add(this.btnTelemetryPause);
             this.panel7.Controls.Add(this.btnTelemetryRun);
-            this.panel7.Location = new System.Drawing.Point(19, 20);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Location = new System.Drawing.Point(14, 16);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(605, 124);
+            this.panel7.Size = new System.Drawing.Size(454, 101);
             this.panel7.TabIndex = 31;
             // 
             // LoopTimeLabel
@@ -661,17 +677,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LoopTimeLabel.AutoSize = true;
             this.LoopTimeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoopTimeLabel.Location = new System.Drawing.Point(474, 28);
+            this.LoopTimeLabel.Location = new System.Drawing.Point(356, 23);
+            this.LoopTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoopTimeLabel.Name = "LoopTimeLabel";
-            this.LoopTimeLabel.Size = new System.Drawing.Size(0, 26);
+            this.LoopTimeLabel.Size = new System.Drawing.Size(0, 19);
             this.LoopTimeLabel.TabIndex = 6;
             // 
             // LoopTime
             // 
             this.LoopTime.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoopTime.Location = new System.Drawing.Point(467, 82);
+            this.LoopTime.Location = new System.Drawing.Point(350, 67);
+            this.LoopTime.Margin = new System.Windows.Forms.Padding(2);
             this.LoopTime.Name = "LoopTime";
-            this.LoopTime.Size = new System.Drawing.Size(124, 30);
+            this.LoopTime.Size = new System.Drawing.Size(94, 25);
             this.LoopTime.TabIndex = 5;
             this.LoopTime.Text = "100";
             this.LoopTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -682,10 +700,9 @@
             this.btnTelemetryStop.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryStop.BackgroundImage")));
             this.btnTelemetryStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryStop.Location = new System.Drawing.Point(116, 16);
-            this.btnTelemetryStop.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryStop.Location = new System.Drawing.Point(87, 13);
             this.btnTelemetryStop.Name = "btnTelemetryStop";
-            this.btnTelemetryStop.Size = new System.Drawing.Size(103, 94);
+            this.btnTelemetryStop.Size = new System.Drawing.Size(77, 76);
             this.btnTelemetryStop.TabIndex = 4;
             this.btnTelemetryStop.UseVisualStyleBackColor = false;
             this.btnTelemetryStop.Click += new System.EventHandler(this.btnTelemetryStop_Click);
@@ -695,10 +712,9 @@
             this.btnTelemetryRecord.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryRecord.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryRecord.BackgroundImage")));
             this.btnTelemetryRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryRecord.Location = new System.Drawing.Point(338, 16);
-            this.btnTelemetryRecord.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryRecord.Location = new System.Drawing.Point(254, 13);
             this.btnTelemetryRecord.Name = "btnTelemetryRecord";
-            this.btnTelemetryRecord.Size = new System.Drawing.Size(110, 94);
+            this.btnTelemetryRecord.Size = new System.Drawing.Size(82, 76);
             this.btnTelemetryRecord.TabIndex = 3;
             this.btnTelemetryRecord.UseVisualStyleBackColor = false;
             this.btnTelemetryRecord.Click += new System.EventHandler(this.btnTelemetryRecord_Click);
@@ -708,10 +724,9 @@
             this.btnTelemetryPause.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryPause.BackgroundImage")));
             this.btnTelemetryPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryPause.Location = new System.Drawing.Point(227, 16);
-            this.btnTelemetryPause.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryPause.Location = new System.Drawing.Point(170, 13);
             this.btnTelemetryPause.Name = "btnTelemetryPause";
-            this.btnTelemetryPause.Size = new System.Drawing.Size(103, 94);
+            this.btnTelemetryPause.Size = new System.Drawing.Size(77, 76);
             this.btnTelemetryPause.TabIndex = 2;
             this.btnTelemetryPause.UseVisualStyleBackColor = false;
             this.btnTelemetryPause.Click += new System.EventHandler(this.btnTelemetryPause_Click);
@@ -721,10 +736,9 @@
             this.btnTelemetryRun.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryRun.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryRun.BackgroundImage")));
             this.btnTelemetryRun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryRun.Location = new System.Drawing.Point(8, 16);
-            this.btnTelemetryRun.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryRun.Location = new System.Drawing.Point(6, 13);
             this.btnTelemetryRun.Name = "btnTelemetryRun";
-            this.btnTelemetryRun.Size = new System.Drawing.Size(100, 94);
+            this.btnTelemetryRun.Size = new System.Drawing.Size(75, 76);
             this.btnTelemetryRun.TabIndex = 1;
             this.btnTelemetryRun.UseVisualStyleBackColor = false;
             this.btnTelemetryRun.Click += new System.EventHandler(this.btnTelemetryRun_Click);
@@ -732,10 +746,9 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel8.Location = new System.Drawing.Point(23, 32);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Location = new System.Drawing.Point(17, 26);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(619, 127);
+            this.panel8.Size = new System.Drawing.Size(464, 103);
             this.panel8.TabIndex = 30;
             // 
             // panel12
@@ -744,10 +757,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel12.Location = new System.Drawing.Point(23, 182);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Location = new System.Drawing.Point(17, 148);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1318, 227);
+            this.panel12.Size = new System.Drawing.Size(988, 234);
             this.panel12.TabIndex = 34;
             // 
             // tabPage2
@@ -759,10 +771,10 @@
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 5);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1361, 784);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1019, 685);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -774,10 +786,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.Controls.Add(this.ConsoleTextBox);
-            this.panel5.Location = new System.Drawing.Point(472, 167);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(354, 136);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(848, 567);
+            this.panel5.Size = new System.Drawing.Size(638, 504);
             this.panel5.TabIndex = 6;
             // 
             // ConsoleTextBox
@@ -786,9 +797,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsoleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConsoleTextBox.Location = new System.Drawing.Point(15, 16);
+            this.ConsoleTextBox.Location = new System.Drawing.Point(11, 13);
+            this.ConsoleTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ConsoleTextBox.Name = "ConsoleTextBox";
-            this.ConsoleTextBox.Size = new System.Drawing.Size(817, 531);
+            this.ConsoleTextBox.Size = new System.Drawing.Size(616, 475);
             this.ConsoleTextBox.TabIndex = 2;
             this.ConsoleTextBox.Text = "";
             // 
@@ -798,10 +810,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel6.Location = new System.Drawing.Point(487, 180);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(365, 146);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(851, 567);
+            this.panel6.Size = new System.Drawing.Size(640, 506);
             this.panel6.TabIndex = 6;
             // 
             // panel3
@@ -809,25 +820,24 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.LuacFileOpenButton);
             this.panel3.Controls.Add(this.LuaFileButton);
             this.panel3.Controls.Add(this.LibChecked);
             this.panel3.Controls.Add(this.LibFolderButton);
             this.panel3.Controls.Add(this.UtilFolderButton);
-            this.panel3.Location = new System.Drawing.Point(20, 167);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(15, 136);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(427, 567);
+            this.panel3.Size = new System.Drawing.Size(320, 504);
             this.panel3.TabIndex = 5;
             // 
             // LuacFileOpenButton
             // 
             this.LuacFileOpenButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LuacFileOpenButton.BackgroundImage")));
             this.LuacFileOpenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LuacFileOpenButton.Location = new System.Drawing.Point(27, 17);
-            this.LuacFileOpenButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LuacFileOpenButton.Location = new System.Drawing.Point(20, 14);
             this.LuacFileOpenButton.Name = "LuacFileOpenButton";
-            this.LuacFileOpenButton.Size = new System.Drawing.Size(370, 70);
+            this.LuacFileOpenButton.Size = new System.Drawing.Size(278, 57);
             this.LuacFileOpenButton.TabIndex = 5;
             this.LuacFileOpenButton.UseVisualStyleBackColor = true;
             this.LuacFileOpenButton.Click += new System.EventHandler(this.LuacFileOpenButton_Click);
@@ -836,10 +846,9 @@
             // 
             this.LuaFileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LuaFileButton.BackgroundImage")));
             this.LuaFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LuaFileButton.Location = new System.Drawing.Point(27, 98);
-            this.LuaFileButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LuaFileButton.Location = new System.Drawing.Point(20, 80);
             this.LuaFileButton.Name = "LuaFileButton";
-            this.LuaFileButton.Size = new System.Drawing.Size(370, 70);
+            this.LuaFileButton.Size = new System.Drawing.Size(278, 57);
             this.LuaFileButton.TabIndex = 4;
             this.LuaFileButton.UseVisualStyleBackColor = true;
             this.LuaFileButton.Click += new System.EventHandler(this.LuaFileButton_Click);
@@ -847,19 +856,19 @@
             // LibChecked
             // 
             this.LibChecked.FormattingEnabled = true;
-            this.LibChecked.Location = new System.Drawing.Point(27, 348);
+            this.LibChecked.Location = new System.Drawing.Point(20, 283);
+            this.LibChecked.Margin = new System.Windows.Forms.Padding(2);
             this.LibChecked.Name = "LibChecked";
-            this.LibChecked.Size = new System.Drawing.Size(370, 191);
+            this.LibChecked.Size = new System.Drawing.Size(278, 154);
             this.LibChecked.TabIndex = 3;
             // 
             // LibFolderButton
             // 
             this.LibFolderButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LibFolderButton.BackgroundImage")));
             this.LibFolderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LibFolderButton.Location = new System.Drawing.Point(27, 254);
-            this.LibFolderButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LibFolderButton.Location = new System.Drawing.Point(20, 206);
             this.LibFolderButton.Name = "LibFolderButton";
-            this.LibFolderButton.Size = new System.Drawing.Size(370, 70);
+            this.LibFolderButton.Size = new System.Drawing.Size(278, 57);
             this.LibFolderButton.TabIndex = 2;
             this.LibFolderButton.UseVisualStyleBackColor = true;
             this.LibFolderButton.Click += new System.EventHandler(this.LibFolderButton_Click);
@@ -868,10 +877,9 @@
             // 
             this.UtilFolderButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UtilFolderButton.BackgroundImage")));
             this.UtilFolderButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.UtilFolderButton.Location = new System.Drawing.Point(27, 176);
-            this.UtilFolderButton.Margin = new System.Windows.Forms.Padding(4);
+            this.UtilFolderButton.Location = new System.Drawing.Point(20, 143);
             this.UtilFolderButton.Name = "UtilFolderButton";
-            this.UtilFolderButton.Size = new System.Drawing.Size(370, 70);
+            this.UtilFolderButton.Size = new System.Drawing.Size(278, 57);
             this.UtilFolderButton.TabIndex = 1;
             this.UtilFolderButton.UseVisualStyleBackColor = true;
             this.UtilFolderButton.Click += new System.EventHandler(this.UtilFolderButton_Click);
@@ -881,10 +889,9 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel4.Location = new System.Drawing.Point(24, 180);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(18, 146);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(440, 567);
+            this.panel4.Size = new System.Drawing.Size(330, 506);
             this.panel4.TabIndex = 4;
             // 
             // panel2
@@ -898,10 +905,9 @@
             this.panel2.Controls.Add(this.LuaCompileButton);
             this.panel2.Controls.Add(this.LuaRunButton);
             this.panel2.Controls.Add(this.LuacLoadButton);
-            this.panel2.Location = new System.Drawing.Point(20, 20);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(15, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1300, 124);
+            this.panel2.Size = new System.Drawing.Size(977, 101);
             this.panel2.TabIndex = 3;
             // 
             // panel11
@@ -910,9 +916,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.Controls.Add(this.StatusLine);
-            this.panel11.Location = new System.Drawing.Point(553, 15);
+            this.panel11.Location = new System.Drawing.Point(415, 12);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(719, 54);
+            this.panel11.Size = new System.Drawing.Size(541, 44);
             this.panel11.TabIndex = 3;
             // 
             // StatusLine
@@ -921,8 +928,9 @@
             this.StatusLine.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StatusLine.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StatusLine.Location = new System.Drawing.Point(0, 0);
+            this.StatusLine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatusLine.Name = "StatusLine";
-            this.StatusLine.Size = new System.Drawing.Size(719, 54);
+            this.StatusLine.Size = new System.Drawing.Size(541, 44);
             this.StatusLine.TabIndex = 6;
             this.StatusLine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -931,10 +939,9 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCancel.Location = new System.Drawing.Point(424, 16);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(318, 13);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 94);
+            this.btnCancel.Size = new System.Drawing.Size(77, 76);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -943,10 +950,11 @@
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(553, 75);
+            this.progressBar1.Location = new System.Drawing.Point(415, 61);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Maximum = 103;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(719, 35);
+            this.progressBar1.Size = new System.Drawing.Size(541, 28);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 4;
             // 
@@ -955,10 +963,9 @@
             this.LuaCompileButton.BackColor = System.Drawing.SystemColors.Control;
             this.LuaCompileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LuaCompileButton.BackgroundImage")));
             this.LuaCompileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LuaCompileButton.Location = new System.Drawing.Point(27, 16);
-            this.LuaCompileButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LuaCompileButton.Location = new System.Drawing.Point(20, 13);
             this.LuaCompileButton.Name = "LuaCompileButton";
-            this.LuaCompileButton.Size = new System.Drawing.Size(110, 94);
+            this.LuaCompileButton.Size = new System.Drawing.Size(82, 76);
             this.LuaCompileButton.TabIndex = 3;
             this.LuaCompileButton.UseVisualStyleBackColor = false;
             this.LuaCompileButton.Click += new System.EventHandler(this.LuaCompileButton_Click);
@@ -968,10 +975,9 @@
             this.LuaRunButton.BackColor = System.Drawing.SystemColors.Control;
             this.LuaRunButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LuaRunButton.BackgroundImage")));
             this.LuaRunButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LuaRunButton.Location = new System.Drawing.Point(294, 16);
-            this.LuaRunButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LuaRunButton.Location = new System.Drawing.Point(220, 13);
             this.LuaRunButton.Name = "LuaRunButton";
-            this.LuaRunButton.Size = new System.Drawing.Size(103, 94);
+            this.LuaRunButton.Size = new System.Drawing.Size(77, 76);
             this.LuaRunButton.TabIndex = 2;
             this.LuaRunButton.UseVisualStyleBackColor = false;
             this.LuaRunButton.Click += new System.EventHandler(this.LuaRunButton_Click);
@@ -981,10 +987,9 @@
             this.LuacLoadButton.BackColor = System.Drawing.SystemColors.Control;
             this.LuacLoadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LuacLoadButton.BackgroundImage")));
             this.LuacLoadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LuacLoadButton.Location = new System.Drawing.Point(166, 16);
-            this.LuacLoadButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LuacLoadButton.Location = new System.Drawing.Point(124, 13);
             this.LuacLoadButton.Name = "LuacLoadButton";
-            this.LuacLoadButton.Size = new System.Drawing.Size(100, 94);
+            this.LuacLoadButton.Size = new System.Drawing.Size(75, 76);
             this.LuacLoadButton.TabIndex = 1;
             this.LuacLoadButton.UseVisualStyleBackColor = false;
             this.LuacLoadButton.Click += new System.EventHandler(this.LuacLoadButton_Click);
@@ -994,10 +999,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(24, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(18, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1314, 127);
+            this.panel1.Size = new System.Drawing.Size(988, 103);
             this.panel1.TabIndex = 2;
             // 
             // tabPage3
@@ -1008,10 +1012,9 @@
             this.tabPage3.Controls.Add(this.panel18);
             this.tabPage3.Controls.Add(this.panel25);
             this.tabPage3.Location = new System.Drawing.Point(4, 5);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1361, 784);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1019, 685);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1022,10 +1025,9 @@
             this.panel26.Controls.Add(this.btnOnlineTelemetry);
             this.panel26.Controls.Add(this.btnOfflineTelemetry);
             this.panel26.Controls.Add(this.btnSaveLog);
-            this.panel26.Location = new System.Drawing.Point(531, 0);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4);
+            this.panel26.Location = new System.Drawing.Point(398, 0);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(418, 124);
+            this.panel26.Size = new System.Drawing.Size(314, 101);
             this.panel26.TabIndex = 44;
             // 
             // btnOnlineTelemetry
@@ -1034,10 +1036,10 @@
             this.btnOnlineTelemetry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOnlineTelemetry.BackgroundImage")));
             this.btnOnlineTelemetry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnOnlineTelemetry.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnOnlineTelemetry.Location = new System.Drawing.Point(20, 16);
-            this.btnOnlineTelemetry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOnlineTelemetry.Location = new System.Drawing.Point(15, 13);
+            this.btnOnlineTelemetry.Margin = new System.Windows.Forms.Padding(2);
             this.btnOnlineTelemetry.Name = "btnOnlineTelemetry";
-            this.btnOnlineTelemetry.Size = new System.Drawing.Size(109, 94);
+            this.btnOnlineTelemetry.Size = new System.Drawing.Size(82, 76);
             this.btnOnlineTelemetry.TabIndex = 48;
             this.btnOnlineTelemetry.UseVisualStyleBackColor = false;
             this.btnOnlineTelemetry.Click += new System.EventHandler(this.btnOnlineTelemetry_Click);
@@ -1047,10 +1049,9 @@
             this.btnOfflineTelemetry.BackColor = System.Drawing.SystemColors.Control;
             this.btnOfflineTelemetry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOfflineTelemetry.BackgroundImage")));
             this.btnOfflineTelemetry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnOfflineTelemetry.Location = new System.Drawing.Point(147, 16);
-            this.btnOfflineTelemetry.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOfflineTelemetry.Location = new System.Drawing.Point(110, 13);
             this.btnOfflineTelemetry.Name = "btnOfflineTelemetry";
-            this.btnOfflineTelemetry.Size = new System.Drawing.Size(110, 94);
+            this.btnOfflineTelemetry.Size = new System.Drawing.Size(82, 76);
             this.btnOfflineTelemetry.TabIndex = 5;
             this.btnOfflineTelemetry.UseVisualStyleBackColor = false;
             this.btnOfflineTelemetry.Click += new System.EventHandler(this.btnOfflineTelemetry_Click);
@@ -1060,10 +1061,9 @@
             this.btnSaveLog.BackColor = System.Drawing.SystemColors.Control;
             this.btnSaveLog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveLog.BackgroundImage")));
             this.btnSaveLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSaveLog.Location = new System.Drawing.Point(276, 16);
-            this.btnSaveLog.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveLog.Location = new System.Drawing.Point(207, 13);
             this.btnSaveLog.Name = "btnSaveLog";
-            this.btnSaveLog.Size = new System.Drawing.Size(110, 94);
+            this.btnSaveLog.Size = new System.Drawing.Size(82, 76);
             this.btnSaveLog.TabIndex = 6;
             this.btnSaveLog.UseVisualStyleBackColor = false;
             this.btnSaveLog.Click += new System.EventHandler(this.btnSaveLog_Click);
@@ -1085,15 +1085,16 @@
             this.tableLayoutPanel2.Controls.Add(this.panel19, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel14, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel15, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 142);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 115);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1314, 619);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(988, 513);
             this.tableLayoutPanel2.TabIndex = 46;
             // 
             // panel24
@@ -1104,20 +1105,18 @@
             this.panel24.Controls.Add(this.Chart8Window);
             this.panel24.Controls.Add(this.Chart8_1Select);
             this.panel24.Controls.Add(this.Chart8_2Select);
-            this.panel24.Location = new System.Drawing.Point(661, 466);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4);
+            this.panel24.Location = new System.Drawing.Point(497, 387);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(649, 137);
+            this.panel24.Size = new System.Drawing.Size(488, 111);
             this.panel24.TabIndex = 56;
             // 
             // Chart8Window
             // 
             this.Chart8Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart8Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart8Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart8Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart8Window.Location = new System.Drawing.Point(16, 27);
             this.Chart8Window.Name = "Chart8Window";
-            this.Chart8Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart8Window.Size = new System.Drawing.Size(152, 58);
             this.Chart8Window.TabIndex = 34;
             this.Chart8Window.Text = "График 8";
             this.Chart8Window.UseVisualStyleBackColor = false;
@@ -1129,9 +1128,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart8_1Select.FormattingEnabled = true;
-            this.Chart8_1Select.Location = new System.Drawing.Point(390, 33);
+            this.Chart8_1Select.Location = new System.Drawing.Point(292, 27);
+            this.Chart8_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart8_1Select.Name = "Chart8_1Select";
-            this.Chart8_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart8_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart8_1Select.TabIndex = 42;
             this.Chart8_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart8_1Select_SelectedIndexChanged);
             // 
@@ -1141,9 +1141,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart8_2Select.FormattingEnabled = true;
-            this.Chart8_2Select.Location = new System.Drawing.Point(390, 81);
+            this.Chart8_2Select.Location = new System.Drawing.Point(292, 66);
+            this.Chart8_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart8_2Select.Name = "Chart8_2Select";
-            this.Chart8_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart8_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart8_2Select.TabIndex = 43;
             this.Chart8_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart8_2Select_SelectedIndexChanged);
             // 
@@ -1155,20 +1156,18 @@
             this.panel23.Controls.Add(this.Chart7Window);
             this.panel23.Controls.Add(this.Chart7_1Select);
             this.panel23.Controls.Add(this.Chart7_2Select);
-            this.panel23.Location = new System.Drawing.Point(4, 466);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4);
+            this.panel23.Location = new System.Drawing.Point(3, 387);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(649, 137);
+            this.panel23.Size = new System.Drawing.Size(488, 111);
             this.panel23.TabIndex = 55;
             // 
             // Chart7Window
             // 
             this.Chart7Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart7Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart7Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart7Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart7Window.Location = new System.Drawing.Point(16, 27);
             this.Chart7Window.Name = "Chart7Window";
-            this.Chart7Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart7Window.Size = new System.Drawing.Size(152, 58);
             this.Chart7Window.TabIndex = 34;
             this.Chart7Window.Text = "График 7";
             this.Chart7Window.UseVisualStyleBackColor = false;
@@ -1180,9 +1179,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart7_1Select.FormattingEnabled = true;
-            this.Chart7_1Select.Location = new System.Drawing.Point(409, 33);
+            this.Chart7_1Select.Location = new System.Drawing.Point(307, 27);
+            this.Chart7_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart7_1Select.Name = "Chart7_1Select";
-            this.Chart7_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart7_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart7_1Select.TabIndex = 42;
             this.Chart7_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart7_1Select_SelectedIndexChanged);
             // 
@@ -1192,9 +1192,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart7_2Select.FormattingEnabled = true;
-            this.Chart7_2Select.Location = new System.Drawing.Point(409, 81);
+            this.Chart7_2Select.Location = new System.Drawing.Point(307, 66);
+            this.Chart7_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart7_2Select.Name = "Chart7_2Select";
-            this.Chart7_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart7_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart7_2Select.TabIndex = 43;
             this.Chart7_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart7_2Select_SelectedIndexChanged);
             // 
@@ -1206,20 +1207,18 @@
             this.panel22.Controls.Add(this.Chart6Window);
             this.panel22.Controls.Add(this.Chart6_1Select);
             this.panel22.Controls.Add(this.Chart6_2Select);
-            this.panel22.Location = new System.Drawing.Point(661, 312);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4);
+            this.panel22.Location = new System.Drawing.Point(497, 259);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(649, 137);
+            this.panel22.Size = new System.Drawing.Size(488, 111);
             this.panel22.TabIndex = 54;
             // 
             // Chart6Window
             // 
             this.Chart6Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart6Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart6Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart6Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart6Window.Location = new System.Drawing.Point(16, 27);
             this.Chart6Window.Name = "Chart6Window";
-            this.Chart6Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart6Window.Size = new System.Drawing.Size(152, 58);
             this.Chart6Window.TabIndex = 34;
             this.Chart6Window.Text = "График 6";
             this.Chart6Window.UseVisualStyleBackColor = false;
@@ -1231,9 +1230,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart6_1Select.FormattingEnabled = true;
-            this.Chart6_1Select.Location = new System.Drawing.Point(390, 33);
+            this.Chart6_1Select.Location = new System.Drawing.Point(292, 27);
+            this.Chart6_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart6_1Select.Name = "Chart6_1Select";
-            this.Chart6_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart6_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart6_1Select.TabIndex = 42;
             this.Chart6_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart6_1Select_SelectedIndexChanged);
             // 
@@ -1243,9 +1243,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart6_2Select.FormattingEnabled = true;
-            this.Chart6_2Select.Location = new System.Drawing.Point(390, 81);
+            this.Chart6_2Select.Location = new System.Drawing.Point(292, 66);
+            this.Chart6_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart6_2Select.Name = "Chart6_2Select";
-            this.Chart6_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart6_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart6_2Select.TabIndex = 43;
             this.Chart6_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart6_2Select_SelectedIndexChanged);
             // 
@@ -1257,20 +1258,18 @@
             this.panel21.Controls.Add(this.buttChart5Window);
             this.panel21.Controls.Add(this.Chart5_1Select);
             this.panel21.Controls.Add(this.Chart5_2Select);
-            this.panel21.Location = new System.Drawing.Point(4, 312);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4);
+            this.panel21.Location = new System.Drawing.Point(3, 259);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(649, 137);
+            this.panel21.Size = new System.Drawing.Size(488, 111);
             this.panel21.TabIndex = 53;
             // 
             // buttChart5Window
             // 
             this.buttChart5Window.BackColor = System.Drawing.SystemColors.Control;
             this.buttChart5Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttChart5Window.Location = new System.Drawing.Point(21, 33);
-            this.buttChart5Window.Margin = new System.Windows.Forms.Padding(4);
+            this.buttChart5Window.Location = new System.Drawing.Point(16, 27);
             this.buttChart5Window.Name = "buttChart5Window";
-            this.buttChart5Window.Size = new System.Drawing.Size(202, 72);
+            this.buttChart5Window.Size = new System.Drawing.Size(152, 58);
             this.buttChart5Window.TabIndex = 34;
             this.buttChart5Window.Text = "График 5";
             this.buttChart5Window.UseVisualStyleBackColor = false;
@@ -1282,9 +1281,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart5_1Select.FormattingEnabled = true;
-            this.Chart5_1Select.Location = new System.Drawing.Point(409, 33);
+            this.Chart5_1Select.Location = new System.Drawing.Point(307, 27);
+            this.Chart5_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart5_1Select.Name = "Chart5_1Select";
-            this.Chart5_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart5_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart5_1Select.TabIndex = 42;
             this.Chart5_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart5_1Select_SelectedIndexChanged);
             // 
@@ -1294,9 +1294,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart5_2Select.FormattingEnabled = true;
-            this.Chart5_2Select.Location = new System.Drawing.Point(409, 81);
+            this.Chart5_2Select.Location = new System.Drawing.Point(307, 66);
+            this.Chart5_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart5_2Select.Name = "Chart5_2Select";
-            this.Chart5_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart5_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart5_2Select.TabIndex = 43;
             this.Chart5_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart5_2Select_SelectedIndexChanged);
             // 
@@ -1308,20 +1309,18 @@
             this.panel20.Controls.Add(this.Chart4Window);
             this.panel20.Controls.Add(this.Chart4_1Select);
             this.panel20.Controls.Add(this.Chart4_2Select);
-            this.panel20.Location = new System.Drawing.Point(661, 158);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4);
+            this.panel20.Location = new System.Drawing.Point(497, 131);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(649, 137);
+            this.panel20.Size = new System.Drawing.Size(488, 111);
             this.panel20.TabIndex = 52;
             // 
             // Chart4Window
             // 
             this.Chart4Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart4Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart4Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart4Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart4Window.Location = new System.Drawing.Point(16, 27);
             this.Chart4Window.Name = "Chart4Window";
-            this.Chart4Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart4Window.Size = new System.Drawing.Size(152, 58);
             this.Chart4Window.TabIndex = 34;
             this.Chart4Window.Text = "График 4";
             this.Chart4Window.UseVisualStyleBackColor = false;
@@ -1333,9 +1332,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart4_1Select.FormattingEnabled = true;
-            this.Chart4_1Select.Location = new System.Drawing.Point(390, 33);
+            this.Chart4_1Select.Location = new System.Drawing.Point(292, 27);
+            this.Chart4_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart4_1Select.Name = "Chart4_1Select";
-            this.Chart4_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart4_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart4_1Select.TabIndex = 42;
             this.Chart4_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart4_1Select_SelectedIndexChanged);
             // 
@@ -1345,9 +1345,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart4_2Select.FormattingEnabled = true;
-            this.Chart4_2Select.Location = new System.Drawing.Point(390, 81);
+            this.Chart4_2Select.Location = new System.Drawing.Point(292, 66);
+            this.Chart4_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart4_2Select.Name = "Chart4_2Select";
-            this.Chart4_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart4_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart4_2Select.TabIndex = 43;
             this.Chart4_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart4_2Select_SelectedIndexChanged);
             // 
@@ -1359,20 +1360,18 @@
             this.panel19.Controls.Add(this.Chart3Window);
             this.panel19.Controls.Add(this.Chart3_1Select);
             this.panel19.Controls.Add(this.Chart3_2Select);
-            this.panel19.Location = new System.Drawing.Point(4, 158);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4);
+            this.panel19.Location = new System.Drawing.Point(3, 131);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(649, 137);
+            this.panel19.Size = new System.Drawing.Size(488, 111);
             this.panel19.TabIndex = 51;
             // 
             // Chart3Window
             // 
             this.Chart3Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart3Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart3Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart3Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart3Window.Location = new System.Drawing.Point(16, 27);
             this.Chart3Window.Name = "Chart3Window";
-            this.Chart3Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart3Window.Size = new System.Drawing.Size(152, 58);
             this.Chart3Window.TabIndex = 34;
             this.Chart3Window.Text = "График 3";
             this.Chart3Window.UseVisualStyleBackColor = false;
@@ -1384,9 +1383,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart3_1Select.FormattingEnabled = true;
-            this.Chart3_1Select.Location = new System.Drawing.Point(409, 33);
+            this.Chart3_1Select.Location = new System.Drawing.Point(307, 27);
+            this.Chart3_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart3_1Select.Name = "Chart3_1Select";
-            this.Chart3_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart3_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart3_1Select.TabIndex = 42;
             this.Chart3_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart3_1Select_SelectedIndexChanged);
             // 
@@ -1396,9 +1396,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart3_2Select.FormattingEnabled = true;
-            this.Chart3_2Select.Location = new System.Drawing.Point(409, 81);
+            this.Chart3_2Select.Location = new System.Drawing.Point(307, 66);
+            this.Chart3_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart3_2Select.Name = "Chart3_2Select";
-            this.Chart3_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart3_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart3_2Select.TabIndex = 43;
             this.Chart3_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart3_2Select_SelectedIndexChanged);
             // 
@@ -1410,20 +1411,18 @@
             this.panel14.Controls.Add(this.Chart2Window);
             this.panel14.Controls.Add(this.Chart2_1Select);
             this.panel14.Controls.Add(this.Chart2_2Select);
-            this.panel14.Location = new System.Drawing.Point(661, 4);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4);
+            this.panel14.Location = new System.Drawing.Point(497, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(649, 146);
+            this.panel14.Size = new System.Drawing.Size(488, 119);
             this.panel14.TabIndex = 49;
             // 
             // Chart2Window
             // 
             this.Chart2Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart2Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Chart2Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart2Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart2Window.Location = new System.Drawing.Point(16, 27);
             this.Chart2Window.Name = "Chart2Window";
-            this.Chart2Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart2Window.Size = new System.Drawing.Size(152, 58);
             this.Chart2Window.TabIndex = 34;
             this.Chart2Window.Text = "График 2";
             this.Chart2Window.UseVisualStyleBackColor = false;
@@ -1435,9 +1434,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart2_1Select.FormattingEnabled = true;
-            this.Chart2_1Select.Location = new System.Drawing.Point(390, 33);
+            this.Chart2_1Select.Location = new System.Drawing.Point(292, 27);
+            this.Chart2_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart2_1Select.Name = "Chart2_1Select";
-            this.Chart2_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart2_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart2_1Select.TabIndex = 42;
             this.Chart2_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart2_1Select_SelectedIndexChanged);
             // 
@@ -1447,9 +1447,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart2_2Select.FormattingEnabled = true;
-            this.Chart2_2Select.Location = new System.Drawing.Point(390, 81);
+            this.Chart2_2Select.Location = new System.Drawing.Point(292, 66);
+            this.Chart2_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart2_2Select.Name = "Chart2_2Select";
-            this.Chart2_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart2_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart2_2Select.TabIndex = 43;
             this.Chart2_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart2_2Select_SelectedIndexChanged);
             // 
@@ -1461,20 +1462,18 @@
             this.panel15.Controls.Add(this.Chart1Window);
             this.panel15.Controls.Add(this.Chart1_1Select);
             this.panel15.Controls.Add(this.Chart1_2Select);
-            this.panel15.Location = new System.Drawing.Point(4, 4);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(649, 146);
+            this.panel15.Size = new System.Drawing.Size(488, 119);
             this.panel15.TabIndex = 50;
             // 
             // Chart1Window
             // 
             this.Chart1Window.BackColor = System.Drawing.SystemColors.Control;
             this.Chart1Window.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Chart1Window.Location = new System.Drawing.Point(21, 33);
-            this.Chart1Window.Margin = new System.Windows.Forms.Padding(4);
+            this.Chart1Window.Location = new System.Drawing.Point(16, 27);
             this.Chart1Window.Name = "Chart1Window";
-            this.Chart1Window.Size = new System.Drawing.Size(202, 72);
+            this.Chart1Window.Size = new System.Drawing.Size(152, 58);
             this.Chart1Window.TabIndex = 34;
             this.Chart1Window.Text = "График 1";
             this.Chart1Window.UseVisualStyleBackColor = false;
@@ -1486,9 +1485,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart1_1Select.FormattingEnabled = true;
-            this.Chart1_1Select.Location = new System.Drawing.Point(409, 33);
+            this.Chart1_1Select.Location = new System.Drawing.Point(307, 27);
+            this.Chart1_1Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart1_1Select.Name = "Chart1_1Select";
-            this.Chart1_1Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart1_1Select.Size = new System.Drawing.Size(123, 21);
             this.Chart1_1Select.TabIndex = 42;
             this.Chart1_1Select.SelectedIndexChanged += new System.EventHandler(this.Chart2_1Select_SelectedIndexChanged);
             // 
@@ -1498,9 +1498,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chart1_2Select.FormattingEnabled = true;
-            this.Chart1_2Select.Location = new System.Drawing.Point(409, 81);
+            this.Chart1_2Select.Location = new System.Drawing.Point(307, 66);
+            this.Chart1_2Select.Margin = new System.Windows.Forms.Padding(2);
             this.Chart1_2Select.Name = "Chart1_2Select";
-            this.Chart1_2Select.Size = new System.Drawing.Size(161, 24);
+            this.Chart1_2Select.Size = new System.Drawing.Size(123, 21);
             this.Chart1_2Select.TabIndex = 43;
             this.Chart1_2Select.SelectedIndexChanged += new System.EventHandler(this.Chart1_2Select_SelectedIndexChanged);
             // 
@@ -1511,10 +1512,9 @@
             this.panel16.Controls.Add(this.btnTelemetryRecord1);
             this.panel16.Controls.Add(this.btnTelemetryPause1);
             this.panel16.Controls.Add(this.btnTelemetryRun1);
-            this.panel16.Location = new System.Drawing.Point(41, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4);
+            this.panel16.Location = new System.Drawing.Point(31, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(467, 124);
+            this.panel16.Size = new System.Drawing.Size(350, 101);
             this.panel16.TabIndex = 33;
             // 
             // btnTelemetryStop1
@@ -1522,10 +1522,9 @@
             this.btnTelemetryStop1.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryStop1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryStop1.BackgroundImage")));
             this.btnTelemetryStop1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryStop1.Location = new System.Drawing.Point(116, 16);
-            this.btnTelemetryStop1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryStop1.Location = new System.Drawing.Point(87, 13);
             this.btnTelemetryStop1.Name = "btnTelemetryStop1";
-            this.btnTelemetryStop1.Size = new System.Drawing.Size(103, 94);
+            this.btnTelemetryStop1.Size = new System.Drawing.Size(77, 76);
             this.btnTelemetryStop1.TabIndex = 4;
             this.btnTelemetryStop1.UseVisualStyleBackColor = false;
             this.btnTelemetryStop1.Click += new System.EventHandler(this.btnTelemetryStop_Click);
@@ -1535,10 +1534,9 @@
             this.btnTelemetryRecord1.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryRecord1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryRecord1.BackgroundImage")));
             this.btnTelemetryRecord1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryRecord1.Location = new System.Drawing.Point(338, 16);
-            this.btnTelemetryRecord1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryRecord1.Location = new System.Drawing.Point(254, 13);
             this.btnTelemetryRecord1.Name = "btnTelemetryRecord1";
-            this.btnTelemetryRecord1.Size = new System.Drawing.Size(110, 94);
+            this.btnTelemetryRecord1.Size = new System.Drawing.Size(82, 76);
             this.btnTelemetryRecord1.TabIndex = 3;
             this.btnTelemetryRecord1.UseVisualStyleBackColor = false;
             this.btnTelemetryRecord1.Click += new System.EventHandler(this.btnTelemetryRecord_Click);
@@ -1548,10 +1546,9 @@
             this.btnTelemetryPause1.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryPause1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryPause1.BackgroundImage")));
             this.btnTelemetryPause1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryPause1.Location = new System.Drawing.Point(227, 16);
-            this.btnTelemetryPause1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryPause1.Location = new System.Drawing.Point(170, 13);
             this.btnTelemetryPause1.Name = "btnTelemetryPause1";
-            this.btnTelemetryPause1.Size = new System.Drawing.Size(103, 94);
+            this.btnTelemetryPause1.Size = new System.Drawing.Size(77, 76);
             this.btnTelemetryPause1.TabIndex = 2;
             this.btnTelemetryPause1.UseVisualStyleBackColor = false;
             this.btnTelemetryPause1.Click += new System.EventHandler(this.btnTelemetryPause_Click);
@@ -1561,10 +1558,9 @@
             this.btnTelemetryRun1.BackColor = System.Drawing.SystemColors.Control;
             this.btnTelemetryRun1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTelemetryRun1.BackgroundImage")));
             this.btnTelemetryRun1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTelemetryRun1.Location = new System.Drawing.Point(8, 16);
-            this.btnTelemetryRun1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTelemetryRun1.Location = new System.Drawing.Point(6, 13);
             this.btnTelemetryRun1.Name = "btnTelemetryRun1";
-            this.btnTelemetryRun1.Size = new System.Drawing.Size(100, 94);
+            this.btnTelemetryRun1.Size = new System.Drawing.Size(75, 76);
             this.btnTelemetryRun1.TabIndex = 1;
             this.btnTelemetryRun1.UseVisualStyleBackColor = false;
             this.btnTelemetryRun1.Click += new System.EventHandler(this.btnTelemetryRun_Click);
@@ -1572,19 +1568,17 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel18.Location = new System.Drawing.Point(41, 8);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4);
+            this.panel18.Location = new System.Drawing.Point(31, 6);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(478, 127);
+            this.panel18.Size = new System.Drawing.Size(358, 103);
             this.panel18.TabIndex = 32;
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel25.Location = new System.Drawing.Point(527, 5);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4);
+            this.panel25.Location = new System.Drawing.Point(395, 4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(439, 130);
+            this.panel25.Size = new System.Drawing.Size(329, 106);
             this.panel25.TabIndex = 47;
             // 
             // tabPage4
@@ -1598,9 +1592,10 @@
             this.tabPage4.Controls.Add(this.panel28);
             this.tabPage4.Controls.Add(this.panel31);
             this.tabPage4.Location = new System.Drawing.Point(4, 5);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1361, 784);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(1019, 685);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1614,17 +1609,17 @@
             this.panel33.Controls.Add(this.btnReadES);
             this.panel33.Controls.Add(this.tbEEPROMSize);
             this.panel33.Controls.Add(this.btnAccess);
-            this.panel33.Location = new System.Drawing.Point(7, 4);
-            this.panel33.Margin = new System.Windows.Forms.Padding(4);
+            this.panel33.Location = new System.Drawing.Point(5, 3);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(321, 305);
+            this.panel33.Size = new System.Drawing.Size(241, 248);
             this.panel33.TabIndex = 52;
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(23, 265);
+            this.progressBar2.Location = new System.Drawing.Point(17, 215);
+            this.progressBar2.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(282, 23);
+            this.progressBar2.Size = new System.Drawing.Size(212, 19);
             this.progressBar2.TabIndex = 50;
             // 
             // btnWriteES
@@ -1635,10 +1630,10 @@
             this.btnWriteES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnWriteES.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnWriteES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnWriteES.Location = new System.Drawing.Point(14, 150);
-            this.btnWriteES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnWriteES.Location = new System.Drawing.Point(10, 122);
+            this.btnWriteES.Margin = new System.Windows.Forms.Padding(2);
             this.btnWriteES.Name = "btnWriteES";
-            this.btnWriteES.Size = new System.Drawing.Size(291, 44);
+            this.btnWriteES.Size = new System.Drawing.Size(218, 36);
             this.btnWriteES.TabIndex = 48;
             this.btnWriteES.Text = "Записать в устройство";
             this.btnWriteES.UseVisualStyleBackColor = false;
@@ -1648,9 +1643,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(15, 229);
+            this.label10.Location = new System.Drawing.Point(11, 186);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 20);
+            this.label10.Size = new System.Drawing.Size(133, 17);
             this.label10.TabIndex = 44;
             this.label10.Text = "Размер EEPROM";
             // 
@@ -1662,10 +1658,10 @@
             this.btnReadES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnReadES.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnReadES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReadES.Location = new System.Drawing.Point(14, 81);
-            this.btnReadES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReadES.Location = new System.Drawing.Point(10, 66);
+            this.btnReadES.Margin = new System.Windows.Forms.Padding(2);
             this.btnReadES.Name = "btnReadES";
-            this.btnReadES.Size = new System.Drawing.Size(291, 47);
+            this.btnReadES.Size = new System.Drawing.Size(218, 38);
             this.btnReadES.TabIndex = 49;
             this.btnReadES.Text = "Прочитать из устройства";
             this.btnReadES.UseVisualStyleBackColor = false;
@@ -1674,10 +1670,11 @@
             // tbEEPROMSize
             // 
             this.tbEEPROMSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbEEPROMSize.Location = new System.Drawing.Point(204, 222);
+            this.tbEEPROMSize.Location = new System.Drawing.Point(153, 180);
+            this.tbEEPROMSize.Margin = new System.Windows.Forms.Padding(2);
             this.tbEEPROMSize.Name = "tbEEPROMSize";
             this.tbEEPROMSize.ReadOnly = true;
-            this.tbEEPROMSize.Size = new System.Drawing.Size(101, 30);
+            this.tbEEPROMSize.Size = new System.Drawing.Size(77, 26);
             this.tbEEPROMSize.TabIndex = 3;
             this.tbEEPROMSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1690,10 +1687,10 @@
             this.btnAccess.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAccess.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAccess.Location = new System.Drawing.Point(14, 14);
-            this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccess.Location = new System.Drawing.Point(10, 11);
+            this.btnAccess.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccess.Name = "btnAccess";
-            this.btnAccess.Size = new System.Drawing.Size(291, 54);
+            this.btnAccess.Size = new System.Drawing.Size(218, 44);
             this.btnAccess.TabIndex = 37;
             this.btnAccess.UseVisualStyleBackColor = false;
             this.btnAccess.Click += new System.EventHandler(this.btnAccess_Click);
@@ -1701,10 +1698,9 @@
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel34.Location = new System.Drawing.Point(18, 18);
-            this.panel34.Margin = new System.Windows.Forms.Padding(4);
+            this.panel34.Location = new System.Drawing.Point(14, 15);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(321, 303);
+            this.panel34.Size = new System.Drawing.Size(241, 246);
             this.panel34.TabIndex = 53;
             // 
             // panel32
@@ -1720,10 +1716,9 @@
             this.panel32.Controls.Add(this.btnConfigStorage);
             this.panel32.Controls.Add(this.label15);
             this.panel32.Controls.Add(this.tbRgisterCount);
-            this.panel32.Location = new System.Drawing.Point(7, 329);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4);
+            this.panel32.Location = new System.Drawing.Point(5, 267);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(321, 428);
+            this.panel32.Size = new System.Drawing.Size(241, 358);
             this.panel32.TabIndex = 49;
             // 
             // button4
@@ -1734,10 +1729,10 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(158, 305);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(118, 258);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 46);
+            this.button4.Size = new System.Drawing.Size(106, 37);
             this.button4.TabIndex = 50;
             this.button4.Text = "Очистить";
             this.button4.UseVisualStyleBackColor = false;
@@ -1751,10 +1746,10 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(11, 305);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(8, 258);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 46);
+            this.button2.Size = new System.Drawing.Size(106, 37);
             this.button2.TabIndex = 49;
             this.button2.Text = "+Поле";
             this.button2.UseVisualStyleBackColor = false;
@@ -1771,47 +1766,22 @@
             this.fieldNumberDataGridViewTextBoxColumn,
             this.fieldTypeDataGridViewTextBoxColumn});
             this.RecordFormatView.DataSource = this.RecordForamtSource;
-            this.RecordFormatView.Location = new System.Drawing.Point(11, 139);
+            this.RecordFormatView.Location = new System.Drawing.Point(8, 113);
+            this.RecordFormatView.Margin = new System.Windows.Forms.Padding(2);
             this.RecordFormatView.Name = "RecordFormatView";
             this.RecordFormatView.RowHeadersVisible = false;
             this.RecordFormatView.RowHeadersWidth = 51;
             this.RecordFormatView.RowTemplate.Height = 24;
-            this.RecordFormatView.Size = new System.Drawing.Size(294, 154);
+            this.RecordFormatView.Size = new System.Drawing.Size(220, 135);
             this.RecordFormatView.TabIndex = 48;
-            // 
-            // fieldNumberDataGridViewTextBoxColumn
-            // 
-            this.fieldNumberDataGridViewTextBoxColumn.DataPropertyName = "FieldNumber";
-            this.fieldNumberDataGridViewTextBoxColumn.HeaderText = "№ поля";
-            this.fieldNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fieldNumberDataGridViewTextBoxColumn.Name = "fieldNumberDataGridViewTextBoxColumn";
-            this.fieldNumberDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // fieldTypeDataGridViewTextBoxColumn
-            // 
-            this.fieldTypeDataGridViewTextBoxColumn.DataPropertyName = "FieldType";
-            this.fieldTypeDataGridViewTextBoxColumn.HeaderText = "Тип поля";
-            this.fieldTypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "BYTE",
-            "SHORT",
-            "LUA_TYPE"});
-            this.fieldTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fieldTypeDataGridViewTextBoxColumn.Name = "fieldTypeDataGridViewTextBoxColumn";
-            this.fieldTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fieldTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.fieldTypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // RecordForamtSource
-            // 
-            this.RecordForamtSource.AllowNew = false;
-            this.RecordForamtSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecordFormat);
             // 
             // timeStampCheck
             // 
             this.timeStampCheck.AutoSize = true;
-            this.timeStampCheck.Location = new System.Drawing.Point(14, 104);
+            this.timeStampCheck.Location = new System.Drawing.Point(10, 84);
+            this.timeStampCheck.Margin = new System.Windows.Forms.Padding(2);
             this.timeStampCheck.Name = "timeStampCheck";
-            this.timeStampCheck.Size = new System.Drawing.Size(219, 20);
+            this.timeStampCheck.Size = new System.Drawing.Size(175, 17);
             this.timeStampCheck.TabIndex = 47;
             this.timeStampCheck.Text = "Добавлять временную метку";
             this.timeStampCheck.UseVisualStyleBackColor = true;
@@ -1820,9 +1790,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(80, 81);
+            this.label11.Location = new System.Drawing.Point(60, 66);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 20);
+            this.label11.Size = new System.Drawing.Size(124, 17);
             this.label11.TabIndex = 46;
             this.label11.Text = "Формат записи";
             // 
@@ -1834,10 +1805,10 @@
             this.btnConfigStorage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnConfigStorage.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnConfigStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnConfigStorage.Location = new System.Drawing.Point(14, 369);
-            this.btnConfigStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfigStorage.Location = new System.Drawing.Point(10, 310);
+            this.btnConfigStorage.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfigStorage.Name = "btnConfigStorage";
-            this.btnConfigStorage.Size = new System.Drawing.Size(294, 46);
+            this.btnConfigStorage.Size = new System.Drawing.Size(220, 37);
             this.btnConfigStorage.TabIndex = 38;
             this.btnConfigStorage.Text = "Сконфигурировать";
             this.btnConfigStorage.UseVisualStyleBackColor = false;
@@ -1849,18 +1820,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(46, 15);
+            this.label15.Location = new System.Drawing.Point(34, 12);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(221, 20);
+            this.label15.Size = new System.Drawing.Size(176, 17);
             this.label15.TabIndex = 39;
             this.label15.Text = "Количество регистров";
             // 
             // tbRgisterCount
             // 
             this.tbRgisterCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbRgisterCount.Location = new System.Drawing.Point(101, 48);
+            this.tbRgisterCount.Location = new System.Drawing.Point(76, 39);
+            this.tbRgisterCount.Margin = new System.Windows.Forms.Padding(2);
             this.tbRgisterCount.Name = "tbRgisterCount";
-            this.tbRgisterCount.Size = new System.Drawing.Size(101, 30);
+            this.tbRgisterCount.Size = new System.Drawing.Size(77, 26);
             this.tbRgisterCount.TabIndex = 0;
             this.tbRgisterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1876,10 +1849,9 @@
             this.panel29.Controls.Add(this.txRecordCount);
             this.panel29.Controls.Add(this.label12);
             this.panel29.Controls.Add(this.tbMaxRecord);
-            this.panel29.Location = new System.Drawing.Point(351, 121);
-            this.panel29.Margin = new System.Windows.Forms.Padding(4);
+            this.panel29.Location = new System.Drawing.Point(263, 98);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(974, 638);
+            this.panel29.Size = new System.Drawing.Size(732, 528);
             this.panel29.TabIndex = 50;
             // 
             // RegisterView
@@ -1913,7 +1885,8 @@
             this.d5DataGridViewTextBoxColumn,
             this.t5DataGridViewTextBoxColumn});
             this.RegisterView.DataSource = this.RegisterSource;
-            this.RegisterView.Location = new System.Drawing.Point(23, 20);
+            this.RegisterView.Location = new System.Drawing.Point(17, 16);
+            this.RegisterView.Margin = new System.Windows.Forms.Padding(2);
             this.RegisterView.Name = "RegisterView";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -1926,178 +1899,9 @@
             this.RegisterView.RowHeadersVisible = false;
             this.RegisterView.RowHeadersWidth = 51;
             this.RegisterView.RowTemplate.Height = 24;
-            this.RegisterView.Size = new System.Drawing.Size(925, 344);
+            this.RegisterView.Size = new System.Drawing.Size(696, 280);
             this.RegisterView.TabIndex = 54;
             this.RegisterView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RegisterView_MouseClick);
-            // 
-            // n1DataGridViewTextBoxColumn
-            // 
-            this.n1DataGridViewTextBoxColumn.DataPropertyName = "N1";
-            this.n1DataGridViewTextBoxColumn.HeaderText = "N";
-            this.n1DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.n1DataGridViewTextBoxColumn.Name = "n1DataGridViewTextBoxColumn";
-            this.n1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.n1DataGridViewTextBoxColumn.Width = 20;
-            // 
-            // d1DataGridViewTextBoxColumn
-            // 
-            this.d1DataGridViewTextBoxColumn.DataPropertyName = "D1";
-            this.d1DataGridViewTextBoxColumn.HeaderText = "Значение";
-            this.d1DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.d1DataGridViewTextBoxColumn.Name = "d1DataGridViewTextBoxColumn";
-            this.d1DataGridViewTextBoxColumn.Width = 110;
-            // 
-            // t1DataGridViewTextBoxColumn
-            // 
-            this.t1DataGridViewTextBoxColumn.DataPropertyName = "T1";
-            this.t1DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.t1DataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Не определено",
-            "Дата и время",
-            "LUA_INT",
-            "LUA_FLOAT",
-            "LUA_BOOL"});
-            this.t1DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.t1DataGridViewTextBoxColumn.Name = "t1DataGridViewTextBoxColumn";
-            this.t1DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.t1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.t1DataGridViewTextBoxColumn.Width = 90;
-            // 
-            // n2DataGridViewTextBoxColumn
-            // 
-            this.n2DataGridViewTextBoxColumn.DataPropertyName = "N2";
-            this.n2DataGridViewTextBoxColumn.HeaderText = "N";
-            this.n2DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.n2DataGridViewTextBoxColumn.Name = "n2DataGridViewTextBoxColumn";
-            this.n2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.n2DataGridViewTextBoxColumn.Width = 20;
-            // 
-            // d2DataGridViewTextBoxColumn
-            // 
-            this.d2DataGridViewTextBoxColumn.DataPropertyName = "D2";
-            this.d2DataGridViewTextBoxColumn.HeaderText = "Значение";
-            this.d2DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.d2DataGridViewTextBoxColumn.Name = "d2DataGridViewTextBoxColumn";
-            this.d2DataGridViewTextBoxColumn.Width = 110;
-            // 
-            // t2DataGridViewTextBoxColumn
-            // 
-            this.t2DataGridViewTextBoxColumn.DataPropertyName = "T2";
-            this.t2DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.t2DataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Не определено",
-            "Дата и время",
-            "LUA_INT",
-            "LUA_FLOAT",
-            "LUA_BOOL"});
-            this.t2DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.t2DataGridViewTextBoxColumn.Name = "t2DataGridViewTextBoxColumn";
-            this.t2DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.t2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.t2DataGridViewTextBoxColumn.Width = 90;
-            // 
-            // n3DataGridViewTextBoxColumn
-            // 
-            this.n3DataGridViewTextBoxColumn.DataPropertyName = "N3";
-            this.n3DataGridViewTextBoxColumn.HeaderText = "N";
-            this.n3DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.n3DataGridViewTextBoxColumn.Name = "n3DataGridViewTextBoxColumn";
-            this.n3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.n3DataGridViewTextBoxColumn.Width = 20;
-            // 
-            // d3DataGridViewTextBoxColumn
-            // 
-            this.d3DataGridViewTextBoxColumn.DataPropertyName = "D3";
-            this.d3DataGridViewTextBoxColumn.HeaderText = "Значение";
-            this.d3DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.d3DataGridViewTextBoxColumn.Name = "d3DataGridViewTextBoxColumn";
-            this.d3DataGridViewTextBoxColumn.Width = 110;
-            // 
-            // t3DataGridViewTextBoxColumn
-            // 
-            this.t3DataGridViewTextBoxColumn.DataPropertyName = "T3";
-            this.t3DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.t3DataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Не определено",
-            "Дата и время",
-            "LUA_INT",
-            "LUA_FLOAT",
-            "LUA_BOOL"});
-            this.t3DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.t3DataGridViewTextBoxColumn.Name = "t3DataGridViewTextBoxColumn";
-            this.t3DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.t3DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.t3DataGridViewTextBoxColumn.Width = 90;
-            // 
-            // n4DataGridViewTextBoxColumn
-            // 
-            this.n4DataGridViewTextBoxColumn.DataPropertyName = "N4";
-            this.n4DataGridViewTextBoxColumn.HeaderText = "N";
-            this.n4DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.n4DataGridViewTextBoxColumn.Name = "n4DataGridViewTextBoxColumn";
-            this.n4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.n4DataGridViewTextBoxColumn.Width = 20;
-            // 
-            // d4DataGridViewTextBoxColumn
-            // 
-            this.d4DataGridViewTextBoxColumn.DataPropertyName = "D4";
-            this.d4DataGridViewTextBoxColumn.HeaderText = "Значение";
-            this.d4DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.d4DataGridViewTextBoxColumn.Name = "d4DataGridViewTextBoxColumn";
-            this.d4DataGridViewTextBoxColumn.Width = 110;
-            // 
-            // t4DataGridViewTextBoxColumn
-            // 
-            this.t4DataGridViewTextBoxColumn.DataPropertyName = "T4";
-            this.t4DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.t4DataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Не определено",
-            "Дата и время",
-            "LUA_INT",
-            "LUA_FLOAT",
-            "LUA_BOOL"});
-            this.t4DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.t4DataGridViewTextBoxColumn.Name = "t4DataGridViewTextBoxColumn";
-            this.t4DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.t4DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.t4DataGridViewTextBoxColumn.Width = 90;
-            // 
-            // n5DataGridViewTextBoxColumn
-            // 
-            this.n5DataGridViewTextBoxColumn.DataPropertyName = "N5";
-            this.n5DataGridViewTextBoxColumn.HeaderText = "N";
-            this.n5DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.n5DataGridViewTextBoxColumn.Name = "n5DataGridViewTextBoxColumn";
-            this.n5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.n5DataGridViewTextBoxColumn.Width = 29;
-            // 
-            // d5DataGridViewTextBoxColumn
-            // 
-            this.d5DataGridViewTextBoxColumn.DataPropertyName = "D5";
-            this.d5DataGridViewTextBoxColumn.HeaderText = "Значение";
-            this.d5DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.d5DataGridViewTextBoxColumn.Name = "d5DataGridViewTextBoxColumn";
-            this.d5DataGridViewTextBoxColumn.Width = 110;
-            // 
-            // t5DataGridViewTextBoxColumn
-            // 
-            this.t5DataGridViewTextBoxColumn.DataPropertyName = "T5";
-            this.t5DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.t5DataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "Не определено",
-            "Дата и время",
-            "LUA_INT",
-            "LUA_FLOAT",
-            "LUA_BOOL"});
-            this.t5DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.t5DataGridViewTextBoxColumn.Name = "t5DataGridViewTextBoxColumn";
-            this.t5DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.t5DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.t5DataGridViewTextBoxColumn.Width = 90;
-            // 
-            // RegisterSource
-            // 
-            this.RegisterSource.DataSource = typeof(WindowsFormsApp1.EEPROMRegister);
             // 
             // RecordView
             // 
@@ -2148,12 +1952,13 @@
             this.P31,
             this.P32});
             this.RecordView.DataSource = this.RecordSource;
-            this.RecordView.Location = new System.Drawing.Point(23, 382);
+            this.RecordView.Location = new System.Drawing.Point(17, 310);
+            this.RecordView.Margin = new System.Windows.Forms.Padding(2);
             this.RecordView.Name = "RecordView";
             this.RecordView.RowHeadersVisible = false;
             this.RecordView.RowHeadersWidth = 51;
             this.RecordView.RowTemplate.Height = 24;
-            this.RecordView.Size = new System.Drawing.Size(921, 172);
+            this.RecordView.Size = new System.Drawing.Size(693, 150);
             this.RecordView.TabIndex = 53;
             // 
             // index
@@ -2165,106 +1970,6 @@
             this.index.ReadOnly = true;
             this.index.Visible = false;
             this.index.Width = 60;
-            // 
-            // p1DataGridViewTextBoxColumn
-            // 
-            this.p1DataGridViewTextBoxColumn.DataPropertyName = "P1";
-            this.p1DataGridViewTextBoxColumn.HeaderText = "Поле 1";
-            this.p1DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p1DataGridViewTextBoxColumn.Name = "p1DataGridViewTextBoxColumn";
-            this.p1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p1DataGridViewTextBoxColumn.Visible = false;
-            this.p1DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p2DataGridViewTextBoxColumn
-            // 
-            this.p2DataGridViewTextBoxColumn.DataPropertyName = "P2";
-            this.p2DataGridViewTextBoxColumn.HeaderText = "Поле 2";
-            this.p2DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p2DataGridViewTextBoxColumn.Name = "p2DataGridViewTextBoxColumn";
-            this.p2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p2DataGridViewTextBoxColumn.Visible = false;
-            this.p2DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p3DataGridViewTextBoxColumn
-            // 
-            this.p3DataGridViewTextBoxColumn.DataPropertyName = "P3";
-            this.p3DataGridViewTextBoxColumn.HeaderText = "Поле 3";
-            this.p3DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p3DataGridViewTextBoxColumn.Name = "p3DataGridViewTextBoxColumn";
-            this.p3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p3DataGridViewTextBoxColumn.Visible = false;
-            this.p3DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p4DataGridViewTextBoxColumn
-            // 
-            this.p4DataGridViewTextBoxColumn.DataPropertyName = "P4";
-            this.p4DataGridViewTextBoxColumn.HeaderText = "Поле 4";
-            this.p4DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p4DataGridViewTextBoxColumn.Name = "p4DataGridViewTextBoxColumn";
-            this.p4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p4DataGridViewTextBoxColumn.Visible = false;
-            this.p4DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p5DataGridViewTextBoxColumn
-            // 
-            this.p5DataGridViewTextBoxColumn.DataPropertyName = "P5";
-            this.p5DataGridViewTextBoxColumn.HeaderText = "Поле 5";
-            this.p5DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p5DataGridViewTextBoxColumn.Name = "p5DataGridViewTextBoxColumn";
-            this.p5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p5DataGridViewTextBoxColumn.Visible = false;
-            this.p5DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p6DataGridViewTextBoxColumn
-            // 
-            this.p6DataGridViewTextBoxColumn.DataPropertyName = "P6";
-            this.p6DataGridViewTextBoxColumn.HeaderText = "Поле 6";
-            this.p6DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p6DataGridViewTextBoxColumn.Name = "p6DataGridViewTextBoxColumn";
-            this.p6DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p6DataGridViewTextBoxColumn.Visible = false;
-            this.p6DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p7DataGridViewTextBoxColumn
-            // 
-            this.p7DataGridViewTextBoxColumn.DataPropertyName = "P7";
-            this.p7DataGridViewTextBoxColumn.HeaderText = "Поле 7";
-            this.p7DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p7DataGridViewTextBoxColumn.Name = "p7DataGridViewTextBoxColumn";
-            this.p7DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p7DataGridViewTextBoxColumn.Visible = false;
-            this.p7DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p8DataGridViewTextBoxColumn
-            // 
-            this.p8DataGridViewTextBoxColumn.DataPropertyName = "P8";
-            this.p8DataGridViewTextBoxColumn.HeaderText = "Поле 8";
-            this.p8DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p8DataGridViewTextBoxColumn.Name = "p8DataGridViewTextBoxColumn";
-            this.p8DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p8DataGridViewTextBoxColumn.Visible = false;
-            this.p8DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p9DataGridViewTextBoxColumn
-            // 
-            this.p9DataGridViewTextBoxColumn.DataPropertyName = "P9";
-            this.p9DataGridViewTextBoxColumn.HeaderText = "Поле 9";
-            this.p9DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p9DataGridViewTextBoxColumn.Name = "p9DataGridViewTextBoxColumn";
-            this.p9DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p9DataGridViewTextBoxColumn.Visible = false;
-            this.p9DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // p10DataGridViewTextBoxColumn
-            // 
-            this.p10DataGridViewTextBoxColumn.DataPropertyName = "P10";
-            this.p10DataGridViewTextBoxColumn.HeaderText = "Поле 10";
-            this.p10DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.p10DataGridViewTextBoxColumn.Name = "p10DataGridViewTextBoxColumn";
-            this.p10DataGridViewTextBoxColumn.ReadOnly = true;
-            this.p10DataGridViewTextBoxColumn.Visible = false;
-            this.p10DataGridViewTextBoxColumn.Width = 125;
             // 
             // P11
             // 
@@ -2476,19 +2181,16 @@
             this.P32.Visible = false;
             this.P32.Width = 125;
             // 
-            // RecordSource
-            // 
-            this.RecordSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecord);
-            // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(654, 589);
+            this.label13.Location = new System.Drawing.Point(490, 489);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(175, 25);
+            this.label13.Size = new System.Drawing.Size(145, 20);
             this.label13.TabIndex = 52;
             this.label13.Text = " Кол-во записей";
             // 
@@ -2496,10 +2198,11 @@
             // 
             this.txRecordCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txRecordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txRecordCount.Location = new System.Drawing.Point(847, 586);
+            this.txRecordCount.Location = new System.Drawing.Point(635, 486);
+            this.txRecordCount.Margin = new System.Windows.Forms.Padding(2);
             this.txRecordCount.Name = "txRecordCount";
             this.txRecordCount.ReadOnly = true;
-            this.txRecordCount.Size = new System.Drawing.Size(101, 30);
+            this.txRecordCount.Size = new System.Drawing.Size(77, 26);
             this.txRecordCount.TabIndex = 51;
             // 
             // label12
@@ -2508,9 +2211,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(27, 589);
+            this.label12.Location = new System.Drawing.Point(20, 489);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(229, 25);
+            this.label12.Size = new System.Drawing.Size(190, 20);
             this.label12.TabIndex = 50;
             this.label12.Text = "Макc. кол-во записей";
             // 
@@ -2518,10 +2222,11 @@
             // 
             this.tbMaxRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tbMaxRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbMaxRecord.Location = new System.Drawing.Point(293, 586);
+            this.tbMaxRecord.Location = new System.Drawing.Point(220, 486);
+            this.tbMaxRecord.Margin = new System.Windows.Forms.Padding(2);
             this.tbMaxRecord.Name = "tbMaxRecord";
             this.tbMaxRecord.ReadOnly = true;
-            this.tbMaxRecord.Size = new System.Drawing.Size(101, 30);
+            this.tbMaxRecord.Size = new System.Drawing.Size(77, 26);
             this.tbMaxRecord.TabIndex = 48;
             // 
             // panel30
@@ -2530,10 +2235,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel30.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel30.Location = new System.Drawing.Point(363, 141);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4);
+            this.panel30.Location = new System.Drawing.Point(272, 115);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(978, 629);
+            this.panel30.Size = new System.Drawing.Size(736, 521);
             this.panel30.TabIndex = 51;
             // 
             // panel27
@@ -2554,10 +2258,9 @@
             this.panel27.Controls.Add(this.YTxtb);
             this.panel27.Controls.Add(this.DTxtb);
             this.panel27.Controls.Add(this.MonTxtb);
-            this.panel27.Location = new System.Drawing.Point(351, 4);
-            this.panel27.Margin = new System.Windows.Forms.Padding(4);
+            this.panel27.Location = new System.Drawing.Point(263, 3);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(974, 92);
+            this.panel27.Size = new System.Drawing.Size(732, 75);
             this.panel27.TabIndex = 48;
             // 
             // tableLayoutPanel3
@@ -2570,11 +2273,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnReadTime, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSyn, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(412, 10);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(309, 8);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(550, 58);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(414, 47);
             this.tableLayoutPanel3.TabIndex = 45;
             // 
             // btnReadTime
@@ -2584,10 +2288,10 @@
             this.btnReadTime.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnReadTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReadTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReadTime.Location = new System.Drawing.Point(3, 2);
-            this.btnReadTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReadTime.Location = new System.Drawing.Point(2, 2);
+            this.btnReadTime.Margin = new System.Windows.Forms.Padding(2);
             this.btnReadTime.Name = "btnReadTime";
-            this.btnReadTime.Size = new System.Drawing.Size(269, 54);
+            this.btnReadTime.Size = new System.Drawing.Size(203, 43);
             this.btnReadTime.TabIndex = 37;
             this.btnReadTime.Text = "Прочитать время";
             this.btnReadTime.UseVisualStyleBackColor = false;
@@ -2600,10 +2304,10 @@
             this.btnSyn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSyn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSyn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSyn.Location = new System.Drawing.Point(278, 2);
-            this.btnSyn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSyn.Location = new System.Drawing.Point(209, 2);
+            this.btnSyn.Margin = new System.Windows.Forms.Padding(2);
             this.btnSyn.Name = "btnSyn";
-            this.btnSyn.Size = new System.Drawing.Size(269, 54);
+            this.btnSyn.Size = new System.Drawing.Size(203, 43);
             this.btnSyn.TabIndex = 38;
             this.btnSyn.Text = "Синхронизировать верия";
             this.btnSyn.UseVisualStyleBackColor = false;
@@ -2613,9 +2317,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(23, 57);
+            this.label9.Location = new System.Drawing.Point(17, 46);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.Size = new System.Drawing.Size(46, 17);
             this.label9.TabIndex = 44;
             this.label9.Text = "Дата";
             // 
@@ -2623,9 +2328,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(253, 55);
+            this.label8.Location = new System.Drawing.Point(190, 45);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 25);
+            this.label8.Size = new System.Drawing.Size(14, 20);
             this.label8.TabIndex = 43;
             this.label8.Text = ".";
             // 
@@ -2633,9 +2339,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(167, 55);
+            this.label7.Location = new System.Drawing.Point(125, 45);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 25);
+            this.label7.Size = new System.Drawing.Size(14, 20);
             this.label7.TabIndex = 42;
             this.label7.Text = ".";
             // 
@@ -2643,9 +2350,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(252, 15);
+            this.label6.Location = new System.Drawing.Point(189, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 25);
+            this.label6.Size = new System.Drawing.Size(14, 20);
             this.label6.TabIndex = 41;
             this.label6.Text = ":";
             // 
@@ -2653,9 +2361,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(167, 15);
+            this.label5.Location = new System.Drawing.Point(125, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 25);
+            this.label5.Size = new System.Drawing.Size(14, 20);
             this.label5.TabIndex = 40;
             this.label5.Text = ":";
             // 
@@ -2663,58 +2372,65 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(19, 19);
+            this.label4.Location = new System.Drawing.Point(14, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(55, 17);
             this.label4.TabIndex = 39;
             this.label4.Text = "Время";
             // 
             // HTxtb
             // 
             this.HTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HTxtb.Location = new System.Drawing.Point(112, 12);
+            this.HTxtb.Location = new System.Drawing.Point(84, 10);
+            this.HTxtb.Margin = new System.Windows.Forms.Padding(2);
             this.HTxtb.Name = "HTxtb";
-            this.HTxtb.Size = new System.Drawing.Size(50, 30);
+            this.HTxtb.Size = new System.Drawing.Size(38, 26);
             this.HTxtb.TabIndex = 0;
             // 
             // MTxtb
             // 
             this.MTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MTxtb.Location = new System.Drawing.Point(198, 10);
+            this.MTxtb.Location = new System.Drawing.Point(148, 8);
+            this.MTxtb.Margin = new System.Windows.Forms.Padding(2);
             this.MTxtb.Name = "MTxtb";
-            this.MTxtb.Size = new System.Drawing.Size(47, 30);
+            this.MTxtb.Size = new System.Drawing.Size(36, 26);
             this.MTxtb.TabIndex = 1;
             // 
             // STxtb
             // 
             this.STxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.STxtb.Location = new System.Drawing.Point(277, 10);
+            this.STxtb.Location = new System.Drawing.Point(208, 8);
+            this.STxtb.Margin = new System.Windows.Forms.Padding(2);
             this.STxtb.Name = "STxtb";
-            this.STxtb.Size = new System.Drawing.Size(46, 30);
+            this.STxtb.Size = new System.Drawing.Size(36, 26);
             this.STxtb.TabIndex = 2;
             // 
             // YTxtb
             // 
             this.YTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.YTxtb.Location = new System.Drawing.Point(277, 52);
+            this.YTxtb.Location = new System.Drawing.Point(208, 42);
+            this.YTxtb.Margin = new System.Windows.Forms.Padding(2);
             this.YTxtb.Name = "YTxtb";
-            this.YTxtb.Size = new System.Drawing.Size(58, 30);
+            this.YTxtb.Size = new System.Drawing.Size(44, 26);
             this.YTxtb.TabIndex = 5;
             // 
             // DTxtb
             // 
             this.DTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DTxtb.Location = new System.Drawing.Point(112, 52);
+            this.DTxtb.Location = new System.Drawing.Point(84, 42);
+            this.DTxtb.Margin = new System.Windows.Forms.Padding(2);
             this.DTxtb.Name = "DTxtb";
-            this.DTxtb.Size = new System.Drawing.Size(50, 30);
+            this.DTxtb.Size = new System.Drawing.Size(38, 26);
             this.DTxtb.TabIndex = 3;
             // 
             // MonTxtb
             // 
             this.MonTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MonTxtb.Location = new System.Drawing.Point(198, 52);
+            this.MonTxtb.Location = new System.Drawing.Point(148, 42);
+            this.MonTxtb.Margin = new System.Windows.Forms.Padding(2);
             this.MonTxtb.Name = "MonTxtb";
-            this.MonTxtb.Size = new System.Drawing.Size(47, 30);
+            this.MonTxtb.Size = new System.Drawing.Size(36, 26);
             this.MonTxtb.TabIndex = 4;
             // 
             // panel28
@@ -2722,10 +2438,9 @@
             this.panel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel28.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel28.Location = new System.Drawing.Point(363, 16);
-            this.panel28.Margin = new System.Windows.Forms.Padding(4);
+            this.panel28.Location = new System.Drawing.Point(272, 13);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(978, 97);
+            this.panel28.Size = new System.Drawing.Size(736, 79);
             this.panel28.TabIndex = 49;
             // 
             // panel31
@@ -2733,10 +2448,9 @@
             this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel31.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel31.Location = new System.Drawing.Point(14, 344);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4);
+            this.panel31.Location = new System.Drawing.Point(10, 280);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(325, 426);
+            this.panel31.Size = new System.Drawing.Size(244, 356);
             this.panel31.TabIndex = 50;
             // 
             // openFileDialog1
@@ -2747,25 +2461,356 @@
             // 
             this.helpProvider1.HelpNamespace = "C:\\Users\\i.dymov\\Documents\\WindowsFormsApp1\\WindowsFormsApp1\\PDM Help File.chm";
             // 
+            // lua5_4
+            // 
+            this.lua5_4.AutoSize = true;
+            this.lua5_4.Location = new System.Drawing.Point(81, 19);
+            this.lua5_4.Name = "lua5_4";
+            this.lua5_4.Size = new System.Drawing.Size(58, 17);
+            this.lua5_4.TabIndex = 6;
+            this.lua5_4.TabStop = true;
+            this.lua5_4.Text = "Lua5.4";
+            this.lua5_4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(160, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(58, 17);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Lua5.3";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // fieldNumberDataGridViewTextBoxColumn
+            // 
+            this.fieldNumberDataGridViewTextBoxColumn.DataPropertyName = "FieldNumber";
+            this.fieldNumberDataGridViewTextBoxColumn.HeaderText = "№ поля";
+            this.fieldNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fieldNumberDataGridViewTextBoxColumn.Name = "fieldNumberDataGridViewTextBoxColumn";
+            this.fieldNumberDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // fieldTypeDataGridViewTextBoxColumn
+            // 
+            this.fieldTypeDataGridViewTextBoxColumn.DataPropertyName = "FieldType";
+            this.fieldTypeDataGridViewTextBoxColumn.HeaderText = "Тип поля";
+            this.fieldTypeDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "BYTE",
+            "SHORT",
+            "LUA_TYPE"});
+            this.fieldTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fieldTypeDataGridViewTextBoxColumn.Name = "fieldTypeDataGridViewTextBoxColumn";
+            this.fieldTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fieldTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fieldTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // RecordForamtSource
+            // 
+            this.RecordForamtSource.AllowNew = false;
+            this.RecordForamtSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecordFormat);
+            // 
+            // n1DataGridViewTextBoxColumn
+            // 
+            this.n1DataGridViewTextBoxColumn.DataPropertyName = "N1";
+            this.n1DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n1DataGridViewTextBoxColumn.Name = "n1DataGridViewTextBoxColumn";
+            this.n1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n1DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d1DataGridViewTextBoxColumn
+            // 
+            this.d1DataGridViewTextBoxColumn.DataPropertyName = "D1";
+            this.d1DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d1DataGridViewTextBoxColumn.Name = "d1DataGridViewTextBoxColumn";
+            this.d1DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t1DataGridViewTextBoxColumn
+            // 
+            this.t1DataGridViewTextBoxColumn.DataPropertyName = "T1";
+            this.t1DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t1DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t1DataGridViewTextBoxColumn.Name = "t1DataGridViewTextBoxColumn";
+            this.t1DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t1DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n2DataGridViewTextBoxColumn
+            // 
+            this.n2DataGridViewTextBoxColumn.DataPropertyName = "N2";
+            this.n2DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n2DataGridViewTextBoxColumn.Name = "n2DataGridViewTextBoxColumn";
+            this.n2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n2DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d2DataGridViewTextBoxColumn
+            // 
+            this.d2DataGridViewTextBoxColumn.DataPropertyName = "D2";
+            this.d2DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d2DataGridViewTextBoxColumn.Name = "d2DataGridViewTextBoxColumn";
+            this.d2DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t2DataGridViewTextBoxColumn
+            // 
+            this.t2DataGridViewTextBoxColumn.DataPropertyName = "T2";
+            this.t2DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t2DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t2DataGridViewTextBoxColumn.Name = "t2DataGridViewTextBoxColumn";
+            this.t2DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t2DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n3DataGridViewTextBoxColumn
+            // 
+            this.n3DataGridViewTextBoxColumn.DataPropertyName = "N3";
+            this.n3DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n3DataGridViewTextBoxColumn.Name = "n3DataGridViewTextBoxColumn";
+            this.n3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n3DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d3DataGridViewTextBoxColumn
+            // 
+            this.d3DataGridViewTextBoxColumn.DataPropertyName = "D3";
+            this.d3DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d3DataGridViewTextBoxColumn.Name = "d3DataGridViewTextBoxColumn";
+            this.d3DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t3DataGridViewTextBoxColumn
+            // 
+            this.t3DataGridViewTextBoxColumn.DataPropertyName = "T3";
+            this.t3DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t3DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t3DataGridViewTextBoxColumn.Name = "t3DataGridViewTextBoxColumn";
+            this.t3DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t3DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t3DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n4DataGridViewTextBoxColumn
+            // 
+            this.n4DataGridViewTextBoxColumn.DataPropertyName = "N4";
+            this.n4DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n4DataGridViewTextBoxColumn.Name = "n4DataGridViewTextBoxColumn";
+            this.n4DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n4DataGridViewTextBoxColumn.Width = 20;
+            // 
+            // d4DataGridViewTextBoxColumn
+            // 
+            this.d4DataGridViewTextBoxColumn.DataPropertyName = "D4";
+            this.d4DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d4DataGridViewTextBoxColumn.Name = "d4DataGridViewTextBoxColumn";
+            this.d4DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t4DataGridViewTextBoxColumn
+            // 
+            this.t4DataGridViewTextBoxColumn.DataPropertyName = "T4";
+            this.t4DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t4DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t4DataGridViewTextBoxColumn.Name = "t4DataGridViewTextBoxColumn";
+            this.t4DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t4DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t4DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // n5DataGridViewTextBoxColumn
+            // 
+            this.n5DataGridViewTextBoxColumn.DataPropertyName = "N5";
+            this.n5DataGridViewTextBoxColumn.HeaderText = "N";
+            this.n5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.n5DataGridViewTextBoxColumn.Name = "n5DataGridViewTextBoxColumn";
+            this.n5DataGridViewTextBoxColumn.ReadOnly = true;
+            this.n5DataGridViewTextBoxColumn.Width = 29;
+            // 
+            // d5DataGridViewTextBoxColumn
+            // 
+            this.d5DataGridViewTextBoxColumn.DataPropertyName = "D5";
+            this.d5DataGridViewTextBoxColumn.HeaderText = "Значение";
+            this.d5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.d5DataGridViewTextBoxColumn.Name = "d5DataGridViewTextBoxColumn";
+            this.d5DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // t5DataGridViewTextBoxColumn
+            // 
+            this.t5DataGridViewTextBoxColumn.DataPropertyName = "T5";
+            this.t5DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.t5DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Не определено",
+            "Дата и время",
+            "LUA_INT",
+            "LUA_FLOAT",
+            "LUA_BOOL"});
+            this.t5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.t5DataGridViewTextBoxColumn.Name = "t5DataGridViewTextBoxColumn";
+            this.t5DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.t5DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.t5DataGridViewTextBoxColumn.Width = 90;
+            // 
+            // RegisterSource
+            // 
+            this.RegisterSource.DataSource = typeof(WindowsFormsApp1.EEPROMRegister);
+            // 
+            // p1DataGridViewTextBoxColumn
+            // 
+            this.p1DataGridViewTextBoxColumn.DataPropertyName = "P1";
+            this.p1DataGridViewTextBoxColumn.HeaderText = "Поле 1";
+            this.p1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p1DataGridViewTextBoxColumn.Name = "p1DataGridViewTextBoxColumn";
+            this.p1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p1DataGridViewTextBoxColumn.Visible = false;
+            this.p1DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p2DataGridViewTextBoxColumn
+            // 
+            this.p2DataGridViewTextBoxColumn.DataPropertyName = "P2";
+            this.p2DataGridViewTextBoxColumn.HeaderText = "Поле 2";
+            this.p2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p2DataGridViewTextBoxColumn.Name = "p2DataGridViewTextBoxColumn";
+            this.p2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p2DataGridViewTextBoxColumn.Visible = false;
+            this.p2DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p3DataGridViewTextBoxColumn
+            // 
+            this.p3DataGridViewTextBoxColumn.DataPropertyName = "P3";
+            this.p3DataGridViewTextBoxColumn.HeaderText = "Поле 3";
+            this.p3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p3DataGridViewTextBoxColumn.Name = "p3DataGridViewTextBoxColumn";
+            this.p3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p3DataGridViewTextBoxColumn.Visible = false;
+            this.p3DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p4DataGridViewTextBoxColumn
+            // 
+            this.p4DataGridViewTextBoxColumn.DataPropertyName = "P4";
+            this.p4DataGridViewTextBoxColumn.HeaderText = "Поле 4";
+            this.p4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p4DataGridViewTextBoxColumn.Name = "p4DataGridViewTextBoxColumn";
+            this.p4DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p4DataGridViewTextBoxColumn.Visible = false;
+            this.p4DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p5DataGridViewTextBoxColumn
+            // 
+            this.p5DataGridViewTextBoxColumn.DataPropertyName = "P5";
+            this.p5DataGridViewTextBoxColumn.HeaderText = "Поле 5";
+            this.p5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p5DataGridViewTextBoxColumn.Name = "p5DataGridViewTextBoxColumn";
+            this.p5DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p5DataGridViewTextBoxColumn.Visible = false;
+            this.p5DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p6DataGridViewTextBoxColumn
+            // 
+            this.p6DataGridViewTextBoxColumn.DataPropertyName = "P6";
+            this.p6DataGridViewTextBoxColumn.HeaderText = "Поле 6";
+            this.p6DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p6DataGridViewTextBoxColumn.Name = "p6DataGridViewTextBoxColumn";
+            this.p6DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p6DataGridViewTextBoxColumn.Visible = false;
+            this.p6DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p7DataGridViewTextBoxColumn
+            // 
+            this.p7DataGridViewTextBoxColumn.DataPropertyName = "P7";
+            this.p7DataGridViewTextBoxColumn.HeaderText = "Поле 7";
+            this.p7DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p7DataGridViewTextBoxColumn.Name = "p7DataGridViewTextBoxColumn";
+            this.p7DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p7DataGridViewTextBoxColumn.Visible = false;
+            this.p7DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p8DataGridViewTextBoxColumn
+            // 
+            this.p8DataGridViewTextBoxColumn.DataPropertyName = "P8";
+            this.p8DataGridViewTextBoxColumn.HeaderText = "Поле 8";
+            this.p8DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p8DataGridViewTextBoxColumn.Name = "p8DataGridViewTextBoxColumn";
+            this.p8DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p8DataGridViewTextBoxColumn.Visible = false;
+            this.p8DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p9DataGridViewTextBoxColumn
+            // 
+            this.p9DataGridViewTextBoxColumn.DataPropertyName = "P9";
+            this.p9DataGridViewTextBoxColumn.HeaderText = "Поле 9";
+            this.p9DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p9DataGridViewTextBoxColumn.Name = "p9DataGridViewTextBoxColumn";
+            this.p9DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p9DataGridViewTextBoxColumn.Visible = false;
+            this.p9DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // p10DataGridViewTextBoxColumn
+            // 
+            this.p10DataGridViewTextBoxColumn.DataPropertyName = "P10";
+            this.p10DataGridViewTextBoxColumn.HeaderText = "Поле 10";
+            this.p10DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.p10DataGridViewTextBoxColumn.Name = "p10DataGridViewTextBoxColumn";
+            this.p10DataGridViewTextBoxColumn.ReadOnly = true;
+            this.p10DataGridViewTextBoxColumn.Visible = false;
+            this.p10DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // RecordSource
+            // 
+            this.RecordSource.DataSource = typeof(WindowsFormsApp1.EEPROMRecord);
+            // 
             // SystemDataSource
             // 
             this.SystemDataSource.DataSource = typeof(WindowsFormsApp1.Properties.DataSources.TelemtryFull);
-       
-            
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lua5_4);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(20, 442);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(277, 51);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Платформа";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1586, 793);
+            this.ClientSize = new System.Drawing.Size(1190, 694);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel17);
             this.ForeColor = System.Drawing.SystemColors.GrayText;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Sider";
@@ -2810,17 +2855,19 @@
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordFormatView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).EndInit();
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegisterView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RecordForamtSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3027,7 +3074,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource SystemDataSource;
-        
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton lua5_4;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

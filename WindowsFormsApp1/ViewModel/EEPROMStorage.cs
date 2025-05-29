@@ -268,7 +268,7 @@ namespace WindowsFormsApp1
         private string sGetLUADataFormSotrage( int addr)
        {
             string temp = "";
-
+         
             switch ((EEPROM_DATA_TYPE)(DataStorage[addr] & 0xF0))
             {
                 case EEPROM_DATA_TYPE.DATA_TIME:

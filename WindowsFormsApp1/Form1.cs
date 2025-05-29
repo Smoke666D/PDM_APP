@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
         List<EEPROMRecord> PROMRecords;
         SystemInfo InfoForm;
         MainForm[] Charts;
-        private PassworForm passwordForm;
+       // private PassworForm passwordForm;
         AutoResetEvent USBDataNoProcess = new AutoResetEvent(true);
         private PdmController PDM;
         private TelemetryStatus TelStatus;
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
         private delegate void SafeCallDelegate5();
         string USB_VID = "1155";
         string USB_PID = "22352";
-        string app_version = "1.4.1";
+        string app_version = "2.0.0";
         private int TimeStump = 0;
         AppSettings Settings;
         AppStateType State = AppStateType.INIT;
@@ -90,11 +90,12 @@ namespace WindowsFormsApp1
         public Form1()
         {
             Charts = new MainForm[8];
-            passwordForm = new PassworForm();
+           
             for (int i = 0; i < Charts.Length; i++)
             {
                 Charts[i] = new MainForm();
             }
+
             VMstorage = new DataStorageViewModel();
             LogData = new DataLog(20, 20, 20, 6);
             InitializeComponent();
@@ -106,6 +107,7 @@ namespace WindowsFormsApp1
             btnTelemetryRecord.Enabled = false;
             btnTelemetryPause.Enabled = false;
             PDM = new PdmController(200, Int32.Parse(USB_VID), Int32.Parse(USB_PID), this.onConnect, this.onDisconect, new RedrawHandler(RedrawCallback), USBIsEnd);
+            lua5_4.Checked = true;  
             vDataGrindInit();
             vRecordDataGrindInit();
             tabControl1.SelectTab(tabPage2);
@@ -901,8 +903,13 @@ namespace WindowsFormsApp1
         public bool TokenValid = false;
         private void btnAccess_Click(object sender, EventArgs e)
         {
-            passwordForm.Access = false;
-            passwordForm.ShowDialog(this);
+            
+            if (vGetDevice() == 1)
+            {
+                ushort size;
+                TokenValid = PDM.SendToken((ushort)0x444, out size);
+                VMstorage.Estorage.iEEPROMSize = size;
+            }
             vSetStorageAccessVisible(TokenValid);
         }
         private void btnWriteES_Click(object sender, EventArgs e)

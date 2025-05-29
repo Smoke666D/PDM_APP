@@ -181,7 +181,10 @@ namespace WindowsFormsApp1
                 switch (SYSTEM.hardware.major) 
                 {
                     case (int)Devices.PDM:
-                        dinN = 11;
+                        if (SYSTEM.hardware.minor >=3)
+                            dinN = 12;
+                        else
+                            dinN = 11;
                         doutN = 20;
                         ainN = 3;
                         velN = 2;

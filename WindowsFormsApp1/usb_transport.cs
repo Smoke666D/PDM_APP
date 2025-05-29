@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             }
             public usbHandler DataLoadStep()
             {
-                return writedatahandler(device.ReadReport(1000));
+                return writedatahandler(device.ReadReport(3000));
             }
 
             public usbHandler ReadDataStep()

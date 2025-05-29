@@ -678,7 +678,7 @@ namespace WindowsFormsApp1
                 if (isConnected())
                 {
                     cancel();
-                    Stop();
+                   // Stop();
                     alert.st = new IndicatoStep(callbac);
                     USBDataCancel.Reset();
                     usbHandler res;
@@ -711,7 +711,7 @@ namespace WindowsFormsApp1
                             break;
                          }
                     }
-                    Restart(); 
+                   // Restart(); 
                 }
                 return result;
             }
@@ -883,7 +883,7 @@ namespace WindowsFormsApp1
                 if (isConnected())
                 {
                     cancel();
-                    Stop();
+                    //Stop();
                     USBDataCancel.Reset();
                     alert.st = new IndicatoStep(callbac);
                     initEEPROMWriteSequency(data, 3);
@@ -898,7 +898,7 @@ namespace WindowsFormsApp1
                             break;
                         }                     
                     }
-                    Restart();
+                  //  Restart();
                 }
                 return;
             }
