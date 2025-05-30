@@ -31,13 +31,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LUA_TIME = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnComLoad = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnJournal = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -75,6 +75,9 @@
             this.ConsoleTextBox = new System.Windows.Forms.RichTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lua5_4 = new System.Windows.Forms.RadioButton();
+            this.lua5_3 = new System.Windows.Forms.RadioButton();
             this.LuacFileOpenButton = new System.Windows.Forms.Button();
             this.LuaFileButton = new System.Windows.Forms.Button();
             this.LibChecked = new System.Windows.Forms.CheckedListBox();
@@ -204,8 +207,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.lua5_4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.fieldNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fieldTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.RecordForamtSource = new System.Windows.Forms.BindingSource(this.components);
@@ -237,7 +238,6 @@
             this.p10DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RecordSource = new System.Windows.Forms.BindingSource(this.components);
             this.SystemDataSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DinInput)).BeginInit();
@@ -253,6 +253,7 @@
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -280,7 +281,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LUA_TIME
@@ -311,7 +311,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel17.Controls.Add(this.button5);
+            this.panel17.Controls.Add(this.btnComLoad);
             this.panel17.Controls.Add(this.btnStop);
             this.panel17.Controls.Add(this.btnJournal);
             this.panel17.Controls.Add(this.btnConnect);
@@ -328,18 +328,19 @@
             this.panel17.Size = new System.Drawing.Size(131, 694);
             this.panel17.TabIndex = 20;
             // 
-            // button5
+            // btnComLoad
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button5.Location = new System.Drawing.Point(7, 11);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 63);
-            this.button5.TabIndex = 39;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnComLoad.BackColor = System.Drawing.SystemColors.Control;
+            this.btnComLoad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComLoad.BackgroundImage")));
+            this.btnComLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnComLoad.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnComLoad.Location = new System.Drawing.Point(7, 11);
+            this.btnComLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComLoad.Name = "btnComLoad";
+            this.btnComLoad.Size = new System.Drawing.Size(116, 63);
+            this.btnComLoad.TabIndex = 39;
+            this.btnComLoad.UseVisualStyleBackColor = false;
+            this.btnComLoad.Click += new System.EventHandler(this.btnComLoad_Click);
             // 
             // btnStop
             // 
@@ -517,10 +518,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DinInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DinInput.Location = new System.Drawing.Point(561, 3);
+            this.DinInput.Location = new System.Drawing.Point(559, 3);
             this.DinInput.Name = "DinInput";
             this.DinInput.RowHeadersWidth = 51;
-            this.DinInput.Size = new System.Drawing.Size(125, 481);
+            this.DinInput.Size = new System.Drawing.Size(124, 481);
             this.DinInput.TabIndex = 24;
             this.DinInput.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DinInput_CellValueChanged);
             // 
@@ -530,10 +531,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AnalogInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AnalogInput.Location = new System.Drawing.Point(313, 3);
+            this.AnalogInput.Location = new System.Drawing.Point(312, 3);
             this.AnalogInput.Name = "AnalogInput";
             this.AnalogInput.RowHeadersWidth = 51;
-            this.AnalogInput.Size = new System.Drawing.Size(242, 481);
+            this.AnalogInput.Size = new System.Drawing.Size(241, 481);
             this.AnalogInput.TabIndex = 25;
             // 
             // DiscreteOut
@@ -543,7 +544,7 @@
             this.DiscreteOut.Location = new System.Drawing.Point(3, 3);
             this.DiscreteOut.Name = "DiscreteOut";
             this.DiscreteOut.RowHeadersWidth = 51;
-            this.DiscreteOut.Size = new System.Drawing.Size(304, 481);
+            this.DiscreteOut.Size = new System.Drawing.Size(303, 481);
             this.DiscreteOut.TabIndex = 26;
             // 
             // System_Par
@@ -551,10 +552,10 @@
             this.System_Par.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.System_Par.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.System_Par.Location = new System.Drawing.Point(692, 3);
+            this.System_Par.Location = new System.Drawing.Point(689, 3);
             this.System_Par.Name = "System_Par";
             this.System_Par.RowHeadersWidth = 51;
-            this.System_Par.Size = new System.Drawing.Size(284, 479);
+            this.System_Par.Size = new System.Drawing.Size(287, 479);
             this.System_Par.TabIndex = 27;
             // 
             // tabControl1
@@ -830,6 +831,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 504);
             this.panel3.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lua5_4);
+            this.groupBox1.Controls.Add(this.lua5_3);
+            this.groupBox1.Location = new System.Drawing.Point(20, 442);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(277, 51);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Платформа";
+            // 
+            // lua5_4
+            // 
+            this.lua5_4.AutoSize = true;
+            this.lua5_4.Location = new System.Drawing.Point(81, 19);
+            this.lua5_4.Name = "lua5_4";
+            this.lua5_4.Size = new System.Drawing.Size(58, 17);
+            this.lua5_4.TabIndex = 6;
+            this.lua5_4.TabStop = true;
+            this.lua5_4.Text = "Lua5.4";
+            this.lua5_4.UseVisualStyleBackColor = true;
+            // 
+            // lua5_3
+            // 
+            this.lua5_3.AutoSize = true;
+            this.lua5_3.Location = new System.Drawing.Point(160, 19);
+            this.lua5_3.Name = "lua5_3";
+            this.lua5_3.Size = new System.Drawing.Size(58, 17);
+            this.lua5_3.TabIndex = 7;
+            this.lua5_3.TabStop = true;
+            this.lua5_3.Text = "Lua5.3";
+            this.lua5_3.UseVisualStyleBackColor = true;
             // 
             // LuacFileOpenButton
             // 
@@ -1859,14 +1893,14 @@
             this.RegisterView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RegisterView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RegisterView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.RegisterView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RegisterView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.n1DataGridViewTextBoxColumn,
@@ -1888,14 +1922,14 @@
             this.RegisterView.Location = new System.Drawing.Point(17, 16);
             this.RegisterView.Margin = new System.Windows.Forms.Padding(2);
             this.RegisterView.Name = "RegisterView";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RegisterView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RegisterView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.RegisterView.RowHeadersVisible = false;
             this.RegisterView.RowHeadersWidth = 51;
             this.RegisterView.RowTemplate.Height = 24;
@@ -1909,14 +1943,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RecordView.AutoGenerateColumns = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecordView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecordView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.RecordView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecordView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.index,
@@ -2461,28 +2495,6 @@
             // 
             this.helpProvider1.HelpNamespace = "C:\\Users\\i.dymov\\Documents\\WindowsFormsApp1\\WindowsFormsApp1\\PDM Help File.chm";
             // 
-            // lua5_4
-            // 
-            this.lua5_4.AutoSize = true;
-            this.lua5_4.Location = new System.Drawing.Point(81, 19);
-            this.lua5_4.Name = "lua5_4";
-            this.lua5_4.Size = new System.Drawing.Size(58, 17);
-            this.lua5_4.TabIndex = 6;
-            this.lua5_4.TabStop = true;
-            this.lua5_4.Text = "Lua5.4";
-            this.lua5_4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(160, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Lua5.3";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // fieldNumberDataGridViewTextBoxColumn
             // 
             this.fieldNumberDataGridViewTextBoxColumn.DataPropertyName = "FieldNumber";
@@ -2787,17 +2799,6 @@
             // 
             this.SystemDataSource.DataSource = typeof(WindowsFormsApp1.Properties.DataSources.TelemtryFull);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lua5_4);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(20, 442);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 51);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Платформа";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2834,6 +2835,8 @@
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -2866,8 +2869,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegisterSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SystemDataSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3074,8 +3075,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource SystemDataSource;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button btnComLoad;
+        private System.Windows.Forms.RadioButton lua5_3;
         private System.Windows.Forms.RadioButton lua5_4;
         private System.Windows.Forms.GroupBox groupBox1;
     }

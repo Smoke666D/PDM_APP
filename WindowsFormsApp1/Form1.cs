@@ -65,6 +65,7 @@ namespace WindowsFormsApp1
         AutoResetEvent USBDataNoProcess = new AutoResetEvent(true);
         private PdmController PDM;
         private TelemetryStatus TelStatus;
+        private CanHACKERLoadForm ComLoadForm;
         private System.Windows.Forms.DataVisualization.Charting.Series ChartData;
         private System.Windows.Forms.DataVisualization.Charting.Series ChartData1;
         static Semaphore USBIsEnd;
@@ -95,7 +96,7 @@ namespace WindowsFormsApp1
             {
                 Charts[i] = new MainForm();
             }
-
+            
             VMstorage = new DataStorageViewModel();
             LogData = new DataLog(20, 20, 20, 6);
             InitializeComponent();
@@ -959,6 +960,12 @@ namespace WindowsFormsApp1
         private void button4_Click_1(object sender, EventArgs e)
         {
             RecordForamtSource.Clear(); 
+        }
+
+        private void btnComLoad_Click(object sender, EventArgs e)
+        {
+            ComLoadForm = new CanHACKERLoadForm();
+            ComLoadForm.Show();
         }
     }   
 }

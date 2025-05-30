@@ -108,6 +108,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="BOOTLOADER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanHACKERLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanHACKERLoadForm.Designer.cs">
+      <DependentUpon>CanHACKERLoadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataClass\EEPROMRecordFormat.cs" />
     <Compile Include="DataLog.cs" />
     <Compile Include="DataStorageView.cs">
@@ -116,6 +125,7 @@
     <Compile Include="DataClass\EEPROMRecord.cs" />
     <Compile Include="DataClass\EEPROMRegister.cs" />
     <Compile Include="DataClass\TelemtryFull.cs" />
+    <Compile Include="USB_TO_CAN.cs" />
     <Compile Include="ViewModel\EEPROMStorage.cs" />
     <Compile Include="FileProcess.cs">
       <SubType>Form</SubType>
@@ -160,6 +170,9 @@
     <Compile Include="System\MouseEventHandler.cs" />
     <Compile Include="USB_Message.cs" />
     <Compile Include="usb_transport.cs" />
+    <EmbeddedResource Include="CanHACKERLoadForm.resx">
+      <DependentUpon>CanHACKERLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

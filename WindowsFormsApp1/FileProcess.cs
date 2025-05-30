@@ -18,7 +18,10 @@ namespace WindowsFormsApp1
             StreamReader outputReader = null;
             StreamReader errorReader = null;
             ConsoleTextBox.AppendText("Компиляция скрипта\n");
-            startInfo.FileName = Settings.sGetUtilPath() + "\\luac.exe";
+            if (lua5_4.Checked)
+                startInfo.FileName = Settings.sGetUtilPath() + "\\luac.exe";
+            else
+                startInfo.FileName = Settings.sGetUtilPath() + "\\luac53.exe";
             startInfo.Arguments = "  -o out.luac runscript.lua";
             startInfo.UseShellExecute = false;
             startInfo.RedirectStandardOutput = true;

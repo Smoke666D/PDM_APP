@@ -1,0 +1,405 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\canhackerloadform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\canhackerloadform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\a3b7acd9f47959aa1a242f627c74eb8309baa46ac9ed871a449b624e1e2d39d4\\BackgroundWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\i.dymov\\documents\\pdm_app\\windowsformsapp1\\bootloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\bootloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\3180730c0865a029468e709871d98b94dd73c292f3f6fd5eadc03c1eda0f4806\\Process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\fileprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\fileprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\canhackerloadform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\canhackerloadform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\usb_to_can.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\usb_to_can.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\bootloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\bootloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\datastorageview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\datastorageview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\ffb81d39a2bf40ad717c90bbc9ec0315674f9e574856e7944d69bd08b541713c\\FileDialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WindowsFormsApp1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\formservicefunctiom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formservicefunctiom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\formservicefunctiom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formservicefunctiom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WindowsFormsApp1\\Setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\graphwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\graphwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\i.dymov\\Documents\\PDM_APP\\windowsformsapp1\\pdm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68DDD457-3216-448E-A9ED-1FCFF2C8FC56}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\pdm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 87,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 239,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
+              "ViewState": "AgIAAKMBAAAAAAAAAIAwwL4BAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T14:52:42.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BOOTLOADER.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\BOOTLOADER.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\BOOTLOADER.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\BOOTLOADER.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\BOOTLOADER.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAM4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:04:10.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackgroundWorker.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\a3b7acd9f47959aa1a242f627c74eb8309baa46ac9ed871a449b624e1e2d39d4\\BackgroundWorker.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a3b7acd9f47959aa1a242f627c74eb8309baa46ac9ed871a449b624e1e2d39d4\\BackgroundWorker.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\a3b7acd9f47959aa1a242f627c74eb8309baa46ac9ed871a449b624e1e2d39d4\\BackgroundWorker.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a3b7acd9f47959aa1a242f627c74eb8309baa46ac9ed871a449b624e1e2d39d4\\BackgroundWorker.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAmwAYBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:27:53.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CanHACKERLoadForm.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAAAAkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T09:12:02.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T10:43:54.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Process.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\3180730c0865a029468e709871d98b94dd73c292f3f6fd5eadc03c1eda0f4806\\Process.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3180730c0865a029468e709871d98b94dd73c292f3f6fd5eadc03c1eda0f4806\\Process.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\3180730c0865a029468e709871d98b94dd73c292f3f6fd5eadc03c1eda0f4806\\Process.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3180730c0865a029468e709871d98b94dd73c292f3f6fd5eadc03c1eda0f4806\\Process.cs",
+              "ViewState": "AgIAAFEIAAAAAAAAAAAMwG0IAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:56:27.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CanHACKERLoadForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\CanHACKERLoadForm.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\CanHACKERLoadForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\CanHACKERLoadForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T09:37:58.596Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileProcess.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FileProcess.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FileProcess.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FileProcess.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FileProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:52:39.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:18:07.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "USB_TO_CAN.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\USB_TO_CAN.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\USB_TO_CAN.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\USB_TO_CAN.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\USB_TO_CAN.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAAANMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:10:08.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BOOTLOADER.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\BOOTLOADER.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\BOOTLOADER.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\BOOTLOADER.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\BOOTLOADER.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:11:03.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataStorageView.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\DataStorageView.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\DataStorageView.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\DataStorageView.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\DataStorageView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:13:48.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:17:54.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FileDialog.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\ffb81d39a2bf40ad717c90bbc9ec0315674f9e574856e7944d69bd08b541713c\\FileDialog.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ffb81d39a2bf40ad717c90bbc9ec0315674f9e574856e7944d69bd08b541713c\\FileDialog.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\AppData\\Local\\Temp\\.vsdbgsrc\\ffb81d39a2bf40ad717c90bbc9ec0315674f9e574856e7944d69bd08b541713c\\FileDialog.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ffb81d39a2bf40ad717c90bbc9ec0315674f9e574856e7944d69bd08b541713c\\FileDialog.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAAAsDAAAAAAAAAAAAAEABAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T14:19:09.885Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormServiceFunctiom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FormServiceFunctiom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormServiceFunctiom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T08:58:57.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WindowsFormsApp1",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "RelativeToolTip": "WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-16T12:50:49.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormServiceFunctiom.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormServiceFunctiom.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAAADwBAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T08:59:10.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Setting.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Setting.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Setting.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Setting.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Setting.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:31:30.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GraphWork.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\GraphWork.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GraphWork.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\GraphWork.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\GraphWork.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T06:25:49.564Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\Form3.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:18:19.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "pdm.cs",
+              "DocumentMoniker": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\pdm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\pdm.cs",
+              "ToolTip": "C:\\Users\\i.dymov\\Documents\\PDM_APP\\WindowsFormsApp1\\pdm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\pdm.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAApwLoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:11:36.69Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 195,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
