@@ -184,6 +184,8 @@ namespace WindowsFormsApp1
             }
             else
             {
+                adapter_connect = false;
+                adapter.Close();
                 BtnConfig(FormViewState.DisconectView);
             }
         }
@@ -258,6 +260,7 @@ namespace WindowsFormsApp1
 
         private void CanHACKERLoadForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (adapter_connect)
             adapter.Close();
         }
 
